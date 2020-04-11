@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/SubtitlesViewer-Alpha.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/config/Translation-LanguageSupportList.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/tempSubtitle.srt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/bin/ffmpeg.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/bin/ffplay.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/bin/ffprobe.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/developer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/faq.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/fate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/ffmpeg-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/ffmpeg-bitstream-filters.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/ffmpeg-codecs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/ffmpeg-devices.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/ffmpeg-filters.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/ffmpeg-formats.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/ffmpeg-protocols.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/ffmpeg-resampler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/ffmpeg-scaler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/ffmpeg-utils.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/ffmpeg.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/ffplay-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/ffplay.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/ffprobe-all.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/ffprobe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/general.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/git-howto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/libavcodec.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/libavdevice.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/libavfilter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/libavformat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/libavutil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/libswresample.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/libswscale.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/mailing-list-faq.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/nut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/platform.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/doc/style.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/presets/ffprobe.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/presets/libvpx-1080p.ffpreset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/presets/libvpx-1080p50_60.ffpreset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/presets/libvpx-360p.ffpreset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/presets/libvpx-720p.ffpreset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ffmpeg/presets/libvpx-720p50_60.ffpreset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/META-INF/SubtitlesViewer-Alpha.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/audio/1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/audio/lfasr.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/baiduTranInfo.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/Log/Log.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/Log/updateLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/AboutPanelControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/ApplicationControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/BuildPanelControl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/BuildPanelControl$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/BuildPanelControl$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/BuildPanelControl$4$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/BuildPanelControl$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/BuildPanelControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/EditToolBarControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/LoadPanelControl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/LoadPanelControl$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/LoadPanelControl$3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/LoadPanelControl$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/LoadPanelControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/SettingPanelControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/SyncPanelControl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/SyncPanelControl$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/SyncPanelControl$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/SyncPanelControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/ToolPanelControl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/ToolPanelControl$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/ToolPanelControl$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/ToolPanelControl$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/ToolPanelControl$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/ToolPanelControl$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/ToolPanelControl$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/ToolPanelControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/TranPanelControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/homePanelControl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/homePanelControl$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/homePanelControl$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/homePanelControl$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/homePanelControl$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/homePanelControl$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/homePanelControl$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/homePanelControl$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/homePanelControl$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/homePanelControl$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/homePanelControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/startControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/controller/titlesBarControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/entity/inputSet$FileSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/entity/inputSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/main/Launcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/main/mainApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/test/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/test/TestSubtitles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/test/TestThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/AudioUtil/VoiceTranslationUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/ConfigUtil/ConfigPathUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/ConfigUtil/ConfigRWUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/DragListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/DragUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/FileIOUtil/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/FileIOUtil/OpenfileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/FileIOUtil/SubFileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/FindReplaceUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/InterfaceInformationUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/LoadUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/OrderedProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/SubtitlesUtil/TimelineUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/SubtitlesUtil/editUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/ToastUtil$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/ToastUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/TransUtil/BaiduTransUtil$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/TransUtil/BaiduTransUtil$BaiduTransTask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/TransUtil/BaiduTransUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/TransUtil/MD5Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/TransUtil/TranThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/TransUtil/TranslationUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/VideoUtil/FFMpegUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/org/fordes/subview/util/VideoUtil/VideoInfoUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/css/TitlesBar_Dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/css/TitlesBar_Light.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/css/mainStyle_Dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/css/mainStyle_Light.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/css/startStyle_Dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/css/startStyle_Light.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/from/AboutPanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/from/Application.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/from/BuildPanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/from/EditToolBar.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/from/HomePanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/from/InDevelopment.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/from/LoadPanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/from/SettingPanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/from/SyncPanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/from/TitlesBar.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/from/ToolPanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/from/TranPanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/from/player.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/from/startFrom.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/InDevelopment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/InDevelopment_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/about/Guide_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/about/Guide_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/about/Guide_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/about/Guide_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/about/Pact_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/about/Pact_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/about/Pact_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/about/Pact_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/about/Updatelog_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/about/Updatelog_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/about/Updatelog_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/about/Updatelog_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/about/alipay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/about/wechat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/build/Save_ChoosePath_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/build/Save_ChoosePath_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/build/Save_Manual_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/build/Save_Manual_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/build/Save_Manual_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/build/Save_Manual_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/build/Save_Preview_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/build/Save_Preview_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/build/Save_Preview_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/build/Save_Preview_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/help.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/Edit_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/Edit_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/Edit_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/Edit_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/addTimeline_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/addTimeline_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/addTimeline_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/code_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/code_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/code_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/findR_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/findR_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/findR_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/findR_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/find_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/find_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/find_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/jump_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/jump_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/jump_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/more_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/more_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/more_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/newline_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/newline_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/newline_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/preview_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/preview_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/preview_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/preview_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/replace_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/replace_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/replace_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/style_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/style_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/style_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/timeline_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/timeline_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/timeline_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/home/timeline_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/openVideo_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/openVideo_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/openViedo_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/save.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/setting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/setting/Advanced_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/setting/Advanced_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/setting/Advanced_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/setting/Advanced_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/setting/Base_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/setting/Base_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/setting/Base_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/setting/Base_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/setting/Lab_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/setting/Lab_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/setting/Lab_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/setting/Lab_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/sync.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/sync/AutoSync_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/sync/AutoSync_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/sync/AutoSync_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/sync/AutoSync_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/sync/ManualSync_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/sync/ManualSync_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/sync/ManualSync_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/sync/ManualSync_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/bold_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/bold_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/bold_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/close_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/close_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/close_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/default_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/default_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/default_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/italic_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/italic_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/italic_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/jump_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/jump_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/jump_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/option_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/option_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/option_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/refresh_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/refresh_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/refresh_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/replace_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/replace_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/replace_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/replaceall_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/replaceall_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/replaceall_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/search_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/search_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/search_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/underline_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/underline_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tool/underline_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tran/TranOnline_Lable_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tran/TranOnline_Lable_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tran/Tran_Offline_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tran/Tran_Offline_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tran/Tran_Offline_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tran/Tran_Offline_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tran/Tran_Online_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tran/Tran_Online_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tran/Tran_Online_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tran/Tran_Online_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/tran/Transformation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/application/translation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/public/Logo_Win.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/public/close_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/public/close_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/public/dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/public/light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/public/max_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/public/max_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/public/min_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/public/min_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/public/standard_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SubtitlesViewer-Alpha/resources/images/public/standard_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/baiduTranInfo.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/Log/Log.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/Log/updateLog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/controller/AboutPanelControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/controller/ApplicationControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/controller/BuildPanelControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/controller/EditToolBarControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/controller/LoadPanelControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/controller/SettingPanelControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/controller/SyncPanelControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/controller/ToolPanelControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/controller/TranPanelControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/controller/homePanelControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/controller/startControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/controller/titlesBarControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/entity/inputSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/main/Launcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/main/mainApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/test/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/test/TestSubtitles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/test/TestThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/AudioUtil/VoiceTranslationUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/ConfigUtil/ConfigPathUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/ConfigUtil/ConfigRWUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/DragListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/DragUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/FileIOUtil/FileUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/FileIOUtil/OpenfileUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/FileIOUtil/SubFileUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/FindReplaceUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/InterfaceInformationUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/LoadUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/OrderedProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/SubtitlesUtil/TimelineUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/SubtitlesUtil/editUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/ToastUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/TransUtil/BaiduTransUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/TransUtil/MD5Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/TransUtil/TranThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/TransUtil/TranslationUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/VideoUtil/FFMpegUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/fordes/subview/util/VideoUtil/VideoInfoUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/css/TitlesBar_Dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/css/TitlesBar_Light.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/css/mainStyle_Dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/css/mainStyle_Light.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/css/startStyle_Dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/css/startStyle_Light.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/from/AboutPanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/from/Application.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/from/BuildPanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/from/EditToolBar.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/from/HomePanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/from/InDevelopment.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/from/LoadPanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/from/SettingPanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/from/SyncPanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/from/TitlesBar.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/from/ToolPanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/from/TranPanel.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/from/player.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/from/startFrom.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/InDevelopment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/InDevelopment_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/about/Guide_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/about/Guide_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/about/Guide_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/about/Guide_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/about/Pact_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/about/Pact_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/about/Pact_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/about/Pact_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/about/Updatelog_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/about/Updatelog_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/about/Updatelog_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/about/Updatelog_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/about/alipay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/about/wechat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/build/Save_ChoosePath_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/build/Save_ChoosePath_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/build/Save_Manual_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/build/Save_Manual_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/build/Save_Manual_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/build/Save_Manual_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/build/Save_Preview_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/build/Save_Preview_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/build/Save_Preview_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/build/Save_Preview_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/help.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/Edit_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/Edit_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/Edit_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/Edit_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/addTimeline_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/addTimeline_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/addTimeline_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/code_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/code_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/code_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/findR_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/findR_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/findR_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/findR_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/find_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/find_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/find_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/jump_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/jump_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/jump_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/more_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/more_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/more_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/newline_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/newline_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/newline_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/preview_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/preview_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/preview_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/preview_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/replace_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/replace_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/replace_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/style_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/style_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/style_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/timeline_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/timeline_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/timeline_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/home/timeline_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/openVideo_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/openVideo_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/openViedo_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/save.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/setting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/setting/Advanced_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/setting/Advanced_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/setting/Advanced_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/setting/Advanced_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/setting/Base_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/setting/Base_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/setting/Base_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/setting/Base_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/setting/Lab_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/setting/Lab_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/setting/Lab_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/setting/Lab_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/sync.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/sync/AutoSync_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/sync/AutoSync_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/sync/AutoSync_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/sync/AutoSync_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/sync/ManualSync_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/sync/ManualSync_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/sync/ManualSync_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/sync/ManualSync_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/bold_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/bold_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/bold_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/close_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/close_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/close_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/default_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/default_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/default_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/italic_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/italic_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/italic_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/jump_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/jump_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/jump_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/option_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/option_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/option_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/refresh_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/refresh_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/refresh_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/replace_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/replace_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/replace_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/replaceall_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/replaceall_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/replaceall_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/search_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/search_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/search_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/underline_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/underline_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tool/underline_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tran/TranOnline_Lable_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tran/TranOnline_Lable_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tran/Tran_Offline_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tran/Tran_Offline_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tran/Tran_Offline_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tran/Tran_Offline_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tran/Tran_Online_Dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tran/Tran_Online_Dark_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tran/Tran_Online_Light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tran/Tran_Online_Light_selected.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/tran/Transformation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/application/translation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/public/Logo_Win.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/public/close_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/public/close_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/public/dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/public/light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/public/max_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/public/max_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/public/min_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/public/min_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/public/standard_dark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/images/public/standard_light.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="JavaFxApplication" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1YtROAHy7xo8FqbJLzrZV0KNSxK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="org.fordes.subview.util.TransUtil" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Workspace\IDEA\SubtitlesViewer-Alpha\src\resources\images\application\home" />
+      <recent name="F:\Workspace\IDEA\SubtitlesViewer-Alpha\src\resources\images\application\build" />
+      <recent name="F:\Workspace\IDEA\SubtitlesViewer-Alpha\date\temp" />
+      <recent name="F:\Workspace\IDEA\SubtitlesViewer-Alpha\src\resources\images\public" />
+      <recent name="F:\Workspace\IDEA\SubtitlesViewer-Alpha" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.fordes.subview.controller" />
+      <recent name="org.fordes.subview.main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Workspace\IDEA\SubtitlesViewer-Alpha\src\resources\images\application\about" />
+      <recent name="F:\Workspace\IDEA\SubtitlesViewer-Alpha\src\resources\images\application\build" />
+      <recent name="F:\Workspace\IDEA\SubtitlesViewer-Alpha\src\resources\images\application\tran" />
+      <recent name="F:\Workspace\IDEA\SubtitlesViewer-Alpha\src\resources\images\application" />
+      <recent name="F:\Workspace\IDEA\SubtitlesViewer-Alpha\src\resources\images\application\tool" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Launcher">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+    <configuration name="ConfigRWUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.fordes.subview.util.ConfigUtil.ConfigRWUtil" />
+      <module name="SubtitlesViewer-Alpha" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fordes.subview.util.ConfigUtil.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.fordes.subview.main.Launcher" />
+      <module name="SubtitlesViewer-Alpha" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fordes.subview.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.fordes.subview.test.Main" />
+      <module name="SubtitlesViewer-Alpha" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fordes.subview.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunnableDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.fordes.subview.test.RunnableDemo" />
+      <module name="SubtitlesViewer-Alpha" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fordes.subview.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimelineUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.fordes.subview.util.SubtitlesUtil.TimelineUtil" />
+      <module name="SubtitlesViewer-Alpha" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.fordes.subview.util.SubtitlesUtil.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Launcher" />
+      <item itemvalue="Application.TimelineUtil" />
+      <item itemvalue="Application.RunnableDemo" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.ConfigRWUtil" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Launcher" />
+        <item itemvalue="Application.ConfigRWUtil" />
+        <item itemvalue="Application.TimelineUtil" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.RunnableDemo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+      <created>1359379246138</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1359379246138</updated>
+      <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1583759873182" duration="3436000" />
+      <workItem from="1583766520675" duration="9210000" />
+      <workItem from="1583829941645" duration="6574000" />
+      <workItem from="1583897888889" duration="4391000" />
+      <workItem from="1584027445479" duration="6048000" />
+      <workItem from="1584072332777" duration="25901000" />
+      <workItem from="1584157657641" duration="22257000" />
+      <workItem from="1584244573260" duration="7091000" />
+      <workItem from="1584252626195" duration="5001000" />
+      <workItem from="1584334418702" duration="12673000" />
+      <workItem from="1584352178218" duration="1696000" />
+      <workItem from="1584353885605" duration="5637000" />
+      <workItem from="1584364187966" duration="1428000" />
+      <workItem from="1584365648338" duration="40000" />
+      <workItem from="1584507460055" duration="27669000" />
+      <workItem from="1584687249992" duration="599000" />
+      <workItem from="1584696184851" duration="273000" />
+      <workItem from="1584697153926" duration="56000" />
+      <workItem from="1584697679484" duration="15185000" />
+      <workItem from="1584850027964" duration="29838000" />
+      <workItem from="1584936137184" duration="24554000" />
+      <workItem from="1584983779340" duration="5093000" />
+      <workItem from="1585020221538" duration="25534000" />
+      <workItem from="1585116594879" duration="6430000" />
+      <workItem from="1585293849551" duration="2425000" />
+      <workItem from="1585460764023" duration="29468000" />
+      <workItem from="1585540180342" duration="20726000" />
+      <workItem from="1585635226885" duration="9487000" />
+      <workItem from="1585716407594" duration="8134000" />
+      <workItem from="1585899059601" duration="12133000" />
+      <workItem from="1585984517624" duration="21038000" />
+      <workItem from="1586065476015" duration="18978000" />
+      <workItem from="1586176787074" duration="10613000" />
+      <workItem from="1586234470857" duration="24599000" />
+      <workItem from="1586336651107" duration="17566000" />
+      <workItem from="1586407107167" duration="25273000" />
+      <workItem from="1586498830947" duration="16564000" />
+      <workItem from="1586581301935" duration="12250000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="500" y="168" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1584335217518">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="500" y="168" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584335217518" />
+    <state x="225" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585587427120">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="225" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585587427120" />
+    <state x="575" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1586358030058">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="575" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586358030058" />
+    <state x="450" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1586452235494">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="450" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1586452235494" />
+    <state x="401" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1586532828181">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="401" y="338" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1586532828181" />
+    <state x="500" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586337538794">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="500" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586337538794" />
+    <state x="446" y="154" key="FileChooserDialogImpl" timestamp="1586538516142">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="446" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586538516142" />
+    <state width="1493" height="150" key="GridCell.Tab.0.bottom" timestamp="1586611350420">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586611350420" />
+    <state width="1493" height="150" key="GridCell.Tab.0.center" timestamp="1586611350420">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586611350420" />
+    <state width="1493" height="150" key="GridCell.Tab.0.left" timestamp="1586611350420">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586611350420" />
+    <state width="1493" height="150" key="GridCell.Tab.0.right" timestamp="1586611350420">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586611350420" />
+    <state width="1493" height="150" key="GridCell.Tab.1.bottom" timestamp="1586611350420">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586611350420" />
+    <state width="1493" height="150" key="GridCell.Tab.1.center" timestamp="1586611350420">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1586611350420" />
+    <state width="1493" height="150" key="GridCell.Tab.1.left" timestamp="1586611350420">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1586611350420" />
+    <state width="1493" height="150" key="GridCell.Tab.1.right" timestamp="1586611350420">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1586611350420" />
+    <state x="250" y="0" key="SettingsEditor" timestamp="1583833009453">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="250" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583833009453" />
+    <state x="455" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1584697681563">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="455" y="237" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584697681563" />
+    <state x="447" y="12" width="642" height="801" key="find.popup" timestamp="1584079622515">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="447" y="12" width="642" height="801" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1584079622515" />
+    <state x="426" y="188" key="run.anything.popup" timestamp="1586500071515">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="426" y="188" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1586500071515" />
+    <state x="797" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1586524980618">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="797" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1586524980618" />
+  </component>
+</project>
