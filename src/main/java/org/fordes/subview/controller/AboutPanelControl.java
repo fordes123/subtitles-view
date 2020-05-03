@@ -31,14 +31,14 @@ public class AboutPanelControl implements Initializable {
     private Label InfoPanel_side_titles;
     @FXML
     private TextArea info_TextArea;
-    //全局主题
+
     private Object LightTheme=getClass().getClassLoader().getResource("css/mainStyle_Light.css").toString();
     private Object DarkTheme=getClass().getClassLoader().getResource("css/mainStyle_Dark.css").toString();
     private startControl controller= (startControl) Launcher.controllers.get(startControl.class.getSimpleName());
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //默认主题
+
         About.getStylesheets().add(LightTheme.toString());
     }
 
@@ -50,22 +50,24 @@ public class AboutPanelControl implements Initializable {
         /*移除所有样式表*/
         About.getStylesheets().remove(LightTheme);
         About.getStylesheets().remove(DarkTheme);
-        if(ModeState)//深色->浅色模式
+        if(ModeState)
             About.getStylesheets().add(LightTheme.toString());
-        else//浅色->深色模式
+        else
             About.getStylesheets().add(DarkTheme.toString());
     }
     
-    //隐藏组件
+
     private void hide(){
         updatePanel.setVisible(false);
         PactPanel.setVisible(false);
         InfoPanel.setVisible(false);
     }
 
+
     public void onInfo(ActionEvent actionEvent) {
         ListGroup.selectToggle(Info);
         Info.setSelected(true);
+
         if(controller.focus_indicator.equals(Info.getId()))
             return;
         controller.focus_indicator=Info.getId();
@@ -73,10 +75,11 @@ public class AboutPanelControl implements Initializable {
         InfoPanel.setVisible(true);
     }
 
-    //使用协议
+
     public void onPact(ActionEvent actionEvent) {
         ListGroup.selectToggle(Pact);
         Pact.setSelected(true);
+
         if(controller.focus_indicator.equals(Pact.getId()))
             return;
         controller.focus_indicator=Pact.getId();
@@ -84,15 +87,18 @@ public class AboutPanelControl implements Initializable {
         PactPanel.setVisible(true);
     }
 
+
     public void onUpdateLog(ActionEvent actionEvent) {
         ListGroup.selectToggle(UpdateLog);
         UpdateLog.setSelected(true);
+
         if(controller.focus_indicator.equals(UpdateLog.getId()))
             return;
-        controller.focus_indicator=UpdateLog.getId();//设置焦点
+        controller.focus_indicator=UpdateLog.getId();
         hide();
         updatePanel.setVisible(true);
     }
+
 
 
     public void onDeveloperInfo(MouseEvent mouseEvent) {
@@ -104,19 +110,25 @@ public class AboutPanelControl implements Initializable {
             info_Content.setVisible(false);
     }
 
+
     public void onProjectHomepage(MouseEvent mouseEvent) throws URISyntaxException, IOException {
         Desktop.getDesktop().browse(new URI("https://github.com/fordes123/Subtitles-Tool"));
     }
 
-    //打开反馈页面
+
     public void onFeedback(MouseEvent mouseEvent) throws URISyntaxException, IOException {
         Desktop.getDesktop().browse(new URI("https://fordes.top"));
     }
 
+
     public void onProtocol(MouseEvent mouseEvent) {
+        /*info_Content.setVisible(false);
+        InfoPanel_side_titles.setText("开源协议");
+        InfoPanel_side_titles.setVisible(true);*/
+
     }
 
-    //隐私相关
+
     public void onPrivacyStatement(MouseEvent mouseEvent) {
         info_Content.setVisible(false);
         InfoPanel_side_titles.setText("隐私声明");

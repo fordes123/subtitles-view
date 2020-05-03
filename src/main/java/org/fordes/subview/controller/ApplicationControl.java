@@ -59,7 +59,7 @@ public class ApplicationControl implements Initializable {
     private Stage stage;
     private double xOffset = 0;
     private double yOffset = 0;
-    private int bit = 0;//left,right,top,bottom
+    private int bit = 0;
     private static final double RESIZE_WIDTH = 5.00;
     private static final double MIN_WIDTH = 1360.00;
     private static final double MIN_HEIGHT = 860.00;
@@ -67,6 +67,7 @@ public class ApplicationControl implements Initializable {
     private boolean FullScreen = false;
     private boolean ModeState = false;
     private startControl controller= (startControl) Launcher.controllers.get(startControl.class.getSimpleName());
+
     private Object LightTheme=getClass().getClassLoader().getResource("css/mainStyle_Light.css").toString();
     private Object DarkTheme=getClass().getClassLoader().getResource("css/mainStyle_Dark.css").toString();
     private Button winMax,winMin,mode,winClose;
@@ -79,12 +80,13 @@ public class ApplicationControl implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //加载组件
+
         top=topController.getTop();
         mode = topController.getMode();
         winClose = topController.getWinClose();
         winMin = topController.getWinMin();
         winMax = topController.getWinMax();
+
 
         root.setOnMousePressed(event -> {
             event.consume();
@@ -106,11 +108,15 @@ public class ApplicationControl implements Initializable {
         winMax.setOnAction(event -> { maxWindow(); });
         winMin.setOnAction(event -> { minWindow(); });
         mode.setOnAction(event -> { modeChange(); });
+
         topController.initialization(2);
+
         loadHome(null);
+
         ModeState=!controller.inputset.getTheme();
         modeChange();
-        //shadow.setPickOnBounds(false);
+
+
         /*shadow.setMouseTransparent(true);*/
 
     }
@@ -153,7 +159,7 @@ public class ApplicationControl implements Initializable {
      */
     private void mouseDraggedHandle(MouseEvent event) {
         event.consume();
-        //Stage primaryStage = getStage();
+
         double x = event.getSceneX();
         double y = event.getSceneY();
         double nextX = stage.getX();
@@ -176,7 +182,7 @@ public class ApplicationControl implements Initializable {
         stage.setY(nextY);
         stage.setWidth(nextWidth);
         stage.setHeight(nextHeight);
-        //HomePanelController.zoom();
+
     }
 
 
@@ -189,6 +195,7 @@ public class ApplicationControl implements Initializable {
             stage = (Stage) root.getScene().getWindow();
         return stage;
     }
+
 
     private void setIndicator(){
         i_build.setVisible(false);
@@ -203,14 +210,14 @@ public class ApplicationControl implements Initializable {
         BuildPanel.setVisible(false);
         SettingPanel.setVisible(false);
         AboutPanel.setVisible(false);
-        SyncPanelController.stopManualSync();//终止返听任务
+        SyncPanelController.stopManualSync();
     }
 
     /**
      * 窗口关闭
      */
     private void onClose() {
-        stage.close();//关闭窗口
+        stage.close();
         System.exit(0);
     }
 
@@ -220,7 +227,7 @@ public class ApplicationControl implements Initializable {
     private void maxWindow() {
         FullScreenChange();
         stage.setFullScreen(FullScreen);
-        //HomePanelController.zoom();
+
     }
 
     /**
@@ -239,6 +246,7 @@ public class ApplicationControl implements Initializable {
         BuildPanelController.modeChange(ModeState);
         AboutPanelController.modeChange(ModeState);
         SettingPanelController.modeChange(ModeState);
+        /*移除所有样式表*/
         shadow.getStylesheets().remove(LightTheme);
         shadow.getStylesheets().remove(DarkTheme);
         if(ModeState)
@@ -253,21 +261,27 @@ public class ApplicationControl implements Initializable {
      * 窗口最大化标准化切换
      */
     private void FullScreenChange(){
+        /*清除已有样式*/
         winMax.getStyleClass().removeAll("winMax","winMax_Full");
         shadow.getStyleClass().removeAll("shadow","shadow_full");
+        /*根据情况重设样式*/
         if(FullScreen) {
             winMax.getStyleClass().add("winMax");
             shadow.getStyleClass().add("shadow");
             root.setPadding(new javafx.geometry.Insets(30,30,30,30));
+
         }else{
             winMax.getStyleClass().add("winMax_Full");
             shadow.getStyleClass().add("shadow_full");
             root.setPadding(new Insets(0,0,0,0));
+
+
         }
 
         FullScreen = !FullScreen;
     }
 
+    /*主页选项*/
     public void loadHome(ActionEvent actionEvent) {
         home.setSelected(true);
         function.selectToggle(home);
@@ -280,6 +294,7 @@ public class ApplicationControl implements Initializable {
 
     }
 
+    /*同步返听选项*/
     public void loadSync(ActionEvent actionEvent) {
         sync.setSelected(true);
         function.selectToggle(sync);
@@ -291,6 +306,7 @@ public class ApplicationControl implements Initializable {
         SyncPanelController.onManualSync(null);
     }
 
+    /*在线翻译选项*/
     public void loadTranslation(ActionEvent actionEvent) {
         translation.setSelected(true);
         function.selectToggle(translation);
@@ -302,6 +318,7 @@ public class ApplicationControl implements Initializable {
         TranPanelController.onTran_Online(null);
     }
 
+    /*构建导出选项*/
     public void loadBuild(ActionEvent actionEvent) {
         build.setSelected(true);
         function.selectToggle(build);
@@ -313,6 +330,7 @@ public class ApplicationControl implements Initializable {
         BuildPanelController.onBuild_Manual(null);
     }
 
+    /*关于程序选项*/
     public void loadAbout(ActionEvent actionEvent) {
         about.setSelected(true);
         function.selectToggle(about);
@@ -324,6 +342,7 @@ public class ApplicationControl implements Initializable {
         AboutPanelController.onInfo(null);
     }
 
+    /*偏好设置选项*/
     public void loadSetting(ActionEvent actionEvent) {
         setting.setSelected(true);
         function.selectToggle(setting);
@@ -334,6 +353,7 @@ public class ApplicationControl implements Initializable {
         SettingPanel.setVisible(true);
     }
 
+    /*Logo点击事件*/
     public void onLogo(MouseEvent mouseEvent) throws URISyntaxException, IOException {
         Desktop.getDesktop().browse(new URI("https://fordes.top"));
     }

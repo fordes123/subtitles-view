@@ -10,13 +10,13 @@ import java.util.ResourceBundle;
 public class SettingPanelControl implements Initializable {
     @FXML
     private GridPane Setting;
-    //全局主题
+    
     private Object LightTheme=getClass().getClassLoader().getResource("css/mainStyle_Light.css").toString();
     private Object DarkTheme=getClass().getClassLoader().getResource("css/mainStyle_Dark.css").toString();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        
         Setting.getStylesheets().add(LightTheme.toString());
     }
 
@@ -32,6 +32,6 @@ public class SettingPanelControl implements Initializable {
             Setting.getStylesheets().add(LightTheme.toString());
         else
             Setting.getStylesheets().add(DarkTheme.toString());
-
+        
     }
 }

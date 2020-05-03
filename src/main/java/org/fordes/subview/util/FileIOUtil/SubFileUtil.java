@@ -20,7 +20,7 @@ public class SubFileUtil {
         return Read(file);
     }
 
-    //按编码读取文件内容并返回
+    
     public String Read(File file){
         String srt = "";
         try {
@@ -33,10 +33,10 @@ public class SubFileUtil {
 
             re.close();
         } catch (IOException e) {
-            // TODO
+            
             e.printStackTrace();
         }
-        //Java在读取Unicode文件的时候，会统一把BOM变成“\uFEFF”，此处尝试去除
+        
         return srt.replace("\uFEFF", "");
     }
 
@@ -52,14 +52,14 @@ public class SubFileUtil {
         try {
             System.out.println("开始写入文件，编码为："+code);
             OutputStreamWriter outStream = new OutputStreamWriter(new FileOutputStream(file), code);
-
+            
             BufferedWriter wr = new BufferedWriter(outStream);
             wr.write(temp);
             wr.flush();
             wr.close();
-
+            
         } catch (IOException e1) {
-
+            
             e1.printStackTrace();
         }
     }
@@ -82,7 +82,7 @@ public class SubFileUtil {
                     str+=num+++""+"\n";
                 str += temp + "\n";
             }
-
+            
             WriteFile(file,str,coding);
         }else
             WriteFile(file,SubText,coding);

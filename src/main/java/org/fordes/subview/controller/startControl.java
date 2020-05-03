@@ -71,19 +71,19 @@ public class startControl implements Initializable {
     private static final double MIN_WIDTH = 1060.00;
     private static final double MIN_HEIGHT = 740.00;
 
-    private boolean FullScreen = false;//全屏状态
-    private boolean ModeState = false;//模式状态
+    private boolean FullScreen = false;
+    private boolean ModeState = false;
     private int fileType;
-    public inputSet inputset=new inputSet();//输入参数集
-    public String focus_indicator=new String("");//操作焦点指示器
-    //全局主题
+    public inputSet inputset=new inputSet();
+    public String focus_indicator=new String("");
+    
     private Object LightTheme=getClass().getClassLoader().getResource("css/startStyle_Light.css").toString();
     private Object DarkTheme=getClass().getClassLoader().getResource("css/startStyle_Dark.css").toString();
     private static String tempPath=new ConfigPathUtil().getTempPath();
     @FXML
     private VBox top;
     private Button winClose,winMin,mode,winMax;
-    public TimelineUtil timelineUtil;//全局字幕工具类
+    public TimelineUtil timelineUtil;
     private File file;
     /**
      * 获取窗口
@@ -101,20 +101,20 @@ public class startControl implements Initializable {
      * @param resources
      */
     public void initialize(URL location, ResourceBundle resources) {
-        //加载组件
+        
         top=topController.getTop();
         mode = topController.getMode();
         winClose = topController.getWinClose();
         winMin = topController.getWinMin();
         winMax = topController.getWinMax();
 
-        //获取鼠标按下时的位置
+        
         root.setOnMousePressed(event -> {
             event.consume();
             xOffset = event.getSceneX();
             yOffset = event.getSceneY();
         });
-        //计算拖动并重设位置
+        
         top.setOnMouseDragged(event -> {
             event.consume();
             stage = getStage();
@@ -124,18 +124,18 @@ public class startControl implements Initializable {
         root.setOnMouseMoved(this::mouseMoveHandle);
         root.setOnMouseDragged(this::mouseDraggedHandle);
         pos_home.setSelected(true);
-        //将此Controller添加到容器中
+        
         Launcher.controllers.put(this.getClass().getSimpleName(), this);
-        //清理缓存
+        
         if(!new FileUtil().delAllFile(tempPath)){
             System.out.println("缓存清理失败");
         }
-        //设置事件
+        
         winClose.setOnAction(event -> { onClose(); });
         winMax.setOnAction(event -> { maxWindow(); });
         winMin.setOnAction(event -> { minWindow(); });
         mode.setOnAction(event -> { modeChange(); });
-        //主题初始化
+        
         topController.initialization(1);
     }
 
@@ -211,9 +211,9 @@ public class startControl implements Initializable {
         /*移除所有样式表*/
         getStage().getScene().getStylesheets().remove(LightTheme);
         getStage().getScene().getStylesheets().remove(DarkTheme);
-        if(ModeState)//深色->浅色模式
+        if(ModeState)
             getStage().getScene().getStylesheets().add(LightTheme.toString());
-        else//浅色->深色模式
+        else
             getStage().getScene().getStylesheets().add(DarkTheme.toString());
         ModeState=!ModeState;
     }
@@ -227,11 +227,11 @@ public class startControl implements Initializable {
         winMax.getStyleClass().removeAll("winMax","winMax_Full");
         shadow.getStyleClass().removeAll("shadow","shadow_full");
         /*根据情况重设样式*/
-        if(FullScreen) {//窗口最大化->标准化
+        if(FullScreen) {
             winMax.getStyleClass().add("winMax");
             shadow.getStyleClass().add("shadow");
             root.setPadding(new Insets(30,30,30,30));
-        }else{//窗口标准化->最大化
+        }else{
             winMax.getStyleClass().add("winMax_Full");
             shadow.getStyleClass().add("shadow_full");
             root.setPadding(new Insets(0,0,0,0));
@@ -250,7 +250,7 @@ public class startControl implements Initializable {
      * 窗口关闭
      */
     private void onClose() {
-        stage.close();//关闭窗口
+        stage.close();
         System.exit(0);
     }
 
@@ -318,13 +318,13 @@ public class startControl implements Initializable {
      */
     public void news(ActionEvent actionEvent) throws InterruptedException, IOException {
 
-        //new ToastUtil().toast(getStage(),"此功能尚在调试中，请悉知",ModeState,1000);
+        
         file=new File(tempPath+"\\newSubtitles_"+new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date())+".srt");
         if(file.exists()){
             file.delete();
         }
         LoadInterface(true);
-        //任务
+        
         /*Task work= new Task() {
             @Override
             protected Object call() throws Exception {
@@ -381,13 +381,13 @@ public class startControl implements Initializable {
      */
     private void LoadInterface(boolean newSubtitle) throws IOException {
         int Type=new FileUtil().getFileType(file);
-
-
+        
+        
         inputset.setCode("UTF-8");
         inputset.setTheme(ModeState);
         inputset.setStage(new Stage());
-
-
+        
+        
         switch (Type<10?1:2){
             case 1:
                 inputset.setText(newSubtitle?" ":new SubFileUtil().Read(file,inputset.getCode()));
@@ -398,7 +398,7 @@ public class startControl implements Initializable {
                 try {
                     new mainApplication().start(inputset.getStage());
                 } catch (Exception e) {
-
+                    
                     System.out.println(e);
                 }
                 return;
@@ -416,7 +416,7 @@ public class startControl implements Initializable {
                 inputset.setSubtitles(null,1);
                 inputset.setVideo(file,Type);
                 timelineUtil=new TimelineUtil(inputset.getSubType());
-
+                
                 new LoadUtil().load(getStage(),ModeState,audio);
                 return;
         }

@@ -45,7 +45,7 @@ public class BuildPanelControl implements Initializable {
     @FXML
     private Label Build_SubtitlesGraphics_Label,Build_SubtitlesSynthetic_Label,Build_SubEncoding_Label;
 
-    //全局主题
+
     private Object LightTheme=getClass().getClassLoader().getResource("css/mainStyle_Light.css").toString();
     private Object DarkTheme=getClass().getClassLoader().getResource("css/mainStyle_Dark.css").toString();
     private startControl controller= (startControl) Launcher.controllers.get(startControl.class.getSimpleName());
@@ -54,7 +54,7 @@ public class BuildPanelControl implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //默认主题
+
         Build.getStylesheets().add(LightTheme.toString());
     }
 
@@ -66,14 +66,14 @@ public class BuildPanelControl implements Initializable {
         /*移除所有样式表*/
         Build.getStylesheets().remove(LightTheme);
         Build.getStylesheets().remove(DarkTheme);
-        if(ModeState)//深色->浅色模式
+        if(ModeState)
             Build.getStylesheets().add(LightTheme.toString());
-        else//浅色->深色模式
+        else
             Build.getStylesheets().add(DarkTheme.toString());
-        //ModeState=!ModeState;
+
     }
 
-    //隐藏所有组件
+
     private void hide(){
         BuildPanel.setVisible(false);
         PreviewPanel.setVisible(false);
@@ -82,20 +82,20 @@ public class BuildPanelControl implements Initializable {
     public void onBuild_Manual(ActionEvent actionEvent) {
         ListGroup.selectToggle(Build_Manual);
         Build_Manual.setSelected(true);
-        //询问焦点，如已在此选项上，则操作无效化，避免重复加载
+
         if(controller.focus_indicator.equals(Build_Manual.getId()))
             return;
-        controller.focus_indicator=Build_Manual.getId();//设置焦点
+        controller.focus_indicator=Build_Manual.getId();
         hide();
-        //初始化
+
         if(!BuildManual_initialization_state)
             BuildManual_initialization();
-        //导出模式选项更改设置
+
         Build_Mode.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
             @Override
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
                 if(((String)Build_Mode.getValue()).equals("合成视频")){
-                    if(controller.inputset.getVideoFile()==null) {//打开的文件为字幕，且并未选择视频
+                    if(controller.inputset.getVideoFile()==null) {
                         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                         alert.setTitle("提示");
                         alert.setHeaderText("需选择视频才可使用此项");
@@ -121,23 +121,23 @@ public class BuildPanelControl implements Initializable {
                     /*if (controller.inputset.getType() == 2)
                         Build_Replace.setSelected(false);*/
                 }
-                Build_VideoOutputFormat.getSelectionModel().selectFirst();//默认输出格式
+                Build_VideoOutputFormat.getSelectionModel().selectFirst();
             }
 
         });
-        //默认项
-        if(controller.inputset.getVideoFile()==null)//打开的文件为字幕，且并未选择视频
+
+        if(controller.inputset.getVideoFile()==null)
             Build_Mode.getSelectionModel().selectLast();
         else
             Build_Mode.getSelectionModel().selectFirst();
-        Build_SubEncoding.getSelectionModel().selectFirst();//字幕编码
-        Build_SubtitlesGraphics.getSelectionModel().selectFirst();//图形质量
-        Build_SubtitlesSynthetic.getSelectionModel().selectFirst();//处理方式
+        Build_SubEncoding.getSelectionModel().selectFirst();
+        Build_SubtitlesGraphics.getSelectionModel().selectFirst();
+        Build_SubtitlesSynthetic.getSelectionModel().selectFirst();
         Build_OutPath.setText(((String)Build_Mode.getValue()).equals("合成视频")?controller.inputset.getVideoFile().getParent():controller.inputset.getSubFile().getParent());
 
         String temp = Build_Mode.getValue().toString().equals("合成视频")?controller.inputset.getVideoFile().getName().substring(0, controller.inputset.getVideoFile().getName().lastIndexOf(".")):controller.inputset.getSubFile().getName().substring(0, controller.inputset.getSubFile().getName().lastIndexOf("."));
-        //((String)Build_Mode.getValue()).equals("合成视频")?controller.inputset.getVideoFile().getName().substring(0, controller.inputset.getSubFile().getName().lastIndexOf(".")):controller.inputset.getSubFile().getName().substring(0, controller.inputset.getSubFile().getName().lastIndexOf("."));
-                //controller.inputset.getFile().getName().substring(0, controller.inputset.getFile().getName().lastIndexOf("."));
+
+
         if (temp.length() > 20)
             temp = temp.substring(0, 10) + "..." + temp.substring(temp.length() - 10, temp.length());
         Build_FileName.setText(temp + "_SubViewExport");
@@ -147,15 +147,15 @@ public class BuildPanelControl implements Initializable {
     public void onBuild_Preview(ActionEvent actionEvent) {
         ListGroup.selectToggle(Build_Preview);
         Build_Preview.setSelected(true);
-        //询问焦点，如已在此选项上，则操作无效化，避免重复加载
+
         if(controller.focus_indicator.equals(Build_Preview.getId()))
             return;
-        controller.focus_indicator=Build_Preview.getId();//设置焦点
+        controller.focus_indicator=Build_Preview.getId();
         hide();
         PreviewPanel.setVisible(true);
     }
 
-    //初始化
+
     private void BuildManual_initialization(){
         outType1 = new ArrayList<String>(Arrays.asList("SRT", "ASS", "LRC"));
         outType2 = new ArrayList<String>(Arrays.asList("MP4", "MKV", "MOV"));
@@ -166,9 +166,9 @@ public class BuildPanelControl implements Initializable {
         BuildManual_initialization_state=!BuildManual_initialization_state;
     }
 
-    //构建导出——>保存选项,更改导出模式
+
     private void ChangeOutputType(int type){
-        if(type==2){ //导出视频
+        if(type==2){
             Build_Mode.getSelectionModel().selectFirst();
             Build_VideoOutputFormat.setItems(FXCollections.observableList(outType2));
             Build_SubtitlesGraphics_Label.setVisible(true);
@@ -177,7 +177,7 @@ public class BuildPanelControl implements Initializable {
             Build_SubtitlesSynthetic.setVisible(true);
             Build_SubEncoding.setVisible(false);
             Build_SubEncoding_Label.setVisible(false);
-        }else{//导出字幕
+        }else{
             Build_Mode.getSelectionModel().selectLast();
             Build_VideoOutputFormat.setItems(FXCollections.observableList(outType1));
             Build_SubtitlesGraphics_Label.setVisible(false);
@@ -196,29 +196,31 @@ public class BuildPanelControl implements Initializable {
     }
 
 
-    //开始导出
+
     public void onStartBuild(ActionEvent actionEvent) throws IOException {
         int mode;
         String input = "",output,filePath;
-        String oldFilePath = "";//原文件路径
+        String oldFilePath = "";
         Task task;
-        //获取输出路径
-        if(Build_Replace.isSelected())//替换原文件
+
+        if(Build_Replace.isSelected())
             output=System.getProperty("user.dir") + "\\date\\"+Build_FileName.getText()+"."+Build_VideoOutputFormat.getValue().toString().toLowerCase();
         else
             output=Build_OutPath.getText()+"\\"+Build_FileName.getText()+"."+Build_VideoOutputFormat.getValue().toString().toLowerCase();
         if(((String)Build_Mode.getValue()).equals("合成视频")){
-            if(controller.inputset.getSubFile()==null) {//以视频开始进入程序，先生成字幕文件
+            if(controller.inputset.getSubFile()==null) {
                 File tempSubtitle=new File(new ConfigPathUtil().getTempPath() + "\\tempSubtitle.srt");
-                if(tempSubtitle.exists())//检测文件是否存在，若已经存在，删除之
+                if(tempSubtitle.exists())
                     tempSubtitle.delete();
-                new SubFileUtil().GenerateSubtitles(controller.inputset.getText(),tempSubtitle,1,null,true);//生成文件
+                new SubFileUtil().GenerateSubtitles(controller.inputset.getText(),tempSubtitle,1,null,true);
                 controller.inputset.setSubtitles(tempSubtitle,1);
             }
             input=controller.inputset.getVideoFile().getPath();
             filePath=controller.inputset.getSubFile().getPath();
             oldFilePath=controller.inputset.getVideoFile().getPath();
+
             mode=Build_SubtitlesSynthetic.getValue().toString().equals("流式（合成速度更快）")?1:2;
+
             String finalInput = input;
             System.out.println("原文件路径"+input);
             task= new Task() {
@@ -229,6 +231,7 @@ public class BuildPanelControl implements Initializable {
                     else
                         updateMessage("处理中，可能需要一些时间，请保持耐心...");
                     updateProgress(0.5, 1);
+
                     new FFMpegUtil().CompositeSubtitles(finalInput,output,filePath,mode);
                     updateMessage("done");
                     return true;
@@ -236,6 +239,8 @@ public class BuildPanelControl implements Initializable {
             };
         }else{
             oldFilePath=controller.inputset.getVideoFile()==null?controller.inputset.getSubFile().getPath():controller.inputset.getVideoFile().getPath();
+
+
 
 
             task= new Task() {

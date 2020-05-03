@@ -45,14 +45,14 @@ public class homePanelControl implements Initializable {
     @FXML
     private ComboBox TimeAdj_hour,TimeAdj_min,TimeAdj_sec,TimeAdj_ms;
     @FXML
-    private EditToolBarControl ToolbarController;//工具栏控制器
+    private EditToolBarControl ToolbarController;
     @FXML
-    private ToolPanelControl ToolPanelController;//工具面板控制器
+    private ToolPanelControl ToolPanelController;
     @FXML
     private RowConstraints ToolBarSpace;
     @FXML
     private TextField TimeAdj_input;
-    //全局主题
+
     private Object LightTheme=getClass().getClassLoader().getResource("css/mainStyle_Light.css").toString();
     private Object DarkTheme=getClass().getClassLoader().getResource("css/mainStyle_Dark.css").toString();
     private startControl controller= (startControl) Launcher.controllers.get(startControl.class.getSimpleName());
@@ -148,7 +148,7 @@ public class homePanelControl implements Initializable {
      * 当窗体缩放时不改变时间对齐面板左侧宽度
      */
 //    public void zoom(){
-//        double d=350/(TimeAdjPanel.getWidth());
+
 //        TimeAdjPanel.setDividerPositions(d);
 //    }
 
@@ -353,12 +353,12 @@ public class homePanelControl implements Initializable {
     private void ParsingSelection(){
         if(TimeAdj_hour.getSelectionModel().getSelectedItem()!=null&&TimeAdj_min.getSelectionModel().getSelectedItem()!=null&&TimeAdj_sec.getSelectionModel().getSelectedItem()!=null&&TimeAdj_ms.getSelectionModel().getSelectedItem()!=null){
             switch (controller.inputset.getSubType()){
-                case 1://srt
+                case 1:
                     TimeAdj_input.setText(TimeAdj_hour.getSelectionModel().getSelectedItem().toString()+":"+TimeAdj_min.getSelectionModel().getSelectedItem().toString()+":"+TimeAdj_sec.getSelectionModel().getSelectedItem().toString()+","+TimeAdj_ms.getSelectionModel().getSelectedItem().toString());
                     break;
-                case 2://ass
+                case 2:
                     break;
-                case 3://lrc
+                case 3:
                     break;
             }
         }

@@ -22,17 +22,17 @@ public class ToastUtil{
     private startControl controller= (startControl) Launcher.controllers.get(startControl.class.getSimpleName());
 
     public void toast(Stage top,String msg,Boolean theme){
-
+        
         toast(top,msg,theme,3000,0,0);
     }
 
     public void toast(Stage top,String msg,Boolean theme,int time){
-
+        
         toast(top,msg,theme,time,0,0);
     }
 
     public void toast(String msg,int time){
-
+        
         toast(controller.inputset.getStage(),msg,controller.inputset.getTheme(),time,0,0);
     }
 
@@ -47,10 +47,10 @@ public class ToastUtil{
         init(msg,theme);
         stage.setAlwaysOnTop(true);
         stage.initOwner(top);
-
+        
         stage.setX(top.getX()+(top.getWidth()-label.getWidth())/2+x);
         stage.setY(top.getY()+(top.getHeight()-label.getHeight())/2+y);
-
+        
         TimerTask task= new TimerTask() {
             @Override
             public void run() {
@@ -65,7 +65,7 @@ public class ToastUtil{
     private void init(String msg,Boolean theme){
         stage.initStyle(StageStyle.TRANSPARENT);
         Label label=new Label(msg);
-        if(!theme)
+        if(!theme) 
             label.setStyle("-fx-background: #dff9dd;-fx-border-radius: 10;-fx-background-radius: 10;-fx-text-fill:#71C647;");
         else
             label.setStyle("-fx-background: #2D2D2D;-fx-border-radius: 10;-fx-background-radius: 10;-fx-text-fill:#71C647;");

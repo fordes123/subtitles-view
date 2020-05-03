@@ -14,19 +14,19 @@ import java.util.List;
  */
 public class FFMpegUtil {
 
-	
+	// Windows下 ffmpeg.exe的路径
 	private static String ffmpeg = System.getProperty("user.dir") + "\\ffmpeg\\windows\\ffmpeg.exe";
-	private ArrayList<String> command;
+	private ArrayList<String> command;//命令集
 
-	
-	
+/*	 Linux与mac下 ffmpeg的路径
+	 private static String ffmpeg = "/developer/ffmpeg-4.0/bin/ffmpeg";*/
 
 	/**
 	 * 执行ffmpeg命令
 	 * @param com
 	 */
 	private static void Perform(String com){
-		
+
 		try {
 			Runtime rt = Runtime.getRuntime();
 			Process proc = rt.exec(com);
@@ -36,10 +36,10 @@ public class FFMpegUtil {
 			String line = null;
 
 			while ( (line = br.readLine()) != null) {
-				
+
 			}
 			int exitVal = proc.waitFor();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 
@@ -52,7 +52,7 @@ public class FFMpegUtil {
 	 * @throws IOException
 	 */
 	private static void Carried(ArrayList command) throws IOException {
-		
+
 		ProcessBuilder builder = new ProcessBuilder(command);
 		Process process = builder.start();
 		InputStream errorStream = process.getErrorStream();
@@ -78,10 +78,10 @@ public class FFMpegUtil {
 	 * @throws Exception
 	 */
 
-	
-	
+
+
 	public void SegmentedAudio (String videoInputPath, String audioOutPath) {
-		
+
 		command = new ArrayList<String>();
 		command.add(ffmpeg);
 		command.add(" -i ");
@@ -92,7 +92,7 @@ public class FFMpegUtil {
 		for (String c : command) {
 			ssp+=c;
 		}
-		
+
 		Perform(ssp);
 	}
 
@@ -106,7 +106,7 @@ public class FFMpegUtil {
 	 * @param type ,合成模式 1、流式，2、嵌入式
 	 */
 	public static void CompositeSubtitles(String input,String output,String subtitles,int type){
-		
+
 		List<String> command = new ArrayList<String>();
 		command.add(ffmpeg);
 		command.add(" -i ");
@@ -121,7 +121,7 @@ public class FFMpegUtil {
 			command.add("\""+output+"\"");
 		}else{
 			command.add("-vf subtitles=");
-			
+
 			command.add("\\'\""+subtitles.replace("\\", "/")+"\"\\' ");
 			command.add("-y ");
 			command.add("\""+output+"\"");
@@ -130,12 +130,9 @@ public class FFMpegUtil {
 		for (String c : command) {
 			ssp+=c;
 		}
-		
-		
+
+
 		Perform(ssp);
 	}
 
-	public static void main(String[] args) {
-		CompositeSubtitles("F:\\HOME\\1.mp4","F:\\HOME\\out.mp4","F:\\HOME\\1.srt",2);
-	}
 }

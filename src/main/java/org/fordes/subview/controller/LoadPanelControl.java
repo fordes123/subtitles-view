@@ -17,7 +17,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.fordes.subview.main.Launcher;
 import org.fordes.subview.main.mainApplication;
-import org.fordes.subview.test.TestSubtitles;
 import org.fordes.subview.util.AudioUtil.VoiceTranslationUtil;
 import org.fordes.subview.util.SubtitlesUtil.TimelineUtil;
 import org.fordes.subview.util.ToastUtil;
@@ -49,7 +48,7 @@ public class LoadPanelControl implements Initializable {
 
     private Stage top;
     private Boolean mode;
-    private Task work=null,last=null;//加载任务
+    private Task work=null,last=null;
     private File audio;
     private startControl controller= (startControl) Launcher.controllers.get(startControl.class.getSimpleName());
     @Override
@@ -63,13 +62,13 @@ public class LoadPanelControl implements Initializable {
         titles.setText("准备视频转换");
         Message.setText("等待开始，请手动确认");
 
-        //获取鼠标按下时的位置
+        
         LoadRoot.setOnMousePressed(event -> {
             event.consume();
             xOffset = event.getSceneX();
             yOffset = event.getSceneY();
         });
-        //计算拖动并重设位置
+        
         LoadTop.setOnMouseDragged(event -> {
             event.consume();
             stage = getStage();
@@ -84,7 +83,7 @@ public class LoadPanelControl implements Initializable {
         return stage;
     }
 
-    //初始化加载任务
+    
     public void initialization(Stage top, Boolean mode, File audio){
         this.top=top;
         this.mode=mode;
@@ -93,7 +92,7 @@ public class LoadPanelControl implements Initializable {
         createWork();
     }
 
-    //初始化加载任务
+    
     public void initialization(Stage top, Boolean mode,Task work,Task last,String titles){
         this.top=top;
         this.mode=mode;
@@ -110,7 +109,7 @@ public class LoadPanelControl implements Initializable {
     }
 
 
-    //取消任务
+    
     public void onCancel(ActionEvent actionEvent) {
         if(work==null){
             getStage().close();
@@ -123,7 +122,7 @@ public class LoadPanelControl implements Initializable {
         new ToastUtil().toast(top,"任务已被取消~",mode);
     }
 
-    //开始任务
+    
     public void onStart(ActionEvent actionEvent) {
         pb.progressProperty().unbind();
         pb.progressProperty().bind(work.progressProperty());
@@ -131,7 +130,7 @@ public class LoadPanelControl implements Initializable {
             public void changed(ObservableValue<? extends String> observable, String oldValue,
                                 String newValue) {
                 Message.setText(newValue);
-                //加载结束
+                
                 if(newValue.equals("done")){
                     new Thread(last).start();
                     getStage().close();
@@ -179,7 +178,7 @@ public class LoadPanelControl implements Initializable {
         return "2";
     }
 
-    //创建任务
+    
     private void createWork(){
 
         work= new Task() {
@@ -188,11 +187,13 @@ public class LoadPanelControl implements Initializable {
 
                 updateMessage("正在提取音轨...");
                 updateProgress(0.3, 1);
-                new FFMpegUtil().SegmentedAudio(controller.inputset.getVideoFile().getPath(), audio.getPath());//提取音轨
+                new FFMpegUtil().SegmentedAudio(controller.inputset.getVideoFile().getPath(), audio.getPath());
 
                 updateMessage("开始语音转换，请保持联机...");
                 updateProgress(0.6, 1);
+                
                 String res=new VoiceTranslationUtil(audio.getPath()).start(getLanguage(),getSpeakersNumber());
+                
 
                 updateMessage("转换完成，正在解析结果...");
                 updateProgress(0.9, 1);
@@ -203,7 +204,7 @@ public class LoadPanelControl implements Initializable {
             }
         };
 
-
+        
         last= new Task(){
 
             @Override
