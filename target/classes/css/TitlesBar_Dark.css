@@ -1,0 +1,94 @@
+/*#top{
+    -fx-background-color: #262626;
+}
+
+#titles {
+    -fx-font-size: 16;
+    -fx-font-weight: 400;
+    -fx-text-fill: #FFF;
+}*/
+
+#winClose {
+    -fx-cursor:hand;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 40px;
+    -fx-padding: 0;
+    -fx-background-insets: 0;//去除边框样式
+-fx-background-image:url("/images/public/close_dark.png");
+    -fx-background-poisitn: center;
+    -fx-background-repeat:no-repeat;
+    -fx-background-radius: 0;
+    -fx-background-color: rgba(38, 38, 38, 0);
+}
+
+#winMin{
+    -fx-cursor:hand;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 40px;
+    -fx-padding: 0;
+    -fx-background-insets: 0;//去除边框样式
+-fx-background-image:url("/images/public/min_dark.png");
+    -fx-background-poisitn: center;
+    -fx-background-repeat:no-repeat;
+    -fx-background-radius: 0;
+    -fx-background-color: rgba(38, 38, 38, 0);
+}
+
+.winMax {
+    -fx-cursor:hand;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 40px;
+    -fx-padding: 0;
+    -fx-background-insets: 0;//去除边框样式
+-fx-background-image:url("/images/public/max_dark.png");
+    -fx-background-poisitn: center;
+    -fx-background-repeat:no-repeat;
+    -fx-background-radius: 0;
+    -fx-background-color: rgba(38, 38, 38, 0);
+}
+
+.winMax_Full {
+    -fx-cursor:hand;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 40px;
+    -fx-padding: 0;
+    -fx-background-insets: 0;//去除边框样式
+    -fx-background-image:url("/images/public/standard_dark.png");
+    -fx-background-poisitn: center;
+    -fx-background-repeat:no-repeat;
+    -fx-background-radius: 0;
+    -fx-background-color: rgba(38, 38, 38, 0);
+}
+
+#winClose:hover {
+    -fx-background-color: red;
+    -fx-background-repeat:no-repeat;
+}
+
+.winMax:hover{
+    -fx-background-color: rgba(94, 96, 99, 0.84);
+    -fx-background-repeat:no-repeat;
+}
+
+.winMax_Full:hover{
+    -fx-background-color: rgba(94, 96, 99, 0.84);
+    -fx-background-repeat:no-repeat;
+}
+
+#winMin:hover{
+    -fx-background-color: rgba(94, 96, 99, 0.84);
+    -fx-background-repeat:no-repeat;
+}
+
+#mode {
+    -fx-cursor:hand;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 40px;
+    -fx-padding: 0;
+    -fx-background-insets: 0;//去除边框样式
+-fx-background-image:url("/images/public/dark.png");
+    -fx-background-poisitn: center;
+    -fx-background-repeat:no-repeat;
+    -fx-background-radius: 0;
+    -fx-background-color: rgba(38, 38, 38, 0);
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="LoadRoot" prefHeight="180.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="org.fordes.subview.controller.LoadPanelControl">
+   <children>
+      <VBox fx:id="LoadTop" prefHeight="30.0" prefWidth="599.0" AnchorPane.leftAnchor="0.5" AnchorPane.rightAnchor="0.2999999999999545" AnchorPane.topAnchor="0.5">
+         <children>
+            <Label fx:id="titles" alignment="CENTER" prefWidth="200.0" styleClass="GlobalLabel" text="titles" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="200.0" top="4.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox fx:id="TaskPanel" prefHeight="80.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="60.0" prefWidth="600.0">
+               <children>
+                  <ProgressBar fx:id="pb" prefHeight="10.0" prefWidth="440.0" progress="0.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+                  <Button fx:id="cancel" mnemonicParsing="false" onAction="#onCancel" prefHeight="20.0" prefWidth="80.0" text="取消" AnchorPane.bottomAnchor="20.5" AnchorPane.rightAnchor="30.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+                  <Label styleClass="GlobalLabel" text="任务进度：" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Message" styleClass="GlobalLabel" text="等待中..." AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox fx:id="OptionsPanel" prefHeight="70.0" prefWidth="600.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <AnchorPane prefHeight="70.0" prefWidth="600.0">
+               <children>
+                  <ChoiceBox fx:id="Language" prefHeight="30.0" prefWidth="120.0" styleClass="Load_ChoiceBox" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="20.0">
+                     <tooltip>
+                        <Tooltip text="请务必准确选择" />
+                     </tooltip>
+                  </ChoiceBox>
+                  <Label styleClass="GlobalLabel" text="发音人数" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="25.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="Number" prefHeight="30.0" prefWidth="120.0" styleClass="Load_ChoiceBox" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="20.0">
+                     <tooltip>
+                        <Tooltip text="如非必要，自动识别即可" />
+                     </tooltip>
+                  </ChoiceBox>
+                  <Button fx:id="start" mnemonicParsing="false" onAction="#onStart" prefHeight="40.0" prefWidth="80.0" styleClass="execute_Button" text="开始转换" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label prefHeight="70.0" styleClass="GlobalLabel" text="视频语言" AnchorPane.leftAnchor="20.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

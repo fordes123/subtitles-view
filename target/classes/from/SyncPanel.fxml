@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="Sync" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="org.fordes.subview.controller.SyncPanelControl">
+    <rowConstraints>
+        <RowConstraints minHeight="40.0" prefHeight="40.0" vgrow="NEVER" />
+        <RowConstraints minHeight="760.0" prefHeight="760.0" vgrow="ALWAYS" />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" minWidth="250.0" prefWidth="250.0" />
+        <ColumnConstraints hgrow="ALWAYS" minWidth="950.0" prefWidth="950.0" />
+    </columnConstraints>
+    <children>
+        <GridPane fx:id="ListPanel" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="250.0" styleClass="ListPanel" GridPane.hgrow="NEVER" GridPane.rowSpan="2" GridPane.vgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints hgrow="NEVER" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="118.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="22.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <!--顶部标题-->
+                <Label fx:id="Titles" minHeight="-Infinity" minWidth="-Infinity" styleClass="List_titles" text="同步返听" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets right="120.0" top="20.0" />
+                    </GridPane.margin>
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Label>
+                <!--手动返听-->
+                <ToggleButton fx:id="ManualSync" mnemonicParsing="false" onAction="#onManualSync" prefHeight="50.0" prefWidth="200.0" text="手动返听" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="ListGroup" />
+                    </toggleGroup>
+                    <styleClass>
+                        <String fx:value="ListButton" />
+                        <String fx:value="ManualSync" />
+                    </styleClass>
+                    <tooltip>
+                        <Tooltip text="点击播放，双击修改" />
+                    </tooltip>
+                </ToggleButton>
+                <!--自动返听-->
+                <ToggleButton fx:id="AutomaticSync" mnemonicParsing="false" onAction="#onAutomaticSync" prefHeight="50.0" prefWidth="200.0" text="自动返听" toggleGroup="$ListGroup" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+
+                    <styleClass>
+                        <String fx:value="ListButton" />
+                        <String fx:value="AutomaticSync" />
+                    </styleClass>
+                    <tooltip>
+                        <Tooltip text="自动播放，点击暂停并修改" />
+                    </tooltip>
+                </ToggleButton>
+
+            </children>
+        </GridPane>
+        <GridPane fx:id="bottomLayer" GridPane.columnIndex="1" GridPane.rowSpan="2">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="950.0" prefWidth="950.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="760.0" prefHeight="760.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <!--手动返听窗格-->
+                <GridPane fx:id="ManualSyncPanel" visible="false" GridPane.rowIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <SplitPane fx:id="MSP_Split" dividerPositions="0.6540229885" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                            <items>
+                                <AnchorPane fx:id="MSP_Split_Left" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <GridPane fx:id="MSP_Split_Left_Content" prefHeight="720.0" prefWidth="560.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints fx:id="mediaRowConstraints" vgrow="ALWAYS" />
+                                                <RowConstraints vgrow="ALWAYS" />
+                                            </rowConstraints>
+                                            <children>
+                                                <GridPane fx:id="mediaContent" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="ModelPart" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <MediaView fx:id="MSP_Split_Left_MediaView" fitHeight="200.0" fitWidth="200.0" onScroll="#mediaScroll" styleClass="mediaView" visible="true" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                                            <GridPane.margin>
+                                                                <Insets />
+                                                            </GridPane.margin>
+                                                        </MediaView>
+                                                        <GridPane fx:id="test" visible="false" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                        </GridPane>
+                                          <Label fx:id="video_vol" styleClass="GlobalLabel" text="" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                                             <GridPane.margin>
+                                                <Insets right="10.0" top="10.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                                    </children>
+                                                    <GridPane.margin>
+                                                        <Insets bottom="10.0" left="20.0" right="20.0" top="5.0" />
+                                                    </GridPane.margin>
+                                                </GridPane>
+                                                <GridPane fx:id="mediaContent_under" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="ModelPart" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <GridPane.margin>
+                                                        <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
+                                                    </GridPane.margin>
+                                       <children>
+                                           <TextArea fx:id="Sync_Tips_Text" editable="false" prefHeight="200.0" prefWidth="200.0" styleClass="sp" text="同步返听可以帮助您快速比较原片和字幕，实现快速而方便的纠察与修改。点击右侧时间轴即可播放对应音频，双击即可修改; 修改完成后必须回车才能保存修改." wrapText="true">
+                                               <font>
+                                                   <Font size="18.0" />
+                                               </font>
+                                               <GridPane.margin>
+                                                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                               </GridPane.margin>
+                                           </TextArea>
+                                       </children>
+                                                </GridPane>
+                                            </children>
+                                        </GridPane>
+                                    </children></AnchorPane>
+                                <AnchorPane fx:id="MSP_Split_Right" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <ListView fx:id="MSP_Split_Right_ListView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onEditCommit="#ManualListEditCommit" onEditStart="#ManualListEditStart" styleClass="listView" />
+                                    </children></AnchorPane>
+                            </items>
+                            <GridPane.margin>
+                                <Insets bottom="20.0" left="0.0" right="40.0" top="10.0" />
+                            </GridPane.margin>
+                        </SplitPane>
+                    </children>
+                </GridPane>
+                <!--自动返听窗格-->
+                <GridPane fx:id="AutomaticSyncPanel" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <fx:include source="InDevelopment.fxml" visible="true" />
+                    </children>
+                </GridPane>
+                <!--选择文件窗格-->
+                <GridPane fx:id="WaitingLoadingPanel" visible="false" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <!--                   <Separator maxHeight="-Infinity" minHeight="-Infinity" prefHeight="10.0" prefWidth="475.0" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">-->
+                        <!--                       <GridPane.margin>-->
+                        <!--                           <Insets left="30.0" right="30.0" top="70.0" />-->
+                        <!--                       </GridPane.margin>-->
+                        <!--                   </Separator>-->
+                        <!--                   <Label styleClass="GlobalLabel" text="手动返听" GridPane.valignment="TOP" >-->
+                        <!--                       <GridPane.margin>-->
+                        <!--                           <Insets bottom="30.0" left="30.0" top="20"/>-->
+                        <!--                       </GridPane.margin>-->
+                        <!--                       <font>-->
+                        <!--                           <Font size="22.0" />-->
+                        <!--                       </font>-->
+                        <!--                   </Label>-->
+                        <GridPane fx:id="WaitingLoadingPanel_Content" onDragDropped="#onDragDropped" onDragOver="#onDragOver">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <GridPane.margin>
+                                <Insets bottom="80.0" left="80.0" right="80.0" top="90.0" />
+                            </GridPane.margin>
+                            <children>
+                                <Button fx:id="WaitingLoadingPanel_Content_Image" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#chooseVideoFile" prefHeight="128.0" prefWidth="128.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                <Label styleClass="WaitingLoadingPanel_Content_Label" text="拖放或选择视频以继续" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                            </children>
+                        </GridPane>
+                    </children>
+                </GridPane>
+            </children>
+        </GridPane>
+    </children>
+</GridPane>
