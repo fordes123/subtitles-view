@@ -11,9 +11,9 @@
 
 
 
-### 环境
+### 运行环境
 
-- JDK1.8（ ~~必须~~ 新版本已集成运行环境）
+- ~~JDK1.8~~（ ~~必须~~ 新版本已集成运行环境，无需单独安装）
 
 - Windows 7及以上64位操作系统
 
@@ -38,3 +38,7 @@
 - 因部分方法在Linux和Mac上不可用，暂不支持跨平台，后期会进行适配和测试；
 
 - 无技术含量，兴趣之作，欢迎提出修改意见
+
+### 反馈
+
+- 问题反馈可以直接在[issues](https://github.com/fordes123/Subtitles-View/issues)提交，或者[点击此处](https://fordes.top/projects/SubtitlesView.html)，移步博客下进行沟通；
