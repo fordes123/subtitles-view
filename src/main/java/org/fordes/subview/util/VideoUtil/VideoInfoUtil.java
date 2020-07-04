@@ -33,11 +33,11 @@ public class VideoInfoUtil {
     public VideoInfoUtil(File file){
         HashMap<String,String> info = new FFMpegUtil().getVideoInfo(file.getPath());
         this.duration = info.get("Duration");
-        this.bitrate = Integer.valueOf(info.get("bitrate"));
+        this.bitrate = Integer.valueOf(info.get("Bitrate"));
         this.code = info.get("Code");
         this.compressionFormat = info.get("CompressionFormat");
         this.width = Integer.valueOf(info.get("Width"));
-        this.videoBitrate = Integer.valueOf(info.get("VideoBitrate"));
+        this.videoBitrate = Integer.valueOf(info.get("videoBitrate"));
         this.fps = Integer.valueOf(info.get("fps"));
         this.height = Integer.valueOf(info.get("Height"));
     }

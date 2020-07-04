@@ -160,13 +160,13 @@ public class FFMpegUtil {
 					continue;
 				}
 				//视频流信息
-				if(line.contains("fps")){
-					res.put("Code",m1.group(1));//视频编码
-					res.put("CompressionFormat",m1.group(2));//图像格式
-					res.put("Width",m1.group(3));//宽度
-					res.put("Height",m1.group(4));//高度
-					res.put("videoBitrate",m1.group(5));//视频流比特率
-					res.put("fps",m1.group(6));//帧数
+				if(m2.find()){
+					res.put("Code",m2.group(1));//视频编码
+					res.put("CompressionFormat",m2.group(2));//图像格式
+					res.put("Width",m2.group(3));//宽度
+					res.put("Height",m2.group(4));//高度
+					res.put("videoBitrate",m2.group(5));//视频流比特率
+					res.put("fps",m2.group(6));//帧数
 					continue;
 				}
 			}

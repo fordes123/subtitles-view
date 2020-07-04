@@ -147,8 +147,8 @@ public class ToolPanelController extends RootController implements Initializable
                 CodePanel.setVisible(true);
                 break;
             case "style":
-                
-                Style_FontList.getSelectionModel().select(editor.getFont().getName());
+                String font=editor.getFont().getName();
+                Style_FontList.getSelectionModel().select(font.equals("System Regular")?"System":font);
                 Style_FontSizeList.getSelectionModel().select(Integer.toString((int)editor.getFont().getSize()));
                 StylePanel.setVisible(true);
                 
