@@ -8,6 +8,12 @@
     -fx-background-insets: 0;
 }
 
+.ServicePanel_Bottom{
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-effect: dropshadow(gaussian, black, 20, 0, 0, 0);
+    -fx-background-insets: 20;
+}
+
 #logo{
     -fx-background-image:url("/images/application/logo.png");
 }
@@ -506,7 +512,7 @@
 
 /*全局ChoiceBox*/
 /*控件本身上的选定项目文本颜色*/
-.choice-box > .label { -fx-text-fill: #000; }
+.choice-box > .label { -fx-text-fill: #000; -fx-text-alignment: center}
 /*整个上下文菜单的背景色、字体大小、宽度*/
 .choice-box .context-menu { -fx-background-color: #fff; -fx-font-size: 16;}
 /*列表中的焦点项目背景颜色*/
@@ -555,6 +561,26 @@
     -fx-background-color: #5B5BFA;
     -fx-text-fill: #fff;
     -fx-background-radius: 5;
+}
+
+/*默认按钮*/
+.def_Button{
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000;
+    -fx-background-radius: 5;
+    -fx-border-color: #DDDDDE;
+    -fx-background-insets: 1;
+    -fx-border-radius: 5;
+}
+
+/*默认按钮*/
+.def_Button:hover{
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #5B5BFA;
+    -fx-background-radius: 5;
+    -fx-border-color: #DDDDDE;
+    -fx-background-insets: 1;
+    -fx-border-radius: 5;
 }
 
 /*全局单选按钮*/
@@ -955,7 +981,7 @@
     -fx-line-spacing: 8px;
 }
 
-#PreviewPanel .text{
+#PreviewArea .text{
     -fx-line-spacing: 8px;
 }
 
@@ -1076,4 +1102,27 @@
 
 .info_Label:hover{
     -fx-text-fill: #5B5BFA;
+}
+
+#Editor_Rec{
+    -fx-background-color: transparent;
+    -fx-background-image: url("/images/application/setting/Editor_Rec_Light.png");
+}
+
+#Editor_Rec:hover{
+    -fx-background-color: transparent;
+    -fx-background-image: url("/images/application/setting/Editor_Rec_Light_Select.png");
+}
+
+#winClose {
+    -fx-cursor:hand;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 40px;
+    -fx-padding: 0;
+    -fx-background-insets: 0;//去除边框样式
+-fx-background-image:url("/images/public/close_light.png");
+    -fx-background-poisitn: center;
+    -fx-background-repeat:no-repeat;
+    -fx-background-radius: 0;
+    -fx-background-color: rgba(255, 255, 255, 0);
 }

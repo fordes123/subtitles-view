@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane fx:id="Tran" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="org.fordes.subview.controller.TranPanelControl">
+<GridPane fx:id="Tran" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="org.fordes.subview.controller.TranPanelController">
     <rowConstraints>
         <RowConstraints minHeight="40.0" prefHeight="40.0" vgrow="NEVER" />
         <RowConstraints minHeight="760.0" prefHeight="760.0" vgrow="ALWAYS" />

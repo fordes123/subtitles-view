@@ -2,7 +2,6 @@ package org.fordes.subview.main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
@@ -15,7 +14,6 @@ public class mainApplication extends Application {
     public void start(Stage stage) throws Exception {
 
         stage.initStyle(StageStyle.TRANSPARENT);
-
         StackPane stackPane =FXMLLoader.load(getClass().getClassLoader().getResource("from/Application.fxml"));
         stage.setTitle("SubView Base");
         stage.setFullScreenExitHint("");

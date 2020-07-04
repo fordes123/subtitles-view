@@ -9,54 +9,17 @@ import java.io.File;
  */
 public class inputSet {
 
-    private FileSet Subtitles = new FileSet();
-    private FileSet Video = new FileSet();
+    private FileSet Subtitles = null;
+    private FileSet Video = null;
     private String code;
     private String text;
     private Boolean theme;
     private Stage stage;
-
-
-    
-    class FileSet{
-        public File file;
-        public int type;
-    }
-
-    public void setSubtitles(File file,int type) {
-        Subtitles.file = file;
-        Subtitles.type = type;
-    }
-
-    public void setVideo(File file,int type) {
-        this.Video.file = file;
-        this.Video.type = type;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-
-    public void setTheme(Boolean theme) { this.theme = theme; }
-
-    public void setStage(Stage stage) { this.stage = stage; }
+    private VoiceService voiceService;
 
     public FileSet getSubtitles() {
         return Subtitles;
     }
-
-    public File getVideoFile(){ return Video.file;}
-
-    public File getSubFile(){ return Subtitles.file;}
-
-    public int getSubType(){ return Subtitles.type;}
-
-    public int getVideoType(){ return Video.type;}
 
     public FileSet getVideo() {
         return Video;
@@ -70,7 +33,43 @@ public class inputSet {
         return text;
     }
 
-    public Boolean getTheme() { return theme; }
+    public Boolean getTheme() {
+        return theme;
+    }
 
-    public Stage getStage() { return stage; }
+    public Stage getStage() {
+        return stage;
+    }
+
+    public VoiceService getVoiceService() {
+        return voiceService;
+    }
+
+    public void setSubtitles(FileSet subtitles) {
+        Subtitles = subtitles;
+    }
+
+    public void setVideo(FileSet video) {
+        Video = video;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public void setTheme(Boolean theme) {
+        this.theme = theme;
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    public void setVoiceService(VoiceService voiceService) {
+        this.voiceService = voiceService;
+    }
 }

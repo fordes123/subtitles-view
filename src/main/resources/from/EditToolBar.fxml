@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane fx:id="toolbar" prefHeight="60.0" prefWidth="950.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="org.fordes.subview.controller.EditToolBarControl">
+<GridPane fx:id="EditToolbar" prefHeight="60.0" prefWidth="950.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="org.fordes.subview.controller.EditToolBarController">
 
         <columnConstraints>
             <ColumnConstraints hgrow="NEVER" minWidth="50.0" prefWidth="50.0" />

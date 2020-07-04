@@ -4,16 +4,67 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.fordes</groupId>
-    <artifactId>SubtitlesView</artifactId>
-    <version>1.0-Alpha</version>
+    <groupId>org.fordes.subview</groupId>
+    <artifactId>Subtitles-View</artifactId>
+    <version>1.1.0-Alpha</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
     </properties>
+    <dependencies>
+        <!--语音转写 SDK-->
+        <dependency>
+            <groupId>com.iflytek.msp.lfasr</groupId>
+            <artifactId>lfasr-sdk</artifactId>
+            <version>3.0.0</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/lfasr-sdk-3.0.0.jar</systemPath>
+        </dependency>
 
+        <!--第三方依赖包-->
+        <!--java-->
+        <!--<dependency>
+            <groupId>it.sauronsoftware.jave</groupId>
+            <artifactId>jave</artifactId>
+            <version>1.0.2</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/jave-1.0.2.jar</systemPath>
+        </dependency>-->
+        <!--讯飞语音2.0-->
+        <!--<dependency>
+            <groupId>com.iflytek.ifasr</groupId>
+            <artifactId>lfasr-sdk-client</artifactId>
+            <version>2.0.0.1007</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/lfasr-sdk-client-2.0.0.1007.jar</systemPath>
+        </dependency>-->
+        <!--<dependency>
+            <groupId>com.iflytek.ifasr</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.21</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/fastjson-1.2.21.jar</systemPath>
+        </dependency>-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.67</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>4.5</version>
+        </dependency>
+    </dependencies>
+    <!--构建配置-->
     <build>
         <finalName>SubtitlesView</finalName>
         <plugins>
@@ -35,8 +86,8 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <classpathPrefix>libs/</classpathPrefix>
-                            <mainClass>org.fordes.subview.main.Launcher</mainClass>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>org.fordes.org.fordes.subview.main.Launcher</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -44,33 +95,4 @@
         </plugins>
     </build>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>Ifasr-sdk</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.21</version>
-            <scope>system</scope>
-            <systemPath>${basedir}\lib\fastjson-1.2.21.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>Ifasr-sdk</groupId>
-            <artifactId>jave</artifactId>
-            <version>1.0.2</version>
-            <scope>system</scope>
-            <systemPath>${basedir}\lib\jave-1.0.2.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>Ifasr-sdk</groupId>
-            <artifactId>lfasr-sdk-client</artifactId>
-            <version>2.0.0.1007</version>
-            <scope>system</scope>
-            <systemPath>${basedir}\lib\lfasr-sdk-client-2.0.0.1007.jar</systemPath>
-        </dependency>
-    </dependencies>
 </project>

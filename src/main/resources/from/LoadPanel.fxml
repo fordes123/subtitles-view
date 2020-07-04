@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="LoadRoot" prefHeight="180.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="org.fordes.subview.controller.LoadPanelControl">
+<AnchorPane fx:id="LoadRoot" prefHeight="180.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="org.fordes.subview.controller.LoadPanelController">
    <children>
       <VBox fx:id="LoadTop" prefHeight="30.0" prefWidth="599.0" AnchorPane.leftAnchor="0.5" AnchorPane.rightAnchor="0.2999999999999545" AnchorPane.topAnchor="0.5">
          <children>

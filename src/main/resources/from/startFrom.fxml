@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane fx:id="shadow" styleClass="shadow" prefHeight="740.0" prefWidth="1060.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="org.fordes.subview.controller.startControl">
+<StackPane fx:id="shadow" prefHeight="740.0" prefWidth="1060.0" styleClass="shadow" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fordes.subview.controller.StartController">
     <children>
         <GridPane fx:id="root" styleClass="root">
             <columnConstraints>
@@ -56,13 +56,144 @@
                         </ToggleButton>
                         <Button fx:id="news" mnemonicParsing="true" onAction="#news" prefHeight="32.0" prefWidth="80.0" styleClass="news" text="新建" GridPane.halignment="CENTER" GridPane.rowIndex="16" />
                         <Button fx:id="open" mnemonicParsing="true" onAction="#open" prefHeight="32.0" prefWidth="80.0" styleClass="news" text="打开" GridPane.halignment="CENTER" GridPane.rowIndex="13" />
-                        <ListView fx:id="dragPanel" onDragDropped="#onDragDropped" onDragOver="#onDragOver" prefHeight="480.0" prefWidth="660.0" styleClass="dragPanel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.rowSpan="15" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
-                        <Label fx:id="tips" alignment="CENTER" onMouseClicked="#openFile" prefHeight="40.0" prefWidth="660.0" styleClass="tips" text="拖放或点此选择文件以开始" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
                         <ToggleButton fx:id="pos_home" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#home" prefWidth="200.0" styleClass="pos_home" text="主页" toggleGroup="$position" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
                         <ToggleButton fx:id="pos_local" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#local" prefWidth="200.0" styleClass="pos_home" text="此电脑" toggleGroup="$position" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                        <GridPane styleClass="ContentBottom" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.rowSpan="15" GridPane.vgrow="ALWAYS">
+                            <columnConstraints>
+                                <ColumnConstraints prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <GridPane fx:id="ServicePanel" visible="false" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" prefWidth="237.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" prefWidth="363.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                        <RowConstraints />
+                                    </rowConstraints>
+                                    <children>
+                                        <TextArea fx:id="ServiceTips" editable="false" prefHeight="200.0" prefWidth="200.0" styleClass="sp" GridPane.rowSpan="2">
+                                            <GridPane.margin>
+                                                <Insets bottom="60.0" left="40.0" right="20.0" top="80.0" />
+                                            </GridPane.margin>
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </TextArea>
+                                        <GridPane GridPane.columnIndex="1" GridPane.rowSpan="2">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.0" minWidth="10.0" prefWidth="81.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="282.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                <RowConstraints vgrow="SOMETIMES" />
+                                                <RowConstraints vgrow="SOMETIMES" />
+                                                <RowConstraints vgrow="SOMETIMES" />
+                                                <RowConstraints vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Label styleClass="GlobalLabel" text="服务接口" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                    <font>
+                                                        <Font size="17.0" />
+                                                    </font>
+                                                    <GridPane.margin>
+                                                        <Insets />
+                                                    </GridPane.margin>
+                                                    <tooltip>
+                                                        <Tooltip text="目前仅支持讯飞接口，其他接口正在适配中" />
+                                                    </tooltip>
+                                                </Label>
+                                                <ChoiceBox fx:id="Service_provider" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="150.0" styleClass="Load_ChoiceBox" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                    <GridPane.margin>
+                                                        <Insets left="20.0" />
+                                                    </GridPane.margin>
+                                                </ChoiceBox>
+                                                <Label styleClass="GlobalLabel" text="APP_ID" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                    <font>
+                                                        <Font size="17.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label styleClass="GlobalLabel" text="APP_KEY" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                    <font>
+                                                        <Font size="17.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="Service_id" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="210.0" styleClass="TextField" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                                    <GridPane.margin>
+                                                        <Insets left="20.0" />
+                                                    </GridPane.margin></TextField>
+                                                <TextField fx:id="Service_key" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="210.0" styleClass="TextField" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                                    <GridPane.margin>
+                                                        <Insets left="20.0" />
+                                                    </GridPane.margin>
+                                                </TextField>
+                                                <ChoiceBox fx:id="User_type" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="150.0" styleClass="Load_ChoiceBox" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                                                    <GridPane.margin>
+                                                        <Insets left="20.0" />
+                                                    </GridPane.margin>
+                                                </ChoiceBox>
+                                                <Label styleClass="GlobalLabel" text="用户类型" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                                    <font>
+                                                        <Font size="17.0" />
+                                                    </font>
+                                                    <tooltip>
+                                                        <Tooltip text="付费用户可多线并发请求，以提高处理速度" />
+                                                    </tooltip>
+                                                </Label>
+                                                <Button fx:id="apply" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#ServiceApply" prefHeight="30.0" prefWidth="120.0" styleClass="execute_Button" text="保存并应用" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                                    <font>
+                                                        <Font size="17.0" />
+                                                    </font>
+                                                    <GridPane.margin>
+                                                        <Insets right="58.0" />
+                                                    </GridPane.margin>
+                                                </Button>
+                                            </children>
+                                            <GridPane.margin>
+                                                <Insets />
+                                            </GridPane.margin>
+                                        </GridPane>
+                                        <Label fx:id="TutorialsTips" onMouseClicked="#openTutorials" text="• 还没有接口？点此查看免费接口获取教程" textFill="#4b65ab" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" GridPane.vgrow="NEVER">
+                                            <GridPane.margin>
+                                                <Insets bottom="5.0" left="30.0" />
+                                            </GridPane.margin>
+                                            <font>
+                                                <Font name="System Italic" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label styleClass="GlobalLabel" text="使用须知" GridPane.valignment="TOP">
+                                            <font>
+                                                <Font name="System Bold" size="21.0" />
+                                            </font>
+                                            <GridPane.margin>
+                                                <Insets left="40.0" top="40.0" />
+                                            </GridPane.margin>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                                <GridPane fx:id="FilePanel" visible="true" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <ListView fx:id="dragPanel" onDragDropped="#onDragDropped" onDragOver="#onDragOver" prefHeight="480.0" prefWidth="660.0" styleClass="dragPanel" visible="true" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                                        <Label fx:id="tips" alignment="CENTER" onMouseClicked="#openFile" prefHeight="40.0" prefWidth="660.0" styleClass="tips" text="拖放或点此选择文件以开始" textAlignment="CENTER" textFill="#dedede" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </GridPane>
                     </children>
                 </GridPane>
-
                 <!--标题栏-->
                 <fx:include fx:id="top" source="TitlesBar.fxml"/>
             </children>

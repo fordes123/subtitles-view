@@ -1,11 +1,10 @@
 package org.fordes.subview.util;
 
 import javafx.scene.control.TextArea;
-import org.fordes.subview.controller.startControl;
+import org.fordes.subview.controller.StartController;
 import org.fordes.subview.main.Launcher;
 import org.fordes.subview.util.SubtitlesUtil.TimelineUtil;
 import org.fordes.subview.util.SubtitlesUtil.editUtil;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -28,7 +27,7 @@ public class FindReplaceUtil {
     private int posRow=0;
     private int posCol=0;
 
-    private startControl controller= (startControl) Launcher.controllers.get(startControl.class.getSimpleName());
+    private StartController startController = (StartController) Launcher.controllers.get(StartController.class.getSimpleName());
 
     /**
      * 初始化构造搜索，每次更改关键字需重新构造
@@ -68,7 +67,6 @@ public class FindReplaceUtil {
         
         ArrayList<Integer> res=new editUtil().changPos(edit.getText(),edit.getCaretPosition());
         int line=res.get(0)-1; int pos=res.get(1)-1;
-        
 
         /*从起始位置向下搜索*/
         for(int i=line;i<list.length;i++){
@@ -94,10 +92,7 @@ public class FindReplaceUtil {
                 else
                     counter+=list[i].length()+1;
             }else {
-
-
                 Pending=list[i];
-               
                 if(get()){
                     state=true;
                     posRow=i;
@@ -117,7 +112,7 @@ public class FindReplaceUtil {
      */
     private boolean get(){
         /*如开启了过滤时间轴，校验并跳过时间轴行*/
-        if(filterState&&new TimelineUtil(controller.inputset.getSubType()).TimelineCheck(Pending)){
+        if(filterState&&new TimelineUtil(startController.inputset.getSubtitles().getType()).TimelineCheck(Pending)){
             counter+=Pending.length()+1;
             return false;
         }
@@ -146,7 +141,6 @@ public class FindReplaceUtil {
             }
             else
                 posCol=m.end(2);
-
             counter+=posCol;
             posCol-=target.length();
             return true;
@@ -157,7 +151,6 @@ public class FindReplaceUtil {
         boolean state=find();
         if(state)
             edit.selectRange(counter-target.length(),counter);
-        
         return state;
     }
 

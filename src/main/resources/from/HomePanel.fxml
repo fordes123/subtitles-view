@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane fx:id="Home" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="org.fordes.subview.controller.homePanelControl">
+<GridPane fx:id="HomePanel" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.fordes.subview.controller.HomePanelController">
     <rowConstraints>
         <RowConstraints minHeight="40.0" prefHeight="40.0" vgrow="NEVER" />
         <RowConstraints minHeight="760.0" prefHeight="760.0" vgrow="ALWAYS" />
@@ -95,7 +95,7 @@
             </rowConstraints>
             <children>
                 <!--主编辑器-->
-                <TextArea fx:id="editor" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="sp" visible="false" wrapText="true" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                <TextArea fx:id="editor" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="sp" visible="true" wrapText="true" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                     <GridPane.margin>
                         <Insets bottom="20.0" left="40.0" right="40.0" top="10.0" />
                     </GridPane.margin>
@@ -103,8 +103,6 @@
                         <Font size="18.0" />
                     </font>
                 </TextArea>
-                <!--工具栏-->
-                <fx:include fx:id="Toolbar" source="EditToolBar.fxml" visible="true" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
                 <!--时间轴对齐窗格-->
                 <SplitPane fx:id="TimeAdjPanel" dividerPositions="0.40229885057471265" styleClass="split-pane" visible="false" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES">
                 <items>
@@ -305,7 +303,7 @@
                </GridPane.margin>
             </SplitPane>
                 <!--文字预览窗格-->
-                <TextArea fx:id="PreviewPanel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="sp" visible="false" wrapText="true" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                <TextArea fx:id="PreviewArea" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="sp" visible="false" wrapText="true" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                     <GridPane.margin>
                         <Insets bottom="20.0" left="40.0" right="40.0" top="10.0" />
                     </GridPane.margin>
@@ -315,6 +313,8 @@
                 </TextArea>
                 <!--工具面板-->
                 <fx:include fx:id="ToolPanel" source="ToolPanel.fxml" visible="false" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                <!--工具栏-->
+                <fx:include fx:id="EditToolBar" source="EditToolBar.fxml" visible="true" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
             </children>
         </GridPane>
     </children>

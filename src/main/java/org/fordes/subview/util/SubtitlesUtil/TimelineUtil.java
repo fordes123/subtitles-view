@@ -2,7 +2,7 @@ package org.fordes.subview.util.SubtitlesUtil;
 
 
 
-import org.fordes.subview.controller.startControl;
+import org.fordes.subview.controller.StartController;
 import org.fordes.subview.main.Launcher;
 
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
  */
 public class TimelineUtil {
 
-    private startControl controller= (startControl) Launcher.controllers.get(startControl.class.getSimpleName());
+    private StartController startController = (StartController) Launcher.controllers.get(StartController.class.getSimpleName());
     private int type;
     public TimelineUtil(int type){
         this.type=type;
@@ -27,11 +27,11 @@ public class TimelineUtil {
     public long TimelineToMillisecond(String time){
 
         switch (type){
-            case 1://str类型,如 00:00:52,825
+            case 1:
                 return (Integer.parseInt(time.substring(0, 2)) * 3600 + Integer.parseInt(time.substring(3, 5)) * 60 + Integer.parseInt(time.substring(6, 8))) * 1000 + Integer.parseInt(time.substring(9, 12));
-            case 2://ass类型,如 0:07:38.34
+            case 2:
                 return Integer.parseInt(time.substring(20, 22)) + Integer.parseInt(time.substring(17, 19)) * 100 + Integer.parseInt(time.substring(14, 16)) * 6000 + Integer.parseInt(time.substring(12, 13)) * 360000;
-            case 3://lrc类型
+            case 3:
                 return Integer.parseInt(time.substring(7, 9)) + Integer.parseInt(time.substring(4, 6)) * 100 + Integer.parseInt(time.substring(1, 3)) * 6000;
         }
     return 0;
@@ -44,13 +44,13 @@ public class TimelineUtil {
     public String getRegex(int Types){
         String regex="";
         switch (Types){
-            case 1://str类型,如 00:00:52,825
+            case 1:
                 regex = "(\\d{2})(:)(\\d{2})(:)(\\d{2})(,)(\\d{3})(.*?)";
                 break;
-            case 2://ass类型,如 0:07:38.34
+            case 2:
                 regex="(Dialogue:)(.*?)";
                 break;
-            case 3://lrc类型
+            case 3:
                 regex = "\\d\\d:\\d\\d.\\d\\d";
                 break;
         }
@@ -71,7 +71,7 @@ public class TimelineUtil {
         String regex="";
         Matcher m;
         switch (type){
-            case 1://str类型,如 00:00:52,825
+            case 1:
                 System.out.println(line);
                 regex="(\\d{2})(:)(\\d{2})(:)(\\d{2})(,)(\\d{3})";
                 m = Pattern.compile(regex).matcher(line);
@@ -83,8 +83,8 @@ public class TimelineUtil {
                 }else
                     return null;
                 break;
-            case 2://ass类型,如 0:07:38.34
-
+            case 2:
+               
                 regex="(\\d{1})(:)(\\d{2})(:)(\\d{2})(.)(\\d{2})";
                 m = Pattern.compile(regex).matcher(line);
                 if(m.find()) {
@@ -95,7 +95,7 @@ public class TimelineUtil {
                 }else
                     return null;
                 break;
-            case 3://lrc类型,00:06.26
+            case 3:
                 regex="(\\d{2})(:)(\\d{2})(.)(\\d{2})";
                 m = Pattern.compile(regex).matcher(line);
                 if(m.find()){
@@ -129,10 +129,10 @@ public class TimelineUtil {
         ArrayList<String> res=null;
         String h,m,s,ms="";
         int hour=in.get(0),min=in.get(1),sec=in.get(2),mse=in.get(3);
-
+        
         switch (type){
             case 1:
-
+                
                 if(hour<10)
                     h = "0" + hour;
                 else
@@ -169,20 +169,20 @@ public class TimelineUtil {
     private String MillisecondToTimeline(long time){
 
         switch (type){
-            case 1://str类型,如 00:00:52,825
+            case 1:
                 String h,m,s,ms;
-
+                
                 int hour = (int)time/3600000;
                 int min = (int)(time%3600000)/60000;
                 int sec = (int)((time%3600000)%60000)/1000;
                 int mse =  (int)((time%3600000)%60000)%1000;
-
+                
                 ArrayList<String> res=TimeToString(new ArrayList<Integer>(Arrays.asList(hour,min,sec,mse)));
-
+                
                 return res.get(0)+":"+res.get(1)+":"+res.get(2)+","+res.get(3);
-            case 2://ass类型,如 0:07:38.34
+            case 2:
                 return null;
-            case 3://lrc类型
+            case 3:
                 return null;
         }
         System.out.println("未知错误");
@@ -192,17 +192,17 @@ public class TimelineUtil {
 
     /*获取时间轴起点*/
     public String getTimeStart(){
-        return ParsingTimeline(controller.inputset.getText()).get(0);
+        return ParsingTimeline(startController.inputset.getText()).get(0);
     }
 
     /*获取时间轴终点*/
     public String getTimeEnd(){
-        return ParsingTimeline(controller.inputset.getText()).get(1);
+        return ParsingTimeline(startController.inputset.getText()).get(1);
     }
 
     /*获取时间轴起止信息*/
     public String getTimeStart_Stop(){
-        ArrayList<String> res=ParsingTimeline(controller.inputset.getText());
+        ArrayList<String> res=ParsingTimeline(startController.inputset.getText());
         return res.get(0)+" - "+res.get(1);
     }
     /**
@@ -216,9 +216,8 @@ public class TimelineUtil {
         String start="",end="";
         boolean state=false;
         switch (type) {
-            case 1:// srt
+            case 1:
                 regex = "\\d\\d:\\d\\d:\\d\\d,\\d\\d\\d";
-
                 r = Pattern.compile(regex);
                 for(String line:list){
                     Matcher m = r.matcher(line);
@@ -232,9 +231,9 @@ public class TimelineUtil {
                     }
                 }
                 break;
-            case 2:// ass 0,0:07:38.34,0:07:40.13
+            case 2:
                 regex="(Dialogue: 0,)(.*?)(,)(.*?)(,)";
-
+                
                 r = Pattern.compile(regex);
                 for(String line:list){
                     Matcher m = r.matcher(line);
@@ -248,9 +247,9 @@ public class TimelineUtil {
                     }
                 }
                 break;
-            case 3: // lrc
+            case 3: 
                 regex="\\d\\d:\\d\\d.\\d\\d";
-
+                
                 r = Pattern.compile(regex);
                 for(String line:list){
                     Matcher m = r.matcher(line);
@@ -266,7 +265,7 @@ public class TimelineUtil {
                 break;
 
         }
-
+        
         ArrayList<String> res=new ArrayList<String>();
         res.add(start);res.add(end);
         return res;
@@ -281,38 +280,38 @@ public class TimelineUtil {
      * @param time ,时间
      */
     public String Revise(String temp, long time) {
-
+        
         long StartTime = 0;
         String[] list;
         String subtitles = "";
         long timeError;
         switch (type) {
-            case 1:// srt，00:00:52,825 --> 00:00:55,454
+            case 1:
 
                 list = temp.split("\n");
                 String regex1 = "\\d\\d:\\d\\d:\\d\\d,\\d\\d\\d --> \\d\\d:\\d\\d:\\d\\d,\\d\\d\\d";
-
+                
                 timeError=time-TimelineToMillisecond(ParsingTimeline(temp).get(0));
                 for (int j = 0; j < list.length; j++) {
                     if (!Pattern.matches(regex1, list[j])) {
                         subtitles += list[j] + "\n";
                         continue;
                     } else {
-
+                        
                         long first=TimelineToMillisecond(list[j].substring(0, 12));
-
+                        
                         long last=TimelineToMillisecond(list[j].substring(17, 29));
-
+                        
                         String newFirst=MillisecondToTimeline(first+timeError);
-
+                        
                         String newLast=MillisecondToTimeline(last+timeError);
-
+                        
                         subtitles+=newFirst+" --> "+newLast+"\n";
                        }
                 }
                 return subtitles;
 
-            case 2:// ass 0,0:07:38.34,0:07:40.13
+            case 2:
 
                /* newsub = "";
                 list = temp.split("\n");
@@ -324,15 +323,15 @@ public class TimelineUtil {
                         int second = Integer.parseInt(list[i].substring(17, 19));
                         int minute = Integer.parseInt(list[i].substring(14, 16));
                         int hour = Integer.parseInt(list[i].substring(12, 13));
-                        StartTime = millisecond + second * 100 + minute * 6000 + hour * 360000;
+                        StartTime = millisecond + second * 100 + minute * 6000 + hour * 360000; 
 
                         break;
                     }
                 }
 
-//                timeError = (Integer.parseInt(time.substring(0, 1))) * 360000 // ����ʱ���ֵ
-//                        + (Integer.parseInt(time.substring(2, 4))) * 6000 + (Integer.parseInt(time.substring(5, 7))) * 100
-//                        + (Integer.parseInt(time.substring(8, 10))) - StartTime;
+
+
+
                 timeError=time-StartTime;
 
                 for (int j = 0; j < list.length; j++) {
@@ -389,26 +388,26 @@ public class TimelineUtil {
                 return newsub;
 */
 
-            case 3: // lrc
+            case 3: 
                /* String regex3 = "\\d\\d:\\d\\d.\\d\\d";
                 newsub = "";
                 list = temp.split("\n");
                 for (int i = 0; i < list.length; i++) {
-                    //System.out.println(list[i].substring(1, 9));
+                    
                     if (!Pattern.matches(regex3, list[i].substring(0, 9)))
                         continue;
                     else {
                         int ms = Integer.parseInt(list[i].substring(7, 9));
                         int s = Integer.parseInt(list[i].substring(4, 6));
                         int m = Integer.parseInt(list[i].substring(1, 3));
-                        StartTime = ms + s * 100 + m * 6000; // ��Ļ��ʼʱ��
+                        StartTime = ms + s * 100 + m * 6000; 
 
                         break;
                     }
                 }
 
-//                timeError = (Integer.parseInt(time.substring(0, 2))) * 6000 + (Integer.parseInt(time.substring(3, 5))) * 100
-//                        + (Integer.parseInt(time.substring(6, 8))) - StartTime;
+
+
                 timeError=time-StartTime;
 
                 for (int j = 0; j < list.length; j++) {
@@ -465,47 +464,44 @@ public class TimelineUtil {
         return result;
     }
 
-
-
     /**
      * 语音转换出的原始数据解析出时间轴
      * @param data ,一行原始数据
      */
     public String exTimeLine(String data) {
-
-        Matcher matcher_bg = Pattern.compile("(\"bg\":\")(.*?)(\",)").matcher(data);
-        Matcher matcher_ed = Pattern.compile("(\"ed\":\")(.*?)(\",)").matcher(data);
-        Matcher matcher_dialogue = Pattern.compile("(\"onebest\":\")(.*?)(\",)").matcher(data);
-
-
-        String bg=matcher_bg.find()?matcher_bg.group(2):null;
-        String ed=matcher_ed.find()?matcher_ed.group(2):null;
-        String dialogue=matcher_dialogue.find()?matcher_dialogue.group(2):null;
-
-        String Start=MillisecondToTimeline(Integer.valueOf(bg));
-        String End=MillisecondToTimeline(Integer.valueOf(ed));
-
-
-        return Start+" --> "+End+"\n"+dialogue;
+        String reg = "\\\"bg\\\":\\\"(\\d*)\\\",\\\"ed\\\"\\:\\\"(\\d*)\\\",\\\"onebest\\\"\\:\\\"(.*)\\\"";
+        Matcher matcher = Pattern.compile(reg).matcher(data);
+        if(matcher.find()){
+            String bg=matcher.group(1);
+            String ed=matcher.group(2);
+            String dialogue=matcher.group(3).trim();
+            return MillisecondToTimeline(Integer.valueOf(bg))+" --> "+MillisecondToTimeline(Integer.valueOf(ed))+"\n"+dialogue;
+        }
+        return null;
     }
 
 
     /**
      * 处理语音转换结果生成初始字幕
      */
-    public String parsing(String date) {
-        String sub="";
-
-        ArrayList<String> OriginalResult=new ArrayList<>();
+    public StringBuffer parsing(String date) {
+        int counter=0;
+        StringBuffer res=new StringBuffer();
         String reg = "(\\{)(.*?)(\\})";
         Pattern pattern = Pattern.compile(reg);
         Matcher matcher = pattern.matcher(date);
         while (matcher.find())
-            OriginalResult.add(matcher.group(2));
+            res.append(counter+++"\n"+exTimeLine(matcher.group(2))+"\n\n");
+        res.delete(res.length()-2,res.length());//去除多的换行符
+        return res;
+    }
 
-        for (String line:OriginalResult){
-                sub+=exTimeLine(line)+"\n\n";}
-        return sub;
+    public static boolean isNumericzidai(String str) {
+        Pattern pattern = Pattern.compile("-?[0-9]+\\.?[0-9]*");
+        Matcher isNum = pattern.matcher(str);
+        if (!isNum.matches())
+            return false;
+        return true;
     }
 
 }

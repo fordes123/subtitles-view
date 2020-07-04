@@ -104,7 +104,7 @@ public class FileUtil {
             delAllFile(folderPath);
             String filePath = folderPath;
             filePath = filePath.toString();
-            java.io.File myFilePath = new java.io.File(filePath);
+            File myFilePath = new File(filePath);
             myFilePath.delete();
         } catch (Exception e) {
             e.printStackTrace();

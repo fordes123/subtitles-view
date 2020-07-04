@@ -1,14 +1,12 @@
 package org.fordes.subview.util;
 
-import java.util.Collections;
-import java.util.Enumeration;
-import java.util.LinkedHashSet;
-import java.util.Properties;
-import java.util.Set;
+import java.util.*;
 
 /**
  * 用于指定properites文件的存储顺序和输入顺序一样，使得顺序不发生改变
  * OrderedProperties
+ * @author wxq
+ * @date 2016-09-26
  */
 public class OrderedProperties extends Properties {
 

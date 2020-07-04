@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<StackPane fx:id="shadow" prefHeight="860.0" prefWidth="1360.0" styleClass="shadow" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="org.fordes.subview.controller.ApplicationControl">
+<StackPane fx:id="shadow" prefHeight="860.0" prefWidth="1360.0" styleClass="shadow" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="org.fordes.subview.controller.ApplicationController">
     <children>
         <GridPane fx:id="root" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" styleClass="root">
             <columnConstraints>
@@ -19,7 +18,7 @@
             </rowConstraints>
             <children>
                 <!--主页基础功能窗格-->
-                <fx:include fx:id="HomePanel" visible="false" source="HomePanel.fxml" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS"/>
+                <fx:include fx:id="HomePanel" source="HomePanel.fxml" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS"/>
                 <!--同步返听窗格-->
                 <fx:include fx:id="SyncPanel" visible="false" source="SyncPanel.fxml" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS"/>
                 <!--语言翻译窗格-->

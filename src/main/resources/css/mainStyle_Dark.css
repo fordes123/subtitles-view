@@ -411,7 +411,7 @@
     -fx-border-radius: 0;
     -fx-border-insets: 0;
     -fx-background-insets: 0;
-    -fx-highlight-fill: #9B9BFF; /* makes color of highlight region */
+    -fx-highlight-fill: #7777c2; /* makes color of highlight region */
     -fx-highlight-text-fill: #FFF;  /* makes the color of highlighted text */
 }
 
@@ -636,7 +636,25 @@
     -fx-text-fill: #fff;
     -fx-background-radius: 5;
 }
+/*默认按钮*/
+.def_Button{
+    -fx-background-color: #504f4f;
+    -fx-text-fill: #FFF;
+    -fx-background-radius: 5;
+    -fx-border-color: #404040;
+    -fx-background-insets: 1;
+    -fx-border-radius: 5;
+}
 
+/*默认按钮*/
+.def_Button:hover{
+    -fx-background-color: #504f4f;
+    -fx-text-fill: #5B5BFA;
+    -fx-background-radius: 5;
+    -fx-border-color: #404040;
+    -fx-background-insets: 1;
+    -fx-border-radius: 5;
+}
 /*全局单选按钮*/
 .radio-button {
     -fx-text-fill: #FFF;
@@ -1021,7 +1039,7 @@
     -fx-line-spacing: 8px;
 }
 
-#PreviewPanel .text{
+#PreviewArea .text{
     -fx-line-spacing: 8px;
 }
 
@@ -1124,4 +1142,14 @@
     -fx-border-insets: 1;*/
    /* -fx-border-color: #5A5A5A;*/
     -fx-effect: dropshadow(three-pass-box, #5A5A5A, 3.0,0, 0, 0);
+}
+
+#Editor_Rec{
+    -fx-background-color: transparent;
+    -fx-background-image: url("/images/application/setting/Editor_Rec_Dark.png");
+}
+
+#Editor_Rec:hover{
+    -fx-background-color: transparent;
+    -fx-background-image: url("/images/application/setting/Editor_Rec_Dark_Select.png");
 }

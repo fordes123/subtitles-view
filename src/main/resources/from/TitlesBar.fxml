@@ -8,7 +8,7 @@
 
 <?import javafx.scene.text.Font?>
 <VBox fx:id="top" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.fordes.subview.controller.titlesBarControl"
+      fx:controller="org.fordes.subview.controller.TitlesBarController"
       prefHeight="40.0" maxHeight="40" >
     <children>
         <AnchorPane prefHeight="40.0">

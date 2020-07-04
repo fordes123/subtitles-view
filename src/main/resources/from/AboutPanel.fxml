@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane fx:id="About" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="org.fordes.subview.controller.AboutPanelControl">
+<GridPane fx:id="About" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"  fx:controller="org.fordes.subview.controller.AboutPanelController">
     <rowConstraints>
         <RowConstraints minHeight="40.0" prefHeight="40.0" vgrow="NEVER" />
         <RowConstraints minHeight="760.0" prefHeight="760.0" vgrow="ALWAYS" />
@@ -106,7 +106,7 @@
                   <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label styleClass="GlobalLabel" text="编译日期：2020.5.02" GridPane.rowIndex="11">
+                  <Label styleClass="GlobalLabel" text="编译日期：2020.7.04" GridPane.rowIndex="11">
                      <GridPane.margin>
                         <Insets left="30.0" />
                      </GridPane.margin>
@@ -114,7 +114,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label styleClass="GlobalLabel" text="内部版本号：20092" GridPane.rowIndex="10">
+                  <Label styleClass="GlobalLabel" text="内部版本号：20101" GridPane.rowIndex="10">
                      <GridPane.margin>
                         <Insets left="30.0" />
                      </GridPane.margin>
@@ -129,7 +129,7 @@
                      <GridPane.margin>
                         <Insets left="30.0" />
                      </GridPane.margin></Label>
-                  <Label styleClass="GlobalLabel" text="V1.0.Alpha（开发者预览版）">
+                  <Label styleClass="GlobalLabel" text="V1.1.Alpha（开发者预览版）">
                      <GridPane.margin>
                         <Insets left="35.0" top="60.0" />
                      </GridPane.margin>
@@ -235,7 +235,7 @@
                         <String fx:value="info_Label" />
                      </styleClass>
                   </Label>
-                  <TextArea fx:id="info_TextArea" prefHeight="200.0" prefWidth="200.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="11">
+                  <TextArea fx:id="info_TextArea" editable="false" prefHeight="200.0" prefWidth="200.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="11">
                      <padding>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                      </padding>

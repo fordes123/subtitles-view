@@ -1,9 +1,9 @@
 package org.fordes.subview.util.VideoUtil;
 
-import it.sauronsoftware.jave.Encoder;
-import it.sauronsoftware.jave.EncoderException;
-import it.sauronsoftware.jave.InputFormatException;
 
+
+import org.apache.commons.codec.EncoderException;
+import java.beans.Encoder;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -12,80 +12,70 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.nio.channels.FileChannel;
 import java.util.ArrayList;
+import java.util.HashMap;
+
 
 /**
  * 工具类，获取视频文件的一些相关信息
  */
 public class VideoInfoUtil {
 
-    private Encoder encoder = new Encoder();
-    private it.sauronsoftware.jave.MultimediaInfo m;
-    private File file;
+    private String duration;//时长
+    private long bitrate;//比特率
+    private String code;//视频编码
+    private String compressionFormat;//图像格式
+    private int width;//宽度
+    private int height;//高度
+    private long videoBitrate;//视频流比特率
+    private int fps;//帧数
+    //private File file;
 
     public VideoInfoUtil(File file){
-        this.file=file;
-        try {
-            m = encoder.getInfo(file);
-        } catch (InputFormatException e) {
-            e.printStackTrace();
-        } catch (EncoderException e) {
-            e.printStackTrace();
-        }
-
+        HashMap<String,String> info = new FFMpegUtil().getVideoInfo(file.getPath());
+        this.duration = info.get("Duration");
+        this.bitrate = Integer.valueOf(info.get("bitrate"));
+        this.code = info.get("Code");
+        this.compressionFormat = info.get("CompressionFormat");
+        this.width = Integer.valueOf(info.get("Width"));
+        this.videoBitrate = Integer.valueOf(info.get("VideoBitrate"));
+        this.fps = Integer.valueOf(info.get("fps"));
+        this.height = Integer.valueOf(info.get("Height"));
     }
 
-    /**
-     *视频高度
-     */
-    public int getVideoHeight(){
-        return m.getVideo().getSize().getHeight();
+    public String getDuration() {
+        return duration;
     }
 
-    /**
-     *视频宽度
-     */
-    public int getVideoWidth(){
-       return m.getVideo().getSize().getWidth();
+    public long getBitrate() {
+        return bitrate;
     }
 
-    /**
-     * 视频格式
-     * （仅供参考）
-     */
-    public String getVideoType(){
-        return m.getFormat();
+    public String getCode() {
+        return code;
     }
 
-    /**
-     * 视频时长(ms)
-     */
-    public long getVideoLength(){
-        return m.getDuration();
+    public String getCompressionFormat() {
+        return compressionFormat;
     }
 
-    /**
-     * 视频大小()
-     */
-    public int getVideoSize(){
-        String size="";
-        try {
-            FileInputStream fis = new FileInputStream(file);
-            FileChannel fc = fis.getChannel();
-            BigDecimal fileSize = new BigDecimal(fc.size());
-            size=fileSize.divide(new BigDecimal(1048576), 2, RoundingMode.HALF_UP)+"";
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return Integer.parseInt(size);
+    public int getWidth() {
+        return width;
     }
 
-    
+    public int getHeight() {
+        return height;
+    }
+
+    public long getVideoBitrate() {
+        return videoBitrate;
+    }
+
+    public int getFps() {
+        return fps;
+    }
+
     public ArrayList<Integer> calculateVideoContentSize(){
         ArrayList<Integer> res=new ArrayList<>();
-        int width=getVideoWidth();
-        int height=getVideoHeight();
         if(width>height){
             if(width<=728){
                 res.add(width);

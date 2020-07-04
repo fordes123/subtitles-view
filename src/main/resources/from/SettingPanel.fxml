@@ -9,7 +9,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.text.Font?>
 <GridPane fx:id="Setting" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-          fx:controller="org.fordes.subview.controller.SettingPanelControl"
+          fx:controller="org.fordes.subview.controller.Setting.SettingPanelController"
           prefHeight="800.0" prefWidth="1200.0">
     <rowConstraints>
         <RowConstraints vgrow="NEVER" minHeight="40.0" prefHeight="40.0" />
@@ -48,7 +48,7 @@
                 <Font size="22.0" />
             </font>
         </Label>
-        <ToggleButton fx:id="Base" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="基础设置" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+        <ToggleButton fx:id="Base" onAction="#onBaseSetting" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="基础设置" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
             <font>
                 <Font size="17.0" />
             </font>
@@ -60,7 +60,7 @@
                 <String fx:value="Base" />
             </styleClass>
         </ToggleButton>
-        <ToggleButton fx:id="Advanced" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="进阶设置" toggleGroup="$Setting_list_Bt" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+        <ToggleButton fx:id="Advanced" onAction="#onAdvancedSetting" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="进阶设置" toggleGroup="$Setting_list_Bt" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
             <font>
                 <Font size="17.0" />
             </font>
@@ -69,7 +69,7 @@
                 <String fx:value="Advanced" />
             </styleClass>
         </ToggleButton>
-        <ToggleButton fx:id="Lab" mnemonicParsing="false"  prefHeight="50.0" prefWidth="200.0" text="实验功能" toggleGroup="$Setting_list_Bt" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+        <ToggleButton fx:id="Lab" onAction="#onLabSetting" mnemonicParsing="false"  prefHeight="50.0" prefWidth="200.0" text="实验功能" toggleGroup="$Setting_list_Bt" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
             <font>
                 <Font size="17.0" />
             </font>
@@ -89,7 +89,9 @@
             <RowConstraints minHeight="760.0" prefHeight="760.0" vgrow="SOMETIMES" />
         </rowConstraints>
             <children>
-                <fx:include source="InDevelopment.fxml" visible="true" GridPane.rowIndex="1" />
+                <fx:include fx:id="BasicSettingsPanel" source="BasicSettingsPanel.fxml" GridPane.halignment="CENTER" GridPane.valignment="CENTER" visible="false" GridPane.rowIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
+                <fx:include fx:id="AdvancedSettingsPanel" source="AdvancedSettingsPanel.fxml" GridPane.halignment="CENTER" GridPane.valignment="CENTER" visible="false" GridPane.rowIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
+                <fx:include fx:id="ExperimentalSettingPanel" source="ExperimentalSettingPanel.fxml" GridPane.halignment="CENTER" GridPane.valignment="CENTER" visible="false" GridPane.rowIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
             </children>
     </GridPane>
     </children>
