@@ -43,4 +43,4 @@
 
 ### 反馈
 
-- 问题反馈可以直接在[issues](https://github.com/fordes123/Subtitles-View/issues)提交，或者[点击此处](https://fordes.top/projects/SubtitlesView.html)，移步博客下进行沟通；
+- 问题反馈可以直接在[issues](https://github.com/fordes123/Subtitles-View/issues)提交，或者[点击此处](https://blog.fordes.top/archives/subtitles-view.html)，移步博客下进行沟通；
