@@ -25,7 +25,7 @@
 
 - 深色模式 ![深色模式](https://pic.downk.cc/item/5e91c73f504f4bcb04dc588b.png)
 
-- 演示视频 [点此观看（下载）](https://pan.fordes.top/show/1/%E8%A7%86%E9%A2%91/SubtitlesView%E6%BC%94%E7%A4%BA.mp4)
+- 演示视频 [点此观看（下载）](https://pan.fordes.top/s/xng7aq)
 
 
 
