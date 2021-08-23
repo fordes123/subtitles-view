@@ -27,7 +27,7 @@
         <javafx-maven-plugin.version>8.8.3</javafx-maven-plugin.version>
         <jsoup.version>1.10.2</jsoup.version>
         <jackson.version>2.11.2</jackson.version>
-        <guava.version>28.2-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
         <juniversalchardet.version>2.4.0</juniversalchardet.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
