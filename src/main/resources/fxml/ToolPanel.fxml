@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="toolPanel" alignment="CENTER" prefHeight="100.0" prefWidth="400.0" visible="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fordes.subview.controller.ToolBarController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="400.0" prefWidth="400.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <GridPane.margin>
+        <Insets right="70.0" top="20.0" />
+    </GridPane.margin>
+
+    <!--查找面板-->
+    <GridPane fx:id="findPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="350.0" styleClass="editToolPanel" visible="false" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <TextField fx:id="edit_tool_find_input" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="查找" styleClass="ToolPanel_TextField" />
+        <Button id="edit_tool_find_btn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onFindNext" styleClass="ToolPanel_Button" GridPane.columnIndex="1">
+            <tooltip>
+                <Tooltip text="查找下一个" />
+            </tooltip>
+        </Button>
+        <Button id="edit_tool_find_close" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onFindClose" styleClass="ToolPanel_Button" GridPane.columnIndex="3">
+        </Button>
+        <MenuBar id="edit_tool_find_option" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="50.0" minWidth="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="2">
+            <Menu id="edit_tool_find_option_menu" mnemonicParsing="false">
+                <CheckMenuItem fx:id="edit_tool_find_case" mnemonicParsing="false" selected="true" text="区分大小写" />
+                <CheckMenuItem fx:id="edit_tool_find_regular" mnemonicParsing="false" text="正则表达式" />
+            </Menu>
+        </MenuBar>
+    </GridPane>
+    <!--替换面板-->
+    <GridPane fx:id="replacePanel" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="350.0" styleClass="editToolPanel" visible="false" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="250.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <TextField fx:id="edit_tool_search_input" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="查找" styleClass="ToolPanel_TextField" />
+        <TextField fx:id="edit_tool_replace_input" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="替换" styleClass="ToolPanel_TextField" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+        <Button id="edit_tool_search_btn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onReplaceSearch" styleClass="ToolPanel_Button" GridPane.columnIndex="1">
+            <tooltip>
+                <Tooltip text="查找下一个" />
+            </tooltip>
+        </Button>
+        <MenuBar id="edit_tool_search_option" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="50.0" minWidth="50.0" prefHeight="50.0" prefWidth="50.0" GridPane.columnIndex="2">
+            <Menu id="edit_tool_replace_search_menu" mnemonicParsing="false">
+                <CheckMenuItem fx:id="edit_tool_search_case" mnemonicParsing="false" selected="true" text="区分大小写" />
+                <CheckMenuItem fx:id="edit_tool_search_regular" mnemonicParsing="false" text="正则表达式" />
+            </Menu>
+        </MenuBar>
+        <Button id="edit_tool_replace_close" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onReplaceSearchClose" styleClass="ToolPanel_Button" GridPane.columnIndex="3">
+            <tooltip>
+                <Tooltip text="关闭" />
+            </tooltip>
+        </Button>
+        <Button id="edit_tool_replace_next" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onReplaceNext" styleClass="ToolPanel_Button" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <tooltip>
+                <Tooltip text="替换" />
+            </tooltip>
+        </Button>
+        <Button id="edit_tool_replace_all" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onReplaceAll" styleClass="ToolPanel_Button" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <tooltip>
+                <Tooltip text="全部替换" />
+            </tooltip>
+        </Button>
+    </GridPane>
+    <!--跳转面板-->
+    <GridPane fx:id="jumpPanel" maxHeight="50.0" maxWidth="250.0" minHeight="50.0" minWidth="250.0" prefWidth="250.0" styleClass="editToolPanel" visible="false" GridPane.halignment="RIGHT">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150" minWidth="150" prefWidth="150" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <TextField fx:id="edit_tool_jump_input" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="跳转至" styleClass="ToolPanel_TextField" />
+        <Button id="edit_tool_jump_btn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onJump" styleClass="ToolPanel_Button" GridPane.columnIndex="1">
+            <tooltip>
+                <Tooltip text="跳转至(指定行)" />
+            </tooltip>
+        </Button>
+        <Button id="edit_tool_jump_close" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onJumpClose" styleClass="ToolPanel_Button" GridPane.columnIndex="2">
+            <tooltip>
+                <Tooltip text="关闭" />
+            </tooltip>
+        </Button>
+    </GridPane>
+    <!--编码面板-->
+    <GridPane fx:id="codePanel" maxHeight="50.0" maxWidth="250.0" minHeight="50.0" minWidth="250.0" prefWidth="250.0" styleClass="editToolPanel" visible="false" GridPane.halignment="RIGHT">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150" minWidth="150" prefWidth="150" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Button id="edit_tool_code_btn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onRefresh" styleClass="ToolPanel_Button" GridPane.columnIndex="1">
+            <tooltip>
+                <Tooltip text="刷新以生效" />
+            </tooltip>
+        </Button>
+        <Button id="edit_tool_code_close" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onRefreshClose" styleClass="ToolPanel_Button" GridPane.columnIndex="2">
+            <tooltip>
+                <Tooltip text="关闭" />
+            </tooltip>
+        </Button>
+        <ChoiceBox fx:id="edit_tool_code_box" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <tooltip>
+                <Tooltip text="如无乱码请勿更改" />
+            </tooltip>
+        </ChoiceBox>
+    </GridPane>
+    <!--样式面板-->
+    <GridPane fx:id="stylePanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="340.0" styleClass="editToolPanel" visible="false" GridPane.halignment="RIGHT">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints />
+        </rowConstraints>
+        <ChoiceBox fx:id="edit_tool_style_font" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" >
+            <tooltip>
+                <Tooltip text="更改字体" />
+            </tooltip>
+        </ChoiceBox>
+        <ChoiceBox fx:id="edit_tool_style_font_size" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1">
+            <tooltip>
+                <Tooltip text="字体显示大小" />
+            </tooltip>
+        </ChoiceBox>
+        <Button id="edit_tool_style_close" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onStyleClose" styleClass="ToolPanel_Button" GridPane.columnIndex="3">
+            <tooltip>
+                <Tooltip text="关闭" />
+            </tooltip>
+        </Button>
+        <Button id="edit_tool_style_default" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onStyleDefault" styleClass="ToolPanel_Button" GridPane.columnIndex="2">
+            <tooltip>
+                <Tooltip text="恢复默认" />
+            </tooltip>
+        </Button>
+    </GridPane>
+
+</GridPane>

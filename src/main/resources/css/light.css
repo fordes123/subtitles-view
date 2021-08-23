@@ -1,0 +1,1220 @@
+
+.content,
+.bottom-round{
+    -fx-background-color: #dedede;
+}
+
+
+.titlesBar #closed {
+    -fx-background-image: url("/images/public/close_light.png");
+}
+
+
+.root_normal .titlesBar #maximize{
+    -fx-background-image: url("/images/public/max_light.png");
+}
+
+.side{
+    -fx-background-color: #2D2D2D;
+}
+
+.root_full .titlesBar #maximize{
+    -fx-background-image: url("/images/public/standard_light.png");
+}
+
+
+.titlesBar #minimize {
+    -fx-background-image: url("/images/public/min_light.png");
+}
+
+.titlesBar #minimize:hover,
+.titlesBar #mode_switch:hover,
+.titlesBar #maximize:hover {
+    -fx-background-color: #bdc0c6;
+}
+
+.titlesBar #mode_switch {
+    -fx-background-image: url("/images/public/light.png");
+}
+
+
+.news {
+    /*设置背景色*/
+    -fx-background-color: #DEDEDE;
+    -fx-border-color: #262626;
+    -fx-text-fill: #000;
+}
+
+.news:hover {
+    -fx-background-color: #1b1b1b;
+    -fx-text-fill: #FFF;
+}
+
+
+.contentBottom {
+    -fx-background-color: #ffffff;
+}
+
+.nav_button:selected {
+    -fx-background-color: #fff;
+    -fx-effect: dropshadow(gaussian, #a8a5a5, 5, 0, 0, 0);
+}
+
+.nav_button:hover {
+    -fx-background-color: #fff;
+    -fx-effect: dropshadow(gaussian, #a8a5a5, 5, 0, 0, 0);
+}
+
+.nav_button {
+    -fx-background-color: #DEDEDE;
+    -fx-text-fill: #000;
+}
+
+.tips {
+    -fx-text-fill: #929090;
+}
+
+.tips:hover {
+    -fx-text-fill: #5B5BFA;
+}
+
+
+
+/*全局ChoiceBox*/
+/*控件本身上的选定项目文本颜色*/
+.choice-box > .label {
+    -fx-text-fill: #000;
+}
+
+/*整个上下文菜单的背景色、字体大小、宽度*/
+.choice-box .context-menu {
+    -fx-background-color: #fff;
+}
+
+/*列表中的焦点项目背景颜色*/
+.choice-box .menu-item:focused {
+    -fx-background-color: #F4F4F4;
+}
+
+/*列表中非重点项目的文字颜色*/
+.choice-box .menu-item > .label {
+    -fx-text-fill: black;
+}
+
+/*列表中焦点项目的文本颜色*/
+.choice-box .menu-item:focused > .label {
+    -fx-text-fill: #5B5BFA;
+}
+
+/*控件主属性*/
+.choice-box {
+    -fx-background-color: #fff; /*控件本身的背景色*/
+    -fx-mark-color: black; /*箭头颜色*/
+    -fx-border-color: #bababe;
+}
+
+.choice-box:focused {
+    -fx-border-color: #5B5BFA;
+}
+
+.button-shadow {
+    -fx-effect: dropshadow( three-pass-box , #343434, 5, 0.0 , 0 , 0 );
+}
+
+/*执行按钮*/
+.execute-button {
+    -fx-background-color:
+            #5B5BFA,
+            linear-gradient(#5B5BFA 50%, #363699 100%),
+            radial-gradient(center 50% -40%, radius 200%, #5B5BFA 45%, #363699 50%);
+    -fx-text-fill: #FFF;
+}
+
+
+.aux-button {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: #FFF;
+}
+
+.cancel-button {
+    -fx-background-color:
+            #ECECEC,
+            linear-gradient(#ECECEC 50%, #D5D5D5 100%),
+            radial-gradient(center 50% -40%, radius 200%, #ECECEC 45%, #D5D5D5 50%);
+    -fx-text-fill: black;
+}
+
+
+/*输入框*/
+.TextField {
+    -fx-background-color: #fff;
+    -fx-border-color: #bababe;
+    -fx-text-fill: #000;
+}
+
+.TextField:focused {
+    -fx-background-color: #fff;
+    -fx-border-color: #5B5BFA;
+    -fx-text-fill: #000;
+}
+
+/*全局提示框*/
+.tooltip {
+    -fx-background-color: #F4F5F7;
+    -fx-text-fill: #000;
+}
+
+#TutorialsTips {
+    -fx-text-fill: #6e6e6e;
+}
+
+#TutorialsTips:hover {
+    -fx-text-fill: #5B5BFA;
+}
+
+/*输入框*/
+#search_input {
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-font-size: 18;
+
+}
+
+#search_input:focused {
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+#search_execute {
+    -fx-background-image: url("/images/public/search_light.png");
+    -fx-background-color: rgba(38, 38, 38, 0);
+}
+
+#search_execute:hover {
+    -fx-background-image: url("/images/public/search_hover.png");
+}
+
+/*列表视图*/
+.list-view {
+    -fx-text-fill: #000;
+}
+
+.list-view .list-cell {
+    -fx-text-fill: #FFF;
+}
+
+
+/*滚动条颜色*/
+.list-view .thumb {
+    -fx-background-color: rgb(226, 221, 221);
+}
+
+
+.news:hover {
+    -fx-background-color: #1b1b1b;
+    -fx-text-fill: #FFF;
+}
+
+#tips {
+    -fx-text-fill: #929090;
+}
+
+#tips:hover {
+    -fx-text-fill: #5B5BFA;
+}
+
+.titles_background_pure {
+    -fx-background-color: #FFF;
+}
+
+.folder{
+    -fx-background-image: url("/images/application/start/folder_light.png");
+}
+
+.folder:hover{
+    -fx-background-image: url("/images/application/start/folder_light_selected.png");
+}
+
+.folder_success{
+    -fx-background-image: url("/images/application/start/folder_success.png");
+}
+
+.folder_not_support{
+    -fx-background-image: url("/images/application/start/folder_not_support.png");
+}
+
+/*搜索面板内容样式*/
+.search_item .search_item_content{
+
+    -fx-fill: #000;
+}
+
+.search_item:hover .search_item_content{
+    -fx-fill: #5B5BFA;
+}
+
+.search_item_text{
+    -fx-font-size: 18;
+}
+
+.search_item_remark{
+    -fx-font-size: 14;
+}
+
+#home {
+    -fx-background-image: url("/images/application/home.png");
+}
+
+#sync {
+    -fx-background-image: url("/images/application/sync.png");
+}
+
+#translation {
+    -fx-background-image: url("/images/application/translation.png");
+}
+
+#build {
+    -fx-background-image: url("/images/application/save.png");
+}
+
+#about {
+    -fx-background-image: url("/images/application/help.png");
+}
+
+#setting {
+    -fx-background-image: url("/images/application/setting.png");
+}
+
+
+
+.sideButton:hover {
+    -fx-background-color: rgb(74, 74, 74);
+}
+
+/*主页面板样式*/
+.BasicEdit {
+    -fx-background-image: url("/images/application/home/Edit_Light.png");
+}
+
+.BasicEdit:selected {
+    -fx-background-image: url("/images/application/home/Edit_Light_selected.png");
+}
+
+.BasicEdit:hover {
+    -fx-background-image: url("/images/application/home/Edit_Light_selected.png");
+}
+
+.TimelineAdj {
+    -fx-background-image: url("/images/application/home/timeline_Light.png");
+}
+
+.TimelineAdj:selected {
+    -fx-background-image: url("/images/application/home/timeline_Light_selected.png");
+}
+
+.TimelineAdj:hover {
+    -fx-background-image: url("/images/application/home/timeline_Light_selected.png");
+}
+
+.FindR {
+    -fx-background-image: url("/images/application/home/findR_Light.png");
+}
+
+.FindR:hover {
+    -fx-background-image: url("/images/application/home/findR_Light_selected.png");
+}
+
+.FindR:selected {
+    -fx-background-image: url("/images/application/home/findR_Light_selected.png");
+}
+
+.Preview {
+    -fx-background-image: url("/images/application/home/preview_Light.png");
+}
+
+.Preview:hover {
+    -fx-background-image: url("/images/application/home/preview_Light_selected.png");
+}
+
+.Preview:selected {
+    -fx-background-image: url("/images/application/home/preview_Light_selected.png");
+}
+
+.edit_tool_button {
+    -fx-text-fill: rgb(67, 67, 67);
+}
+
+
+.edit_tool_button:selected {
+    -fx-background-color: rgba(234, 236, 240, 1);
+    -fx-text-fill: #5B5BFA;
+}
+
+.edit_tool_button:hover {
+    -fx-background-color: rgba(234, 236, 240, 1);
+    -fx-text-fill: #5B5BFA;
+
+}
+
+.List_titles {
+    -fx-text-fill: #000;
+}
+
+.listPanel {
+    -fx-background-color: #F4F4F4;
+}
+
+/*
+同步返听*/
+.ManualSync {
+    -fx-background-image: url("/images/application/sync/ManualSync_Light.png");
+}
+
+.ManualSync:hover {
+    -fx-background-image: url("/images/application/sync/ManualSync_Light_selected.png");
+}
+
+.ManualSync:selected {
+    -fx-background-image: url("/images/application/sync/ManualSync_Light_selected.png");
+}
+
+.AutomaticSync {
+    -fx-background-image: url("/images/application/sync/AutoSync_Light.png");
+}
+
+.AutomaticSync:hover {
+    -fx-background-image: url("/images/application/sync/AutoSync_Light_selected.png");
+}
+
+.AutomaticSync:selected {
+    -fx-background-image: url("/images/application/sync/AutoSync_Light_selected.png");
+}
+
+/*文字翻译-在线翻译按钮样式*/
+.Tran_Online {
+    -fx-background-image: url("/images/application/tran/Tran_Online_Light.png");
+}
+
+.Tran_Online:selected {
+    -fx-background-image: url("/images/application/tran/Tran_Online_Light_selected.png");
+}
+
+.Tran_Online:hover {
+    -fx-background-image: url("/images/application/tran/Tran_Online_Light_selected.png");
+}
+
+/*文字翻译-离线翻译按钮样式*/
+.Tran_Offline {
+    -fx-background-image: url("/images/application/tran/Tran_Offline_Light.png");
+}
+
+.Tran_Offline:selected {
+    -fx-background-image: url("/images/application/tran/Tran_Offline_Light_selected.png");
+}
+
+.Tran_Offline:hover {
+    -fx-background-image: url("/images/application/tran/Tran_Offline_Light_selected.png");
+}
+
+/*翻译面板控件*/
+#Tarn_image {
+    -fx-background-image: url("/images/application/tran/Transformation.png");
+}
+
+/*构建导出-导出选项样式*/
+.Build_Manual {
+    -fx-background-image: url("/images/application/build/Save_Manual_Light.png");
+}
+
+.Build_Manual:selected {
+    -fx-background-image: url("/images/application/build/Save_Manual_Light_selected.png");
+}
+
+.Build_Manual:hover {
+    -fx-background-image: url("/images/application/build/Save_Manual_Light_selected.png");
+}
+
+/*构建导出-视频预览按钮样式*/
+.Build_Preview {
+    -fx-background-image: url("/images/application/build/Save_Preview_Light.png");
+}
+
+.Build_Preview:selected {
+    -fx-background-image: url("/images/application/build/Save_Preview_Light_selected.png");
+}
+
+.Build_Preview:hover {
+    -fx-background-image: url("/images/application/build/Save_Preview_Light_selected.png");
+}
+
+/*设置窗格*/
+.Base {
+    -fx-background-image: url("/images/application/setting/Base_Light.png");
+}
+
+.Base:selected {
+    -fx-background-image: url("/images/application/setting/Base_Light_selected.png");
+}
+
+.Base:hover {
+    -fx-background-image: url("/images/application/setting/Base_Light_selected.png");
+}
+
+.Advanced {
+    -fx-background-image: url("/images/application/setting/Advanced_Light.png");
+}
+
+.Advanced:selected {
+    -fx-background-image: url("/images/application/setting/Advanced_Light_selected.png");
+}
+
+.Advanced:hover {
+    -fx-background-image: url("/images/application/setting/Advanced_Light_selected.png");
+}
+
+.Lab {
+    -fx-background-image: url("/images/application/setting/Lab_Light.png");
+}
+
+.Lab:selected {
+    -fx-background-image: url("/images/application/setting/Lab_Light_selected.png");
+}
+
+.Lab:hover {
+    -fx-background-image: url("/images/application/setting/Lab_Light_selected.png");
+}
+
+/*关于软件*/
+.Guide {
+    -fx-background-image: url("/images/application/about/Guide_Light.png");
+}
+
+.Guide:selected {
+    -fx-background-image: url("/images/application/about/Guide_Light_selected.png");
+}
+
+.Guide:hover {
+    -fx-background-image: url("/images/application/about/Guide_Light_selected.png");
+}
+
+.Pact {
+    -fx-background-image: url("/images/application/about/Pact_Light.png");
+}
+
+.Pact:selected {
+    -fx-background-image: url("/images/application/about/Pact_Light_selected.png");
+}
+
+.Pact:hover {
+    -fx-background-image: url("/images/application/about/Pact_Light_selected.png");
+}
+
+.UpdateLog {
+    -fx-background-image: url("/images/application/about/UpdateLog_Light.png");
+}
+
+.UpdateLog:selected {
+    -fx-background-image: url("/images/application/about/UpdateLog_Light_selected.png");
+}
+
+.UpdateLog:hover {
+    -fx-background-image: url("/images/application/about/UpdateLog_Light_selected.png");
+}
+
+/*主窗格底层*/
+#bottomLayer {
+    -fx-background-color: #FFFFFF;
+}
+
+
+/*全局TextArea*/
+.editor {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #000000;
+    -fx-highlight-fill: #9B9BFF; /* makes color of highlight region */
+    -fx-highlight-text-fill: #000; /* makes the color of highlighted text */
+}
+
+.editor .scroll-pane .content {
+    -fx-background-color: #FFFFFF;
+}
+
+.editor:focused {
+    -fx-background-color: #FFFFFF;
+}
+
+/*滚动条颜色*/
+.editor .thumb {
+    -fx-background-color: rgb(226, 221, 221);
+}
+
+/*separator分界线*/
+.separator *.line {
+    -fx-background-color: #E6E6E6;
+    -fx-border-color: #E6E6E6;
+}
+
+/*全局Label*/
+.GlobalLabel {
+    -fx-text-fill: #000000;
+}
+
+/*主页工具栏按钮*/
+#edit_tool_find {
+    -fx-background-image: url("/images/application/home/find_light.png");
+}
+
+#edit_tool_find:hover {
+    -fx-background-image: url("/images/application/home/find_hover.png");
+}
+
+#edit_tool_find:selected {
+    -fx-background-image: url("/images/application/home/find_hover.png");
+}
+
+#edit_tool_replace {
+    -fx-background-image: url("/images/application/home/replace_light.png");
+}
+
+#edit_tool_replace:hover {
+    -fx-background-image: url("/images/application/home/replace_hover.png");
+}
+
+#edit_tool_replace:selected {
+    -fx-background-image: url("/images/application/home/replace_hover.png");
+}
+
+#edit_tool_hidden {
+    -fx-background-image: url("/images/application/home/more_light.png");
+}
+
+#edit_tool_hidden:hover {
+    -fx-background-image: url("/images/application/home/more_hover.png");
+}
+
+#edit_tool_hidden:selected {
+    -fx-background-image: url("/images/application/home/more_hover.png");
+}
+
+#edit_tool_jump {
+    -fx-background-image: url("/images/application/home/jump_light.png");
+}
+
+#edit_tool_jump:hover {
+    -fx-background-image: url("/images/application/home/jump_hover.png");
+}
+
+#edit_tool_jump:selected {
+    -fx-background-image: url("/images/application/home/jump_hover.png");
+}
+
+#edit_tool_code {
+    -fx-background-image: url("/images/application/home/code_light.png");
+}
+
+#edit_tool_code:hover {
+    -fx-background-image: url("/images/application/home/code_hover.png");
+}
+
+#edit_tool_code:selected {
+    -fx-background-image: url("/images/application/home/code_hover.png");
+}
+
+#edit_tool_style {
+    -fx-background-image: url("/images/application/home/style_light.png");
+}
+
+#edit_tool_style:hover {
+    -fx-background-image: url("/images/application/home/style_hover.png");
+}
+
+#edit_tool_style:selected {
+    -fx-background-image: url("/images/application/home/style_hover.png");
+}
+
+#edit_tool_time_line {
+    -fx-background-image: url("/images/application/home/addTimeline_light.png");
+}
+
+#edit_tool_time_line:hover {
+    -fx-background-image: url("/images/application/home/addTimeline_hover.png");
+}
+
+#edit_tool_time_line:selected {
+    -fx-background-image: url("/images/application/home/addTimeline_hover.png");
+}
+
+#edit_tool_regular_line {
+    -fx-background-image: url("/images/application/home/newline_light.png");
+}
+
+#edit_tool_regular_line:hover {
+    -fx-background-image: url("/images/application/home/newline_hover.png");
+}
+
+#edit_tool_regular_line:selected {
+    -fx-background-image: url("/images/application/home/newline_hover.png");
+}
+
+/*全局提示框*/
+.tooltip {
+    -fx-font-size: 17;
+}
+
+/*分界线*/
+.splitPane *.split-pane-divider {
+    -fx-background-color: #dbdbdb;
+
+}
+
+.modelPart {
+    -fx-background-color: #FFF;
+    -fx-effect: dropshadow(three-pass-box, #2D2D2D, 3.0, 0, 0, 0);
+
+}
+
+/*输入框*/
+.input {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bababe;
+    -fx-text-fill: #000;
+    -fx-highlight-fill: #9B9BFF; /* makes color of highlight region */
+    -fx-highlight-text-fill: #000; /* makes the color of highlighted text */
+}
+
+.input:focused {
+    -fx-background-color: #fff;
+    -fx-border-color: #bababe;
+    -fx-text-fill: #000;
+}
+
+
+
+/*默认按钮*/
+/*#cancel {*/
+/*    -fx-background-color:*/
+/*            #ECECEC,*/
+/*            linear-gradient(#ECECEC 50%, #D5D5D5 100%),*/
+/*            radial-gradient(center 50% -40%, radius 200%, #ECECEC 45%, #D5D5D5 50%);*/
+/*    -fx-background-radius: 10;*/
+/*    -fx-background-insets: 0,1,1;*/
+/*    -fx-text-fill: black;*/
+/*    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );*/
+/*}*/
+
+/*!*默认按钮*!*/
+/*#cancel :hover {*/
+/*    -fx-background-color: #FFFFFF;*/
+/*    -fx-text-fill: #5B5BFA;*/
+/*    -fx-background-radius: 5;*/
+/*    -fx-effect: dropshadow(gaussian, #303030, 5.0,0, 0, 0);*/
+/*}*/
+
+/*全局单选按钮*/
+.radio-button {
+    -fx-text-fill: #000;
+}
+
+.radio-button .radio {
+    -fx-border-color: #000;
+    -fx-background-color: white;
+}
+
+
+
+/*全局ComboBox*/
+.combo-box .list-cell {
+    -fx-background: white;
+    -fx-text-fill: #000;
+    -fx-mark-color: black; /*箭头颜色*/
+    -fx-text-alignment: center;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: white, white;
+    -fx-background-radius: 5;
+}
+
+
+.combo-box-popup .list-view .list-cell:filled:selected,
+.combo-box-popup .list-view .list-cell:filled:selected:hover {
+    -fx-background-color: #FFF;
+    -fx-text-fill: #5B5BFA;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #ececec;
+}
+
+.combo-box-base {
+    -fx-border-color: #BFBFC2;
+}
+
+
+/*滚动条颜色*/
+.combo-box .thumb {
+    -fx-background-color: rgb(226, 221, 221);
+}
+
+/*工具面板组件样式*/
+.editToolPanel {
+    -fx-background-color: #FFF;
+    -fx-effect: dropshadow(GAUSSIAN, #2d2d2d, 7, 0, 0, 0);
+    /*<DropShadow blurType="GAUSSIAN" height="15.0" radius="7.0" width="15.0" />*/
+}
+
+/*工具面板底层*/
+#toolPanel {
+    -fx-background-color: transparent;
+}
+
+/*工具面板文本框样式*/
+.ToolPanel_TextField {
+    -fx-background-color: #FFF;
+    -fx-border-color: #FFF;
+    -fx-text-fill: #000;
+}
+
+
+/*工具面板按钮样式*/
+.ToolPanel_Button {
+    -fx-background-color: #FFF;
+}
+
+/*工具栏按钮样式*/
+#edit_tool_find_btn {
+    -fx-background-image: url("/images/application/tool/search_light.png");
+}
+
+#edit_tool_find_btn:hover {
+    -fx-background-image: url("/images/application/tool/search_hover.png");
+}
+
+#edit_tool_find_option {
+    -fx-background-image: url("/images/application/tool/option_light.png");
+}
+
+#edit_tool_find_option:hover {
+    -fx-background-image: url("/images/application/tool/option_hover.png");
+}
+
+#edit_tool_find_close {
+    -fx-background-image: url("/images/application/tool/close_light.png");
+}
+
+#edit_tool_find_close:hover {
+    -fx-background-image: url("/images/application/tool/close_hover.png");
+}
+
+#edit_tool_search_btn {
+    -fx-background-image: url("/images/application/tool/search_light.png");
+}
+
+#edit_tool_search_btn:hover {
+    -fx-background-image: url("/images/application/tool/search_hover.png");
+}
+
+#edit_tool_search_option {
+    -fx-background-image: url("/images/application/tool/option_light.png");
+}
+
+#edit_tool_search_option:hover {
+    -fx-background-image: url("/images/application/tool/option_hover.png");
+}
+
+#edit_tool_replace_close {
+    -fx-background-image: url("/images/application/tool/close_light.png");
+}
+
+#edit_tool_replace_close:hover {
+    -fx-background-image: url("/images/application/tool/close_hover.png");
+}
+
+#edit_tool_replace_next {
+    -fx-background-image: url("/images/application/tool/replace_light.png");
+}
+
+#edit_tool_replace_next:hover {
+    -fx-background-image: url("/images/application/tool/replace_hover.png");
+}
+
+#edit_tool_replace_all {
+    -fx-background-image: url("/images/application/tool/replaceall_light.png");
+}
+
+#edit_tool_replace_all:hover {
+    -fx-background-image: url("/images/application/tool/replaceall_hover.png");
+}
+
+#edit_tool_jump_btn {
+    -fx-background-image: url("/images/application/tool/jump_light.png");
+}
+
+#edit_tool_jump_btn:hover {
+    -fx-background-image: url("/images/application/tool/jump_hover.png");
+}
+
+#edit_tool_jump_close {
+    -fx-background-image: url("/images/application/tool/close_light.png");
+}
+
+#edit_tool_jump_close:hover {
+    -fx-background-image: url("/images/application/tool/close_hover.png");
+}
+
+#edit_tool_code_close {
+    -fx-background-image: url("/images/application/tool/close_light.png");
+}
+
+#edit_tool_code_close:hover {
+    -fx-background-image: url("/images/application/tool/close_hover.png");
+}
+
+#edit_tool_code_btn {
+    -fx-background-image: url("/images/application/tool/refresh_light.png");
+}
+
+#edit_tool_code_btn:hover {
+    -fx-background-image: url("/images/application/tool/refresh_hover.png");
+}
+
+#edit_tool_style_default {
+    -fx-background-image: url("/images/application/tool/default_light.png");
+}
+
+#edit_tool_style_default:hover {
+    -fx-background-image: url("/images/application/tool/default_hover.png");
+}
+
+#edit_tool_style_close {
+    -fx-background-image: url("/images/application/tool/close_light.png");
+}
+
+#edit_tool_style_close:hover {
+    -fx-background-image: url("/images/application/tool/close_hover.png");
+}
+
+#edit_tool_style_bold {
+    -fx-background-image: url("/images/application/tool/bold_light.png");
+}
+
+#edit_tool_style_bold:hover {
+    -fx-background-image: url("/images/application/tool/bold_hover.png");
+}
+
+#edit_tool_style_bold:selected {
+    -fx-background-image: url("/images/application/tool/bold_hover.png");
+}
+
+
+#edit_tool_style_italic {
+    -fx-background-image: url("/images/application/tool/italic_light.png");
+}
+
+#edit_tool_style_italic:hover {
+    -fx-background-image: url("/images/application/tool/italic_hover.png");
+}
+
+#edit_tool_style_italic:selected {
+    -fx-background-image: url("/images/application/tool/italic_hover.png");
+}
+
+#edit_tool_style_underline {
+    -fx-background-image: url("/images/application/tool/underline_light.png");
+}
+
+#edit_tool_style_underline:hover {
+    -fx-background-image: url("/images/application/tool/underline_hover.png");
+}
+
+#edit_tool_style_underline:selected {
+    -fx-background-image: url("/images/application/tool/underline_hover.png");
+}
+
+/*选项菜单样式*/
+#edit_tool_find_option_menu > .label {
+    -fx-text-fill: #000;
+}
+
+/*整个上下文菜单的背景色、字体大小、宽度*/
+#edit_tool_find_option_menu .context-menu {
+    -fx-background-color: #fff;
+}
+
+/*列表中的焦点项目背景颜色*/
+#edit_tool_find_option_menu .menu-item:focused {
+    -fx-background-color: #F4F4F4;
+}
+
+/*列表中非重点项目的文字颜色*/
+#edit_tool_find_option_menu .menu-item > .label {
+    -fx-text-fill: black;
+}
+
+/*列表中焦点项目的文本颜色*/
+#edit_tool_find_option_menu .menu-item:focused > .label {
+    -fx-text-fill: #5B5BFA;
+}
+
+
+
+#edit_tool_replace_search_menu > .label {
+    -fx-text-fill: #000;
+}
+
+/*整个上下文菜单的背景色、字体大小、宽度*/
+#edit_tool_replace_search_menu .context-menu {
+    -fx-background-color: #fff;
+}
+
+/*列表中的焦点项目背景颜色*/
+#edit_tool_replace_search_menu .menu-item:focused {
+    -fx-background-color: #F4F4F4;
+}
+
+/*列表中非重点项目的文字颜色*/
+#edit_tool_replace_search_menu .menu-item > .label {
+    -fx-text-fill: black;
+}
+
+/*列表中焦点项目的文本颜色*/
+#edit_tool_replace_search_menu .menu-item:focused > .label {
+    -fx-text-fill: #5B5BFA;
+}
+
+
+
+.edit_mode_off {
+    -fx-background-image: url("/images/application/tool/edit_mode_off.png");
+}
+
+.edit_mode_off:hover{
+    -fx-background-image: url("/images/application/tool/edit_mode_off_hover.png");
+}
+
+.edit_mode_no {
+    -fx-background-image: url("/images/application/tool/edit_mode_no.png");
+}
+
+.edit_mode_no:hover{
+    -fx-background-image: url("/images/application/tool/edit_mode_no_hover.png");
+}
+
+/*同步返听字幕列表*/
+.listView {
+    -fx-text-fill: #fff;
+}
+
+.list-cell:even {
+    -fx-text-fill: #000;
+}
+
+.list-cell:odd {
+    -fx-text-fill: #000;
+}
+
+/*滚动条颜色*/
+.listView .thumb {
+    -fx-background-color: rgb(226, 221, 221);
+}
+
+/*待开发图片*/
+#InDevelopment {
+    -fx-background-image: url("/images/application/InDevelopment.png");
+}
+
+#InDevelopment_Label {
+    -fx-text-fill: #979292;
+}
+
+/*等待视频加载内容*/
+#WaitingLoadingPanel_Content {
+    -fx-border-color: #bebebe;
+}
+
+#WaitingLoadingPanel_Content_Image {
+    -fx-background-image: url("/images/application/openVideo_Light.png");
+}
+
+#WaitingLoadingPanel_Content_Image:hover {
+    -fx-background-image: url("/images/application/openVideo_hover.png");
+}
+
+.WaitingLoadingPanel_Content_Label {
+    -fx-text-fill: #bebebe;
+}
+
+
+/*翻译面板控件*/
+#tarn_online_image {
+    -fx-background-image: url("/images/application/tran/TranOnline_Lable_Light.png");
+}
+
+#LoadRoot {
+    -fx-effect: dropshadow(gaussian, #000000, 10.0, 100, 0, 0);
+    -fx-background-color: #DEDEDE;
+    -fx-border-color: #000;
+}
+
+#Load_ChoiceBox {
+    -fx-border-color: #2d2d2d;
+}
+
+#LoadTop {
+    -fx-background-color: #fff;
+}
+
+/*构建导出样式*/
+.Build_TextField {
+    -fx-background-color: #fff;
+    -fx-border-color: #bababe;
+    -fx-text-fill: #000;
+}
+
+
+/*CheckBox默认样式*/
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: grey;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+/*选中颜色*/
+.check-box:selected .box {
+    -fx-background-color: #5B5BFA;
+}
+
+#Build_ChoosePath {
+    -fx-background-color: #fff;
+    -fx-border-color: #bababe;
+    -fx-background-image: url("/images/application/build/Save_ChoosePath_Light.png");
+}
+
+#Build_OutGraphicsQuality {
+    -fx-font-size: 16;
+}
+
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, #2d2d2d, 7.0,0, 0, 0);
+}
+
+.buttonShadow {
+    -fx-effect: dropshadow(three-pass-box, #383838, 3.0,0, 0, 0);
+}
+
+.buttonShadow :hover{
+    -fx-effect: dropshadow(three-pass-box, #2d2d2d, 3.0,0, 0, 0);
+}
+
+
+#Editor_Rec {
+    -fx-background-image: url("/images/application/setting/Editor_Rec_Light.png");
+}
+
+#Editor_Rec:hover {
+    -fx-background-image: url("/images/application/setting/Editor_Rec_Light_Select.png");
+}
+
+#translationLabel {
+    -fx-background-image: url("/images/application/setting/translation_light.png");
+}
+
+#translationLabel:hover {
+    -fx-background-image: url("/images/application/setting/translation_hover.png");
+}
+
+#voiceLabel {
+    -fx-background-image: url("/images/application/setting/voice_light.png");
+}
+
+#voiceLabel:hover {
+    -fx-background-image: url("/images/application/setting/voice_hover.png");
+}
+
+#appidLabel {
+    -fx-background-image: url("/images/application/setting/appid_light.png");
+}
+
+#appidLabel:hover {
+    -fx-background-image: url("/images/application/setting/appid_hover.png");
+}
+
+#keyLabel {
+    -fx-background-image: url("/images/application/setting/key_light.png");
+}
+
+#keyLabel:hover {
+    -fx-background-image: url("/images/application/setting/key_hover.png");
+}
+
+
+.trayMenu {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.trayMenu .trayMenu-bottom {
+    -fx-background-color: #FFF;
+    -fx-effect: dropshadow( three-pass-box , #000, 5, 0.0 , 0 , 0 );
+}
+
+
+.trayMenu .row {
+    -fx-background-color: #FFFFFF;
+}
+
+.trayMenu .row:hover {
+    -fx-background-color: #C8C8C9;
+}
+
+.trayMenu .row:hover .item-exit {
+    -fx-background-image: url("/images/application/system/exit-hover.png");
+}
+
+.trayMenu .row:hover .item-open {
+    -fx-background-image: url("/images/application/system/home-hover.png");
+}
+
+.trayMenu .row:hover .item-setting {
+    -fx-background-image: url("/images/application/system/setting-hover.png");
+}
+
+.trayMenu .item-open {
+    -fx-background-image: url("/images/application/system/home-light.png");
+}
+
+.trayMenu .item-exit {
+    -fx-background-image: url("/images/application/system/exit-light.png");
+}
+
+.trayMenu .item-setting {
+    -fx-background-image: url("/images/application/system/setting-light.png");
+}
+
+#email {
+    -fx-background-image: url("/images/application/about/email_light.png");
+}
+
+#telegram {
+    -fx-background-image: url("/images/application/about/telegram_light.png");
+}
+
+
+.license_label {
+    -fx-background-image: url("/images/application/about/license_light.png");
+}
+
+.git_label {
+    -fx-background-image: url("/images/application/about/github_light.png");
+}
+
+.scroll_pane .thumb {
+    -fx-background-color: rgb(226, 221, 221);
+}
+
+.group-line {
+    -fx-background-color: #F4F4F4;
+}

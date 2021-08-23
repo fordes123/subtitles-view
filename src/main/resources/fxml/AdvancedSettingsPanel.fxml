@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="root" prefHeight="760.0" prefWidth="950.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"
+          xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="org.fordes.subview.controller.settings.AdvancedSettingController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" prefWidth="300.0"/>
+        <ColumnConstraints hgrow="ALWAYS" prefWidth="650.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="90.0" prefHeight="90.0" vgrow="NEVER"/>
+        <RowConstraints prefHeight="80.0" vgrow="NEVER"/>
+        <RowConstraints prefHeight="80.0" vgrow="NEVER"/>
+        <RowConstraints prefHeight="80.0" vgrow="NEVER"/>
+        <RowConstraints prefHeight="80.0" vgrow="NEVER"/>
+        <RowConstraints prefHeight="80.0" vgrow="NEVER"/>
+        <RowConstraints prefHeight="80.0" vgrow="NEVER"/>
+        <RowConstraints prefHeight="80.0" vgrow="NEVER"/>
+        <RowConstraints vgrow="ALWAYS"/>
+    </rowConstraints>
+
+
+    <Separator maxHeight="-Infinity" minHeight="-Infinity" prefHeight="10.0" prefWidth="475.0" GridPane.columnSpan="2"
+               GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER"
+               GridPane.vgrow="ALWAYS">
+        <GridPane.margin>
+            <Insets left="30.0" right="30.0" top="50.0"/>
+        </GridPane.margin>
+    </Separator>
+    <Label styleClass="GlobalLabel" text="进阶设置">
+        <GridPane.margin>
+            <Insets bottom="30.0" left="30.0"/>
+        </GridPane.margin>
+        <font>
+            <Font size="22.0"/>
+        </font>
+    </Label>
+
+    <Button fx:id="apply" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="应用并保存"
+            GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="BOTTOM">
+        <GridPane.margin>
+            <Insets bottom="35.0" right="180.0"/>
+        </GridPane.margin>
+        <font>
+            <Font size="16.0"/>
+        </font>
+        <styleClass>
+            <String fx:value="execute-button"/>
+            <String fx:value="button-shadow"/>
+        </styleClass>
+    </Button>
+    <Button fx:id="cancel" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="放弃"
+            GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="BOTTOM">
+        <GridPane.margin>
+            <Insets bottom="35.0" right="50.0"/>
+        </GridPane.margin>
+        <font>
+            <Font size="16.0"/>
+        </font>
+        <styleClass>
+            <String fx:value="cancel-button"/>
+            <String fx:value="button-shadow"/>
+        </styleClass>
+    </Button>
+    <Label styleClass="GlobalLabel" text="附加选项" GridPane.halignment="RIGHT" GridPane.rowIndex="1"
+           GridPane.valignment="CENTER">
+        <font>
+            <Font size="19.0"/>
+        </font>
+        <GridPane.margin>
+            <Insets right="30.0"/>
+        </GridPane.margin>
+    </Label>
+
+
+    <CheckBox fx:id="quickExit" text="光速退出" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1"
+              GridPane.valignment="CENTER">
+        <font>
+            <Font size="17.0"/>
+        </font>
+        <GridPane.margin>
+            <Insets left="50.0"/>
+        </GridPane.margin>
+    </CheckBox>
+    <Label styleClass="GlobalLabel" text="（关闭时绕过最小化至托盘, 直接结束程序）" GridPane.columnIndex="1" GridPane.halignment="LEFT"
+           GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+        <GridPane.margin>
+            <Insets left="50.0"/>
+        </GridPane.margin>
+        <font>
+            <Font size="14.0"/>
+        </font>
+    </Label>
+
+</GridPane>

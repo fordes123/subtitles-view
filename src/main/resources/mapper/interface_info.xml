@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fordes.subview.dao.InterfaceInfoDao">
+
+
+    <select id="selectInterfaceCount" resultType="java.lang.Integer" parameterType="java.util.Map">
+        SELECT
+        COUNT( * ) AS count
+        FROM
+        interface_info ii
+        LEFT JOIN interface_support "is" ON ii.`support_id` = "is".`id`
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="server_type != null">
+                AND "is".`server_type` = #{server_type}
+            </if>
+            <if test="server_id != null">
+                AND "is".`server_id` = #{server_id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="selectInterfaceInfo" resultType="org.fordes.subview.entity.DTO.InterfaceInfoDTO"
+            parameterType="java.util.Map">
+        SELECT
+        ii."param",
+        ii."concurrency",
+        ii."inner",
+        ii."processing",
+        ii."version_id",
+        ii."support_id",
+        "is"."server_type",
+        "is"."provider_id",
+        "is"."param",
+        "is"."remark"
+        FROM
+        "interface_info" ii
+        LEFT JOIN interface_support "is" ON ii.support_id = "is".id
+        <trim prefix="WHERE" prefixOverrides="AND">
+            <if test="server_type != null">
+                AND "is".`server_type` = #{server_type}
+            </if>
+            <if test="provider_id != null">
+                AND "is".`provider_id` = #{provider_id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="findProviderByType" resultType="java.lang.Integer">
+        SELECT ins.provider_id
+        FROM "interface_info" ini
+                 LEFT JOIN "interface_support" ins ON ini.support_id = ins.id
+        GROUP BY ins.server_type = #{server_type}
+    </select>
+
+    <insert id="insertOne" parameterType="org.fordes.subview.entity.PO.InterfaceInfo">
+        REPLACE INTO `interface_info`(`support_id`, `version_id`, `param`, `concurrency`, `inner`, `processing`)
+        VALUES (#{entity.support_id}, #{entity.version_id}, #{entity.param}, #{entity.concurrency}, #{entity.inner},
+                #{entity.processing})
+--         ON DUPLICATE KEY UPDATE param = #{entity.param}
+    </insert>
+
+
+</mapper>

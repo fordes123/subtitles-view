@@ -1,0 +1,31 @@
+logging:
+  config: classpath:logback/logback-spring.xml
+  file:
+    path: ./logs
+    max-history: 7
+    max-size: 50MB
+    total-size-cap: 1GB
+  level:
+    org.fordes.subview: debug
+    org:
+      mybatis: debug
+
+
+spring:
+  application:
+    name: sutitles-view
+  datasource:
+    url: jdbc:sqlite::resource:db/subtitles-view.sqlite
+    driver-class-name: org.sqlite.JDBC
+
+
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  type-aliases-package: org.fordes.subview.entity.PO
+  configuration:
+    map-underscore-to-camel-case: false
+    cache-enabled: false
+  global-config:
+    db-config:
+      update-strategy: not_null

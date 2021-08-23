@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="homePanel" prefHeight="760.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fordes.subview.controller.HomeController">
+    <rowConstraints>
+        <RowConstraints minHeight="40.0" prefHeight="40.0" vgrow="NEVER"/>
+        <RowConstraints minHeight="720.0" prefHeight="720.0" vgrow="ALWAYS"/>
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" minWidth="250.0" prefWidth="250.0"/>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="950.0" prefWidth="950.0"/>
+    </columnConstraints>
+    <!--功能列表-->
+    <GridPane id="listPanel" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0"
+              prefWidth="250.0" styleClass="listPanel" GridPane.hgrow="NEVER" GridPane.rowSpan="2"
+              GridPane.vgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" maxWidth="250.0" minWidth="250.0" prefWidth="250.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints prefHeight="118.0" vgrow="SOMETIMES"/>
+            <RowConstraints prefHeight="60.0" vgrow="SOMETIMES"/>
+            <RowConstraints prefHeight="60.0" vgrow="SOMETIMES"/>
+            <RowConstraints prefHeight="60.0" vgrow="SOMETIMES"/>
+            <RowConstraints prefHeight="60.0" vgrow="SOMETIMES"/>
+            <RowConstraints prefHeight="60.0" vgrow="SOMETIMES"/>
+            <RowConstraints prefHeight="60.0" vgrow="SOMETIMES"/>
+            <RowConstraints prefHeight="60.0" vgrow="SOMETIMES"/>
+            <RowConstraints prefHeight="60.0" vgrow="SOMETIMES"/>
+            <RowConstraints prefHeight="60.0" vgrow="SOMETIMES"/>
+            <RowConstraints prefHeight="60.0" vgrow="SOMETIMES"/>
+            <RowConstraints prefHeight="60.0" vgrow="SOMETIMES"/>
+            <RowConstraints prefHeight="22.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <!--顶部标题-->
+        <Label id="Titles" minHeight="-Infinity" minWidth="-Infinity" styleClass="List_titles" text="基础功能"
+               GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets right="120.0" top="20.0"/>
+            </GridPane.margin>
+            <font>
+                <Font size="22.0"/>
+            </font>
+        </Label>
+        <!--基础编辑-->
+        <ToggleButton fx:id="basicEdit" mnemonicParsing="false" prefHeight="50.0"
+                      prefWidth="200.0" selected="true" text="直接编辑" GridPane.halignment="CENTER" GridPane.hgrow="NEVER"
+                      GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+            <font>
+                <Font size="17.0"/>
+            </font>
+            <toggleGroup>
+                <ToggleGroup fx:id="listGroup"/>
+            </toggleGroup>
+            <styleClass>
+                <String fx:value="edit_tool_button"/>
+                <String fx:value="BasicEdit"/>
+            </styleClass>
+        </ToggleButton>
+        <!--时间轴对齐-->
+        <ToggleButton fx:id="timeAlignment" mnemonicParsing="false" prefHeight="50.0"
+                      prefWidth="200.0" text="时间对齐" toggleGroup="$listGroup" GridPane.halignment="CENTER"
+                      GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+            <font>
+                <Font size="17.0"/>
+            </font>
+            <styleClass>
+                <String fx:value="edit_tool_button"/>
+                <String fx:value="TimelineAdj"/>
+            </styleClass>
+        </ToggleButton>
+    </GridPane>
+    <!--底层容器-->
+    <GridPane id="bottomLayer" styleClass="content" GridPane.columnIndex="1" GridPane.rowSpan="2">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="950.0" prefWidth="950.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="NEVER"/>
+            <RowConstraints fx:id="toolBarSpace" maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="NEVER"/>
+            <RowConstraints fx:id="contentSpace" prefHeight="620.0" vgrow="ALWAYS"/>
+            <RowConstraints/>
+        </rowConstraints>
+        <ToggleButton fx:id="edit_mode" minHeight="30.0" minWidth="30.0" mnemonicParsing="false"
+                      styleClass="edit_mode_off" GridPane.halignment="RIGHT" GridPane.rowIndex="2"
+                      GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets bottom="5.0" right="110.0"/>
+            </GridPane.margin>
+        </ToggleButton>
+        <Label fx:id="editIndicator" styleClass="GlobalLabel" text="行0, 列0" GridPane.halignment="RIGHT"
+               GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+            <GridPane.margin>
+                <Insets bottom="10.0" right="150.0"/>
+            </GridPane.margin>
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <Label fx:id="edit_mode_label" styleClass="GlobalLabel" text="简洁模式" GridPane.halignment="RIGHT"
+               GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font size="16.0"/>
+            </font>
+            <GridPane.margin>
+                <Insets bottom="10.0" right="40.0"/>
+            </GridPane.margin>
+        </Label>
+        <!--时间轴对齐窗格-->
+        <GridPane fx:id="timeAlignmentPanel" visible="false" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+                  GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" percentWidth="870.0" prefWidth="870.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="570.0" prefHeight="570.0" vgrow="ALWAYS"/>
+            </rowConstraints>
+            <GridPane.margin>
+                <Insets bottom="40.0" left="40.0" right="40.0" top="10.0"/>
+            </GridPane.margin>
+            <SplitPane id="timeAlignment_split_pane" dividerPositions="0.42" styleClass="splitPane"
+                       GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER"
+                       GridPane.vgrow="ALWAYS">
+                <GridPane id="timeAlignment_left">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="NEVER" minWidth="400.0" prefWidth="400.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="220.0" prefHeight="220" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="350.0" prefHeight="350.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <GridPane id="timeAlignment_tips" styleClass="modelPart" GridPane.hgrow="ALWAYS"
+                              GridPane.vgrow="ALWAYS">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" prefWidth="120.0"/>
+                            <ColumnConstraints hgrow="ALWAYS"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="33.0" prefHeight="33.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="33.0" prefHeight="33.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="33.0" prefHeight="33.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="33.0" prefHeight="33.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="33.0" prefHeight="33.0" vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <GridPane.margin>
+                            <Insets bottom="10" left="10.0" right="20.0" top="10.0"/>
+                        </GridPane.margin>
+                        <Label styleClass="GlobalLabel" text="字幕信息" GridPane.halignment="LEFT"
+                               GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                            <font>
+                                <Font name="System Bold" size="16.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="20.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label styleClass="GlobalLabel" text="文件名" GridPane.halignment="CENTER"
+                               GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER"
+                               GridPane.vgrow="SOMETIMES">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="timeAlignment_file_name" styleClass="GlobalLabel" GridPane.columnIndex="1"
+                               GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1"
+                               GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label styleClass="GlobalLabel" text="时间起点" GridPane.halignment="CENTER"
+                               GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.valignment="CENTER"
+                               GridPane.vgrow="SOMETIMES">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="timeAlignment_time_start" styleClass="GlobalLabel" GridPane.columnIndex="1"
+                               GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2"
+                               GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label styleClass="GlobalLabel" text="时长" GridPane.halignment="CENTER"
+                               GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.valignment="CENTER"
+                               GridPane.vgrow="SOMETIMES">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="timeAlignment_time_size" styleClass="GlobalLabel" GridPane.columnIndex="1"
+                               GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3"
+                               GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label styleClass="GlobalLabel" text="字符集" GridPane.halignment="CENTER"
+                               GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4" GridPane.valignment="CENTER"
+                               GridPane.vgrow="SOMETIMES">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="timeAlignment_encode" styleClass="GlobalLabel" GridPane.columnIndex="1"
+                               GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4"
+                               GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label styleClass="GlobalLabel" text="文件大小" GridPane.halignment="CENTER"
+                               GridPane.hgrow="SOMETIMES" GridPane.rowIndex="5" GridPane.valignment="CENTER"
+                               GridPane.vgrow="SOMETIMES">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="timeAlignment_file_size" styleClass="GlobalLabel" GridPane.columnIndex="1"
+                               GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="5"
+                               GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                    </GridPane>
+                    <GridPane id="timeAlignment_newTime" styleClass="modelPart" GridPane.hgrow="ALWAYS"
+                              GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="160.0" prefWidth="160.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="160.0" prefWidth="160.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="40.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="60.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="60.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="50.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+                            <RowConstraints minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <GridPane.margin>
+                            <Insets bottom="2" left="10.0" right="20.0" top="10.0"/>
+                        </GridPane.margin>
+                        <ComboBox fx:id="timeAlignment_hour" maxHeight="-Infinity" maxWidth="-Infinity"
+                                  minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="100.0"
+                                  promptText="0-99" GridPane.halignment="RIGHT" GridPane.rowIndex="1"
+                                  GridPane.valignment="CENTER">
+                            <GridPane.margin>
+                                <Insets right="5.0"/>
+                            </GridPane.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="timeAlignment_min" maxHeight="-Infinity" maxWidth="-Infinity"
+                                  minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="100.0"
+                                  promptText="0-59" GridPane.columnIndex="1" GridPane.halignment="RIGHT"
+                                  GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                            <GridPane.margin>
+                                <Insets right="25.0"/>
+                            </GridPane.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="timeAlignment_ms" maxHeight="-Infinity" maxWidth="-Infinity"
+                                  minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="100.0"
+                                  promptText="0-999" GridPane.columnIndex="1" GridPane.halignment="RIGHT"
+                                  GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                            <GridPane.margin>
+                                <Insets right="25.0"/>
+                            </GridPane.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="timeAlignment_sec" maxHeight="-Infinity" maxWidth="-Infinity"
+                                  minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="100.0"
+                                  promptText="0-59" GridPane.halignment="RIGHT" GridPane.rowIndex="2"
+                                  GridPane.valignment="CENTER">
+                            <GridPane.margin>
+                                <Insets right="5.0"/>
+                            </GridPane.margin>
+                        </ComboBox>
+                        <Label styleClass="GlobalLabel" text="操作" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES"
+                               GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                            <GridPane.margin>
+                                <Insets left="20.0"/>
+                            </GridPane.margin>
+                            <font>
+                                <Font name="System Bold" size="16.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="timeAlignment_input" maxHeight="-Infinity" maxWidth="-Infinity"
+                                   prefHeight="40.0" prefWidth="270.0" promptText="点此直接输入(支持毫秒时间戳)"
+                                   styleClass="TextField" GridPane.columnSpan="2" GridPane.halignment="CENTER"
+                                   GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="17.0"/>
+                            </font>
+                        </TextField>
+                        <RadioButton fx:id="timeAlignment_processing_all" mnemonicParsing="false" selected="true"
+                                     text="处理全部" GridPane.halignment="CENTER" GridPane.rowIndex="4"
+                                     GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="timeAlignment_mode"/>
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton id="timeAlignment_processing_selected" mnemonicParsing="false" text="仅处理选中"
+                                     toggleGroup="$timeAlignment_mode" GridPane.columnIndex="1"
+                                     GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </RadioButton>
+                        <Button fx:id="perform_time_alignment" mnemonicParsing="false" prefHeight="36.0" prefWidth="140.0"
+                                text="开始执行" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5"
+                                GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                            <styleClass>
+                                <String fx:value="execute-button"/>
+                                <String fx:value="button-shadow"/>
+                            </styleClass>
+                        </Button>
+                        <Label styleClass="GlobalLabel" text="小时" GridPane.halignment="LEFT" GridPane.rowIndex="1"
+                               GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets left="20.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label styleClass="GlobalLabel" text="分钟" GridPane.columnIndex="1" GridPane.halignment="LEFT"
+                               GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label styleClass="GlobalLabel" text="秒数" GridPane.halignment="LEFT" GridPane.rowIndex="2"
+                               GridPane.valignment="CENTER">
+                            <GridPane.margin>
+                                <Insets left="20.0"/>
+                            </GridPane.margin>
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label styleClass="GlobalLabel" text="毫秒" GridPane.columnIndex="1" GridPane.halignment="LEFT"
+                               GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                            <GridPane.margin>
+                                <Insets/>
+                            </GridPane.margin>
+                        </Label>
+                    </GridPane>
+                </GridPane>
+                <TextArea fx:id="timeAlignment_area" styleClass="editor" wrapText="true" GridPane.halignment="CENTER"
+                          GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </TextArea>
+            </SplitPane>
+        </GridPane>
+        <GridPane fx:id="editorPanel" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2"
+                  GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="ALWAYS"/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+            <GridPane.margin>
+                <Insets bottom="40.0" left="40.0" right="40.0" top="10.0"/>
+            </GridPane.margin>
+            <!--主编辑器-->
+            <TextArea fx:id="editor" prefHeight="570.0" prefWidth="870.0" styleClass="editor" wrapText="true"
+                      GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER"
+                      GridPane.vgrow="ALWAYS">
+                <font>
+                    <Font size="18.0"/>
+                </font>
+            </TextArea>
+        </GridPane>
+
+        <!--工具面板-->
+        <fx:include id="toolPanel" source="ToolPanel.fxml" GridPane.halignment="RIGHT" GridPane.rowIndex="2"
+                    GridPane.valignment="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity"/>
+        <!--工具栏-->
+        <fx:include id="editToolBar" source="EditToolBar.fxml" visible="true" GridPane.halignment="CENTER"
+                    GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER"/>
+    </GridPane>
+</GridPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="top" maxHeight="40" prefHeight="40.0" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fordes.subview.controller.TitlesBarController">
+    <styleClass>
+        <String fx:value="titlesBar"/>
+    </styleClass>
+    <AnchorPane prefHeight="40.0">
+        <Button fx:id="closed" contentDisplay="CENTER" mnemonicParsing="false" AnchorPane.rightAnchor="0.0"/>
+        <Button fx:id="maximize" contentDisplay="CENTER" mnemonicParsing="false" AnchorPane.rightAnchor="50.0"/>
+        <Button fx:id="minimize" contentDisplay="CENTER" mnemonicParsing="false" AnchorPane.rightAnchor="100.0"/>
+        <Button fx:id="mode_switch" contentDisplay="CENTER" mnemonicParsing="false" AnchorPane.rightAnchor="150.0"/>
+        <Label fx:id="title" prefHeight="40.0" styleClass="titles" AnchorPane.leftAnchor="20">
+            <font>
+                <Font name="Microsoft YaHei" size="15.0"/>
+            </font>
+        </Label>
+    </AnchorPane>
+</VBox>

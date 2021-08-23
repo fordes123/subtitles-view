@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="root" prefHeight="680.0" prefWidth="475.0" style="-fx-background-color: transparent;-fx-cursor: hand" visible="false" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fordes.subview.controller.AboutContentController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="50" vgrow="NEVER" />
+        <RowConstraints prefHeight="50" vgrow="SOMETIMES" />
+    </rowConstraints>
+
+    <GridPane fx:id="developer" visible="false" GridPane.rowIndex="1">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="ALWAYS"/>
+            <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES"/>
+            <RowConstraints/>
+        </rowConstraints>
+        <GridPane.margin>
+            <Insets left="10.0" top="10.0"/>
+        </GridPane.margin>
+        <Pane id="blog" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+              prefHeight="160.0" prefWidth="160.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets bottom="20.0" right="20.0" top="60.0"/>
+            </GridPane.margin>
+        </Pane>
+        <TextArea editable="false"
+                  text="很久之前弄过一个字幕工具叫做SubtitlesTool，也是我初学编程的第一个练手项目。当初还是为看美剧所作，因为那时网上一些二次压制的资源经常有一个片头广告，导致其和下载的外挂字幕时间对不上，虽然某些播放器可以手动调节，但是毕竟不太方便，于是初学编程的我就写了一个控制台程序用来批量校正字幕时间轴。后面伴随着我的学习，最初代码不断被重构，如今或许是最后一次了。作为告别，也作为补完，这也是现在你所看到的 Subtitles View."
+                  wrapText="true" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+                  GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <font>
+                <Font size="17.0"/>
+            </font>
+            <GridPane.margin>
+                <Insets bottom="10.0" right="30.0"/>
+            </GridPane.margin>
+            <styleClass>
+                <String fx:value="editor"/>
+                <String fx:value="info_Content_Area"/>
+            </styleClass>
+        </TextArea>
+        <Label styleClass="GlobalLabel" text="联系方式" GridPane.rowIndex="1">
+            <font>
+                <Font size="17.0"/>
+            </font>
+            <GridPane.margin>
+                <Insets/>
+            </GridPane.margin>
+        </Label>
+        <Label id="email" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+               prefHeight="30.0" prefWidth="30.0" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets/>
+            </GridPane.margin>
+        </Label>
+        <Label id="telegram" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+               prefHeight="30.0" prefWidth="30.0" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets/>
+            </GridPane.margin>
+        </Label>
+        <Label onMouseClicked="#onClip" text="ec.cheng.16888@gmail.com" GridPane.rowIndex="2">
+            <font>
+                <Font size="16.0"/>
+            </font>
+            <GridPane.margin>
+                <Insets left="45.0"/>
+            </GridPane.margin>
+            <styleClass>
+                <String fx:value="GlobalLabel"/>
+                <String fx:value="info_Label"/>
+            </styleClass>
+        </Label>
+        <Label onMouseClicked="#onClip" text="https://t.me/Fordes123" GridPane.rowIndex="3">
+            <GridPane.margin>
+                <Insets left="45.0"/>
+            </GridPane.margin>
+            <font>
+                <Font size="16.0"/>
+            </font>
+            <styleClass>
+                <String fx:value="info_Label"/>
+                <String fx:value="GlobalLabel"/>
+            </styleClass>
+        </Label>
+        <Label styleClass="GlobalLabel" text="（扫码查看开发者Blog 👉 ）" GridPane.rowIndex="4">
+            <font>
+                <Font size="15.0"/>
+            </font>
+            <GridPane.margin>
+                <Insets/>
+            </GridPane.margin>
+        </Label>
+    </GridPane>
+    <GridPane fx:id="terms" style="-fx-background-color: transparent;-fx-cursor: hand" visible="false" GridPane.rowIndex="1">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <TextArea fx:id="termsArea" editable="false" prefHeight="200.0" prefWidth="200.0" styleClass="editor" wrapText="true">
+           <GridPane.margin>
+               <Insets bottom="10.0" left="10.0" right="20.0" />
+           </GridPane.margin>
+           <font>
+               <Font size="16.0" />
+           </font>
+        </TextArea>
+    </GridPane>
+   <Label fx:id="title" styleClass="GlobalLabel" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+      <font>
+         <Font name="System Bold" size="20.0" />
+      </font>
+      <GridPane.margin>
+         <Insets left="10.0" />
+      </GridPane.margin></Label>
+    <ScrollPane fx:id="license" prefHeight="200.0" prefWidth="200.0"
+                style="-fx-background-color: transparent;-fx-cursor: hand" styleClass="scroll_pane" visible="false"
+                GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER"
+                GridPane.vgrow="ALWAYS">
+        <GridPane.margin>
+            <Insets left="10.0"/>
+        </GridPane.margin>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+            <GridPane prefHeight="594.0" prefWidth="415.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" vgrow="SOMETIMES"/>
+                    <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" vgrow="SOMETIMES"/>
+                    <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" vgrow="SOMETIMES"/>
+                    <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" vgrow="SOMETIMES"/>
+                    <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" vgrow="SOMETIMES"/>
+                    <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" vgrow="SOMETIMES"/>
+                    <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" vgrow="SOMETIMES"/>
+                    <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" vgrow="SOMETIMES"/>
+                    <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" vgrow="SOMETIMES"/>
+                    <RowConstraints/>
+                </rowConstraints>
+
+                <Label onMouseClicked="#onClick" text="roskenet/springboot-javafx-support"
+                       GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="50.0" top="10.0"/>
+                    </GridPane.margin>
+                    <styleClass>
+                        <String fx:value="GlobalLabel"/>
+                        <String fx:value="license_item"/>
+                    </styleClass>
+                </Label>
+                <Label prefHeight="26.0" prefWidth="26.0" styleClass="license_label" GridPane.halignment="LEFT"
+                       GridPane.valignment="BOTTOM">
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="10.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label styleClass="GlobalLabel" text="MIT License" GridPane.halignment="LEFT"
+                       GridPane.valignment="BOTTOM">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="50.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label layoutX="20.0" layoutY="59.0" prefHeight="26.0" prefWidth="26.0" styleClass="git_label"
+                       GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets left="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </Label>
+
+                <Label onMouseClicked="#onClick" text="FFmpeg/FFmpeg" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="1" GridPane.valignment="TOP">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="50.0" top="10.0"/>
+                    </GridPane.margin>
+                    <styleClass>
+                        <String fx:value="GlobalLabel"/>
+                        <String fx:value="license_item"/>
+                    </styleClass>
+                </Label>
+                <Label prefHeight="26.0" prefWidth="26.0" styleClass="license_label" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="10.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label styleClass="GlobalLabel" text="GPL v2+ License" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="50.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label layoutX="20.0" layoutY="59.0" prefHeight="26.0" prefWidth="26.0" styleClass="git_label"
+                       GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets left="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </Label>
+
+                <Label onMouseClicked="#onClick" text="baomidou/mybatis-plus" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="2" GridPane.valignment="TOP">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="50.0" top="10.0"/>
+                    </GridPane.margin>
+                    <styleClass>
+                        <String fx:value="GlobalLabel"/>
+                        <String fx:value="license_item"/>
+                    </styleClass>
+                </Label>
+                <Label prefHeight="26.0" prefWidth="26.0" styleClass="license_label" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="10.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label styleClass="GlobalLabel" text="Apache License" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="50.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label layoutX="20.0" layoutY="59.0" prefHeight="26.0" prefWidth="26.0" styleClass="git_label"
+                       GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets left="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </Label>
+
+                <Label onMouseClicked="#onClick" text="albfernandez/juniversalchardet" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="3" GridPane.valignment="TOP">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="50.0" top="10.0"/>
+                    </GridPane.margin>
+                    <styleClass>
+                        <String fx:value="GlobalLabel"/>
+                        <String fx:value="license_item"/>
+                    </styleClass>
+                </Label>
+                <Label prefHeight="26.0" prefWidth="26.0" styleClass="license_label" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="10.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label styleClass="GlobalLabel" text="Mozilla Public License" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="50.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label layoutX="20.0" layoutY="59.0" prefHeight="26.0" prefWidth="26.0" styleClass="git_label"
+                       GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets left="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </Label>
+
+                <Label onMouseClicked="#onClick" text="dromara/hutool" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="4" GridPane.valignment="TOP">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="50.0" top="10.0"/>
+                    </GridPane.margin>
+                    <styleClass>
+                        <String fx:value="GlobalLabel"/>
+                        <String fx:value="license_item"/>
+                    </styleClass>
+                </Label>
+                <Label prefHeight="26.0" prefWidth="26.0" styleClass="license_label" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="10.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label styleClass="GlobalLabel" text="MulanPSL v2 License" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="50.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label layoutX="20.0" layoutY="59.0" prefHeight="26.0" prefWidth="26.0" styleClass="git_label"
+                       GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets left="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </Label>
+
+                <Label onMouseClicked="#onClick" text="jhy/jsoup" GridPane.halignment="LEFT" GridPane.rowIndex="5"
+                       GridPane.valignment="TOP">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="50.0" top="10.0"/>
+                    </GridPane.margin>
+                    <styleClass>
+                        <String fx:value="GlobalLabel"/>
+                        <String fx:value="license_item"/>
+                    </styleClass>
+                </Label>
+                <Label prefHeight="26.0" prefWidth="26.0" styleClass="license_label" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="10.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label styleClass="GlobalLabel" text="MIT License" GridPane.halignment="LEFT" GridPane.rowIndex="5"
+                       GridPane.valignment="BOTTOM">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="50.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label layoutX="20.0" layoutY="59.0" prefHeight="26.0" prefWidth="26.0" styleClass="git_label"
+                       GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets left="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </Label>
+
+                <Label onMouseClicked="#onClick" text="google/guava" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="6" GridPane.valignment="TOP">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="50.0" top="10.0"/>
+                    </GridPane.margin>
+                    <styleClass>
+                        <String fx:value="GlobalLabel"/>
+                        <String fx:value="license_item"/>
+                    </styleClass>
+                </Label>
+                <Label prefHeight="26.0" prefWidth="26.0" styleClass="license_label" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="10.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label styleClass="GlobalLabel" text="Apache-2.0 License" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="50.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label layoutX="20.0" layoutY="59.0" prefHeight="26.0" prefWidth="26.0" styleClass="git_label"
+                       GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets left="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </Label>
+
+                <Label onMouseClicked="#onClick" text="dnbn/submerge" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="7" GridPane.valignment="TOP">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="50.0" top="10.0"/>
+                    </GridPane.margin>
+                    <styleClass>
+                        <String fx:value="GlobalLabel"/>
+                        <String fx:value="license_item"/>
+                    </styleClass>
+                </Label>
+                <Label prefHeight="26.0" prefWidth="26.0" styleClass="license_label" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="7" GridPane.valignment="BOTTOM">
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="10.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label styleClass="GlobalLabel" text="MIT License" GridPane.halignment="LEFT"
+                       GridPane.rowIndex="7" GridPane.valignment="BOTTOM">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="15.0" left="50.0"/>
+                    </GridPane.margin>
+                </Label>
+                <Label layoutX="20.0" layoutY="59.0" prefHeight="26.0" prefWidth="26.0" styleClass="git_label"
+                       GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets left="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </Label>
+            </GridPane>
+        </AnchorPane>
+    </ScrollPane>
+   <padding>
+      <Insets left="20.0" top="15.0" />
+   </padding>
+</GridPane>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="interfacePanel" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fordes.subview.controller.InterfaceController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="300.0" prefWidth="300.0" />
+        <ColumnConstraints hgrow="ALWAYS" minWidth="360.0" prefWidth="360.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="510.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <TextArea id="serviceTips" editable="false" prefHeight="200.0" prefWidth="200.0" styleClass="editor" text="◾  视频生成字幕以及翻译为在线服务，需全程保持网络连接.&#10;◾  选择服务商和类型后，点击去申请即可跳转到接口注册，一般注册都有免费额度.&#10;◾  选择套餐后悬停可以查看套餐说明，输入密钥前记得核对套餐是否正确哦~&#10;◾  本软件开源且免费，所有在线服务系第三方提供，任何收费行为与本软件无关" wrapText="true">
+        <GridPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="45.0" />
+        </GridPane.margin>
+        <font>
+            <Font size="17.0" />
+        </font>
+    </TextArea>
+    <GridPane GridPane.columnIndex="1">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" prefWidth="260.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints prefHeight="30.0" vgrow="NEVER" />
+            <RowConstraints prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Label prefWidth="70.0" styleClass="GlobalLabel" text="服务商" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="service_provider" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="36.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets left="20.0" />
+            </GridPane.margin>
+            <styleClass>
+                <String fx:value="round-component" />
+            </styleClass>
+        </ChoiceBox>
+        <Label prefWidth="70.0" styleClass="GlobalLabel" text="接口类型" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="service_type" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="36.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets left="20.0" />
+            </GridPane.margin>
+            <styleClass>
+                <String fx:value="round-component" />
+            </styleClass>
+        </ChoiceBox>
+
+        <ChoiceBox fx:id="user_type" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="36.0" prefWidth="150.0" styleClass="Load_ChoiceBox" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+            <GridPane.margin>
+                <Insets left="20.0" />
+            </GridPane.margin>
+            <styleClass>
+                <String fx:value="round-component" />
+            </styleClass>
+        </ChoiceBox>
+        <Label prefWidth="70.0" styleClass="GlobalLabel" text="套餐类型" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <font>
+                <Font size="16.0" />
+            </font>
+            <tooltip>
+                <Tooltip text="付费用户可多线并发请求，以提高处理速度" />
+            </tooltip>
+        </Label>
+        <Button fx:id="apply" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="保存" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="CENTER">
+            <font>
+                <Font size="16.0" />
+            </font>
+            <GridPane.margin>
+                <Insets right="20.0" />
+            </GridPane.margin>
+            <styleClass>
+                <String fx:value="execute-button" />
+                <String fx:value="button-shadow" />
+            </styleClass>
+        </Button>
+        <Button fx:id="jump" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" text="去申请" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="7" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+            <GridPane.margin>
+                <Insets right="70.0" />
+            </GridPane.margin>
+            <font>
+                <Font size="16.0" />
+            </font>
+            <styleClass>
+                <String fx:value="aux-button" />
+                <String fx:value="button-shadow" />
+            </styleClass>
+            <tooltip>
+                <Tooltip text="所有服务接口均由第三方提供哦，注意是否需要付费~" />
+            </tooltip>
+        </Button>
+        <GridPane fx:id="infoPanel" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.rowSpan="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" prefWidth="260.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="36.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+        </GridPane>
+    </GridPane>
+</GridPane>

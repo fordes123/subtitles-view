@@ -1,0 +1,1268 @@
+
+.content,
+.bottom-round{
+    -fx-background-color: #1b1b1b;
+}
+
+.titlesBar #closed{
+    -fx-background-image: url("/images/public/close_dark.png");
+}
+
+
+.root_normal .titlesBar #maximize{
+    -fx-background-image: url("/images/public/max_dark.png");
+}
+
+.titlesBar #maximize:hover,
+.titlesBar #minimize:hover,
+.titlesBar #mode_switch:hover{
+    -fx-background-color: #3F3F3F;
+}
+
+.root_full .titlesBar #maximize{
+    -fx-background-image: url("/images/public/standard_dark.png");
+}
+
+
+.titlesBar #minimize {
+    -fx-background-image: url("/images/public/min_dark.png");
+}
+
+.titlesBar #mode_switch {
+    -fx-background-image: url("/images/public/dark.png");
+}
+
+.side{
+    -fx-background-color: #191919;
+}
+
+.nav_button:selected {
+    -fx-background-color: #262626;
+    -fx-effect: dropshadow(gaussian, #0e0e0e, 5, 0, 0, 0);
+}
+
+.nav_button {
+    -fx-background-color: #1b1b1b;
+    -fx-text-fill: #fff;
+}
+
+
+
+#tips {
+    -fx-text-fill: #4b4848;
+}
+
+#tips:hover {
+    -fx-text-fill: #FFFFFF;
+}
+
+
+/*输入框*/
+.TextField {
+    -fx-background-color: #343434;
+    -fx-text-fill: #fff;
+    -fx-border-color: #5A5A5A;
+    -fx-effect: dropshadow(three-pass-box, #5A5A5A, 3.0, 0, 0, 0); /*阴影*/
+}
+
+.TextField:focused {
+    -fx-background-color: #343434;
+    -fx-border-color: #bababe;
+    -fx-text-fill: #fff;
+}
+
+.button-shadow {
+    -fx-effect: dropshadow( gaussian , #000000, 5, 0.0 , 0 , 0 );
+}
+
+/*执行按钮*/
+.execute-button {
+    -fx-background-color:
+            #5B5BFA,
+            linear-gradient(#5B5BFA 50%, #363699 100%),
+            radial-gradient(center 50% -40%, radius 200%, #5B5BFA 45%, #363699 50%);
+    -fx-text-fill: #FFF;
+}
+
+
+.aux-button {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: #FFF;
+}
+
+
+
+.cancel-button {
+    -fx-background-color:
+            #D5D5D5,
+            linear-gradient(#D5D5D5 50%, #b6b6b6 100%),
+            radial-gradient(center 50% -40%, radius 200%, #D5D5D5 45%, #b6b6b6 50%);
+    -fx-text-fill: black;
+}
+
+
+/*全局提示框*/
+.tooltip {
+    -fx-background-color: #2D2D2D;
+    -fx-text-fill: #FFF;
+}
+
+#TutorialsTips {
+    -fx-text-fill: #5A5A5A;
+}
+
+#TutorialsTips:hover {
+    -fx-text-fill: #5B5BFA;
+}
+
+
+
+#search_execute {
+    -fx-background-image: url("/images/public/search_dark.png");
+    -fx-background-color: rgba(141, 120, 255, 0);
+}
+
+#search_execute:hover {
+    -fx-background-image: url("/images/public/search_hover.png");
+}
+
+.news {
+    -fx-background-color: #262626;
+    -fx-border-color: #FFF;
+    -fx-text-fill: #FFF;
+}
+
+.news:hover {
+    -fx-background-color: #FFF;
+    -fx-text-fill: #000;
+}
+
+
+
+.contentBottom {
+    -fx-background-color: #262626;
+    -fx-effect: dropshadow(gaussian, #0e0e0e, 5, 0, 0, 0);
+}
+
+.titles {
+    -fx-text-fill: rgb(255, 255, 255);
+}
+
+#logo {
+    -fx-background-image: url("/images/application/logo.png");
+}
+
+.titles_background_pure{
+    -fx-background-color: #262626;
+}
+
+.folder{
+    -fx-background-image: url("/images/application/start/folder_dark.png");
+}
+
+.folder:hover{
+    -fx-background-image: url("/images/application/start/folder_dark_selected.png");
+}
+
+.folder_success{
+    -fx-background-image: url("/images/application/start/folder_success.png");
+}
+
+.folder_not_support{
+    -fx-background-image: url("/images/application/start/folder_not_support.png");
+}
+
+/*列表视图*/
+.list-view {
+    -fx-text-fill: #FFF;
+}
+
+.list-view .list-cell .text-field{
+    -fx-text-fill: #FFF;
+}
+
+
+/*滚动条颜色*/
+.list-view .thumb {
+    -fx-background-color: #595959;
+}
+
+/*搜索面板内容样式*/
+.search_item .search_item_content{
+    -fx-fill: #FFF;
+}
+
+.search_item:hover .search_item_content{
+    -fx-fill: #2ecc71;
+}
+
+
+.list {
+    -fx-background-color: #2D2D2D;
+}
+
+.right {
+    -fx-background-color: #343434;
+}
+
+#home {
+    -fx-background-image: url("/images/application/home.png");
+}
+
+#sync {
+    -fx-background-image: url("/images/application/sync.png");
+}
+
+#translation {
+    -fx-background-image: url("/images/application/translation.png");
+}
+
+#build {
+    -fx-background-image: url("/images/application/save.png");
+}
+
+#about {
+    -fx-background-image: url("/images/application/help.png");
+}
+
+#setting {
+    -fx-background-image: url("/images/application/setting.png");
+}
+
+
+.sideButton:hover {
+    -fx-background-color: rgb(74, 74, 74);
+}
+
+/*主页面板样式*/
+.BasicEdit {
+    -fx-background-image: url("/images/application/home/Edit_Dark.png");
+}
+
+.BasicEdit:selected {
+    -fx-background-image: url("/images/application/home/Edit_Dark_selected.png");
+}
+
+.BasicEdit:hover {
+    -fx-background-image: url("/images/application/home/Edit_Dark_selected.png");
+}
+
+.TimelineAdj {
+    -fx-background-image: url("/images/application/home/timeline_Dark.png");
+}
+
+.TimelineAdj:selected {
+    -fx-background-image: url("/images/application/home/timeline_Dark_selected.png");
+}
+
+.TimelineAdj:hover {
+    -fx-background-image: url("/images/application/home/timeline_Dark_selected.png");
+}
+
+.FindR {
+    -fx-background-image: url("/images/application/home/findR_Dark.png");
+}
+
+.FindR:hover {
+    -fx-background-image: url("/images/application/home/findR_Dark_selected.png");
+}
+
+.FindR:selected {
+    -fx-background-image: url("/images/application/home/findR_Dark_selected.png");
+}
+
+.Preview {
+    -fx-background-image: url("/images/application/home/preview_Dark.png");
+}
+
+.Preview:hover {
+    -fx-background-image: url("/images/application/home/preview_Dark_selected.png");
+}
+
+.Preview:selected {
+    -fx-background-image: url("/images/application/home/preview_Dark_selected.png");
+}
+
+.edit_tool_button {
+    -fx-text-fill: rgb(139, 139, 139);
+}
+
+.edit_tool_button:selected {
+    -fx-background-color: rgba(68, 68, 68, 1);
+    -fx-text-fill: rgb(255, 255, 255);
+}
+
+.edit_tool_button:hover {
+    -fx-background-color: rgba(68, 68, 68, 1);
+    -fx-text-fill: rgb(255, 255, 255);
+}
+
+.List_titles {
+    -fx-text-fill: #FFF;
+}
+
+.listPanel {
+    -fx-background-color: #2D2D2D;
+}
+
+/*同步返听窗格*/
+.ManualSync {
+    -fx-background-image: url("/images/application/sync/ManualSync_Dark.png");
+}
+
+.ManualSync:hover {
+    -fx-background-image: url("/images/application/sync/ManualSync_Dark_selected.png");
+}
+
+.ManualSync:selected {
+    -fx-background-image: url("/images/application/sync/ManualSync_Dark_selected.png");
+}
+
+.AutomaticSync {
+    -fx-background-image: url("/images/application/sync/AutoSync_Dark.png");
+}
+
+.AutomaticSync:hover {
+    -fx-background-image: url("/images/application/sync/AutoSync_Dark_selected.png");
+}
+
+.AutomaticSync:selected {
+    -fx-background-image: url("/images/application/sync/AutoSync_Dark_selected.png");
+}
+
+/*文字翻译-在线翻译按钮样式*/
+
+.Tran_Online {
+    -fx-background-image: url("/images/application/tran/Tran_Online_Dark.png");
+}
+
+.Tran_Online:selected {
+    -fx-background-image: url("/images/application/tran/Tran_Online_Dark_selected.png");
+}
+
+.Tran_Online:hover {
+    -fx-background-image: url("/images/application/tran/Tran_Online_Dark_selected.png");
+}
+
+/*文字翻译-离线翻译按钮样式*/
+
+.Tran_Offline {
+    -fx-background-image: url("/images/application/tran/Tran_Offline_Dark.png");
+}
+
+.Tran_Offline:selected {
+    -fx-background-image: url("/images/application/tran/Tran_Offline_Dark_selected.png");
+}
+
+.Tran_Offline:hover {
+    -fx-background-image: url("/images/application/tran/Tran_Offline_Dark_selected.png");
+}
+
+/*翻译面板控件*/
+#Tarn_image {
+    -fx-background-image: url("/images/application/tran/Transformation.png");
+}
+
+/*构建导出-导出选项样式*/
+.Build_Manual {
+    -fx-background-image: url("/images/application/build/Save_Manual_Dark.png");
+}
+
+.Build_Manual:selected {
+    -fx-background-image: url("/images/application/build/Save_Manual_Dark_selected.png");
+}
+
+.Build_Manual:hover {
+    -fx-background-image: url("/images/application/build/Save_Manual_Dark_selected.png");
+}
+
+/*构建导出-视频预览按钮样式*/
+.Build_Preview {
+    -fx-background-image: url("/images/application/build/Save_Preview_Dark.png");
+}
+
+.Build_Preview:selected {
+    -fx-background-image: url("/images/application/build/Save_Preview_Dark_selected.png");
+}
+
+.Build_Preview:hover {
+    -fx-background-image: url("/images/application/build/Save_Preview_Dark_selected.png");
+}
+
+/*设置窗格*/
+.Base {
+    -fx-background-image: url("/images/application/setting/Base_Dark.png");
+}
+
+.Base:selected {
+    -fx-background-image: url("/images/application/setting/Base_Dark_selected.png");
+}
+
+.Base:hover {
+    -fx-background-image: url("/images/application/setting/Base_Dark_selected.png");
+}
+
+.Advanced {
+    -fx-background-image: url("/images/application/setting/Advanced_Dark.png");
+}
+
+.Advanced:selected {
+    -fx-background-image: url("/images/application/setting/Advanced_Dark_selected.png");
+}
+
+.Advanced:hover {
+    -fx-background-image: url("/images/application/setting/Advanced_Dark_selected.png");
+}
+
+.Lab {
+    -fx-background-image: url("/images/application/setting/Lab_Dark.png");
+}
+
+.Lab:selected {
+    -fx-background-image: url("/images/application/setting/Lab_Dark_selected.png");
+}
+
+.Lab:hover {
+    -fx-background-image: url("/images/application/setting/Lab_Dark_selected.png");
+}
+
+/*关于软件*/
+.Guide {
+    -fx-background-image: url("/images/application/about/Guide_Dark.png");
+}
+
+.Guide:selected {
+    -fx-background-image: url("/images/application/about/Guide_Dark_selected.png");
+}
+
+.Guide:hover {
+    -fx-background-image: url("/images/application/about/Guide_Dark_selected.png");
+}
+
+.Pact {
+    -fx-background-image: url("/images/application/about/Pact_Dark.png");
+}
+
+.Pact:selected {
+    -fx-background-image: url("/images/application/about/Pact_Dark_selected.png");
+}
+
+.Pact:hover {
+    -fx-background-image: url("/images/application/about/Pact_Dark_selected.png");
+}
+
+.UpdateLog {
+    -fx-background-image: url("/images/application/about/Updatelog_Dark.png");
+}
+
+.UpdateLog:selected {
+    -fx-background-image: url("/images/application/about/Updatelog_Dark_selected.png");
+}
+
+.UpdateLog:hover {
+    -fx-background-image: url("/images/application/about/Updatelog_Dark_selected.png");
+}
+
+/*主窗格底层*/
+#bottomLayer {
+    -fx-background-color: #343434;
+}
+
+/*separator分界线*/
+.separator *.line {
+    -fx-background-color: #494949;
+    -fx-border-color: #494949
+}
+
+/*全局提示框*/
+.tooltip {
+    -fx-background-color: #2D2D2D;
+    -fx-text-fill: #FFF;
+}
+
+/*主页工具栏按钮*/
+#edit_tool_find {
+    -fx-background-image: url("/images/application/home/find_dark.png");
+}
+
+#edit_tool_find:hover {
+    -fx-background-image: url("/images/application/home/find_hover.png");
+}
+
+#edit_tool_find:selected {
+    -fx-background-image: url("/images/application/home/find_hover.png");
+}
+
+#edit_tool_replace {
+    -fx-background-image: url("/images/application/home/replace_dark.png");
+}
+
+#edit_tool_replace:hover {
+    -fx-background-image: url("/images/application/home/replace_hover.png");
+}
+
+#edit_tool_replace:selected {
+    -fx-background-image: url("/images/application/home/replace_dark.png");
+}
+
+#edit_tool_hidden {
+    -fx-background-image: url("/images/application/home/more_dark.png");
+}
+
+#edit_tool_hidden:hover {
+    -fx-background-image: url("/images/application/home/more_hover.png");
+}
+
+#edit_tool_hidden:selected {
+    -fx-background-image: url("/images/application/home/more_hover.png");
+}
+
+#edit_tool_jump {
+    -fx-background-image: url("/images/application/home/jump_dark.png");
+}
+
+#edit_tool_jump:hover {
+    -fx-background-image: url("/images/application/home/jump_hover.png");
+}
+
+#edit_tool_jump:selected {
+    -fx-background-image: url("/images/application/home/jump_hover.png");
+}
+
+#edit_tool_code {
+    -fx-background-image: url("/images/application/home/code_dark.png");
+}
+
+#edit_tool_code:hover {
+    -fx-background-image: url("/images/application/home/code_hover.png");
+}
+
+#edit_tool_code:selected {
+    -fx-background-image: url("/images/application/home/code_hover.png");
+}
+
+#edit_tool_style {
+    -fx-background-image: url("/images/application/home/style_dark.png");
+}
+
+#edit_tool_style:hover {
+    -fx-background-image: url("/images/application/home/style_hover.png");
+}
+
+#edit_tool_style:selected {
+    -fx-background-image: url("/images/application/home/style_hover.png");
+}
+
+#edit_tool_time_line {
+    -fx-background-image: url("/images/application/home/addTimeline_dark.png");
+}
+
+#edit_tool_time_line:hover {
+    -fx-background-image: url("/images/application/home/addTimeline_hover.png");
+}
+
+#edit_tool_time_line:selected {
+    -fx-background-image: url("/images/application/home/addTimeline_hover.png");
+}
+
+#edit_tool_regular_line {
+    -fx-background-image: url("/images/application/home/newline_dark.png");
+}
+
+#edit_tool_regular_line:hover {
+    -fx-background-image: url("/images/application/home/newline_hover.png");
+}
+
+#edit_tool_regular_line:selected {
+    -fx-background-image: url("/images/application/home/newline_hover.png");
+}
+
+
+.edit_mode_off {
+    -fx-background-image: url("/images/application/tool/edit_mode_off_dark.png");
+}
+
+.edit_mode_off:hover{
+    -fx-background-image: url("/images/application/tool/edit_mode_off_hover.png");
+}
+
+.edit_mode_no {
+    -fx-background-image: url("/images/application/tool/edit_mode_no_dark.png");
+}
+
+.edit_mode_no:hover{
+    -fx-background-image: url("/images/application/tool/edit_mode_no_hover.png");
+}
+/*全局split面板*/
+
+/*分界线*/
+.splitPane *.split-pane-divider {
+    -fx-background-color: #595959;
+}
+
+
+
+.modelPart {
+    -fx-background-color: #343434;
+    -fx-effect: dropshadow(three-pass-box, rgb(241, 241, 241), 3.0, 0, 0, 0);
+}
+
+/*全局ChoiceBox*/
+/*控件本身上的选定项目文本颜色*/
+.choice-box > .label {
+    -fx-text-fill: white;
+}
+
+/*整个上下文菜单的背景色、字体大小、宽度*/
+.choice-box .context-menu {
+    -fx-background-color: #343434;
+}
+
+/*列表中的重点项目背景颜色*/
+.choice-box .menu-item:focused {
+    -fx-background-color: #404040;
+}
+
+/*列表中非重点项目的文字颜色*/
+.choice-box .menu-item > .label {
+    -fx-text-fill: white;
+}
+
+/*列表中焦点项目的文本颜色*/
+.choice-box .menu-item:focused > .label {
+    -fx-text-fill: #5B5BFA;
+}
+
+/*控件主属性*/
+.choice-box {
+    -fx-background-color: #343434; /*控件本身的背景色*/
+    -fx-mark-color: white; /*箭头颜色*/
+    -fx-border-color: #5A5A5A;
+    /*    -fx-effect: dropshadow(three-pass-box, #5A5A5A, 3.0,0, 0, 0);!*阴影*!*/
+}
+
+.choice-box:focused {
+    -fx-border-color: #bababe;
+}
+
+/*输入框*/
+.input {
+    -fx-background-color: #343434;
+    -fx-border-color: #5A5A5A;
+    -fx-text-fill: #fff;
+    -fx-highlight-fill: #9B9BFF; /* makes color of highlight region */
+    -fx-highlight-text-fill: #FFF; /* makes the color of highlighted text */
+}
+
+.input:focused {
+    -fx-background-color: #343434;
+    -fx-border-color: #bababe;
+    -fx-text-fill: #fff;
+}
+
+/*执行按钮*/
+.execute_button {
+    -fx-background-color: #5B5BFA;
+    -fx-text-fill: #fff;
+}
+
+/*默认按钮*/
+.def_button {
+    -fx-background-color: #504f4f;
+    -fx-text-fill: #FFF;
+    -fx-border-color: #404040;
+}
+
+/*默认按钮*/
+.def_button:hover {
+    -fx-background-color: #504f4f;
+    -fx-text-fill: #5B5BFA;
+    -fx-border-color: #404040;
+}
+
+/*全局单选按钮*/
+.radio-button {
+    -fx-text-fill: #FFF;
+}
+
+.radio-button .radio {
+    -fx-border-color: #FFF;
+    -fx-background-color: #343434;
+}
+
+
+
+/*全局ComboBox*/
+.combo-box .list-cell {
+    -fx-background: #636363;
+    -fx-mark-color: white; /*箭头颜色*/
+    -fx-text-fill: #FFF;
+    -fx-text-alignment: center;
+    -fx-background-radius: 0;
+}
+
+
+.combo-box-popup .list-view {
+    -fx-background-color: #343434;
+    -fx-background-radius: 5;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected,
+.combo-box-popup .list-view .list-cell:filled:selected:hover {
+    -fx-background-color: #343434; /*下拉列表选中色*/
+    -fx-text-fill: #5B5BFA; /*下拉列表字体色*/
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #575757;
+}
+
+.combo-box-base {
+    -fx-border-color: #575757; /*下拉列表背景色*/
+}
+
+
+/*滚动条颜色*/
+.combo-box .thumb {
+    -fx-background-color: #595959;
+}
+
+/*工具面板组件样式*/
+.editToolPanel {
+    -fx-background-color: #343434;
+    -fx-effect: dropshadow(GAUSSIAN, #000000, 7, 0, 0, 0);
+}
+
+
+
+/*工具面板文本框样式*/
+.ToolPanel_TextField {
+    -fx-background-color: #343434;
+    -fx-border-color: #343434;
+    -fx-text-fill: #FFF;
+}
+
+.ToolPanel_TextField:focused {
+    -fx-background-color: #343434;
+    -fx-border-color: #343434;
+    -fx-text-fill: #FFF;
+}
+
+.ToolPanel_TextField:hover {
+    -fx-background-color: #343434;
+    -fx-border-color: #343434;
+    -fx-text-fill: #FFF;
+}
+
+/*工具面板按钮样式*/
+.ToolPanel_Button {
+    -fx-background-color: #343434;
+}
+
+/*工具栏按钮样式*/
+#edit_tool_find_btn {
+    -fx-background-image: url("/images/application/tool/search_dark.png");
+}
+
+#edit_tool_find_btn:hover {
+    -fx-background-image: url("/images/application/tool/search_hover.png");
+}
+
+#edit_tool_find_option {
+    -fx-background-image: url("/images/application/tool/option_dark.png");
+}
+
+#edit_tool_find_option:hover {
+    -fx-background-image: url("/images/application/tool/option_hover.png");
+}
+
+#edit_tool_find_close {
+    -fx-background-image: url("/images/application/tool/close_dark.png");
+}
+
+#edit_tool_find_close:hover {
+    -fx-background-image: url("/images/application/tool/close_hover.png");
+}
+
+#edit_tool_search_btn {
+    -fx-background-image: url("/images/application/tool/search_dark.png");
+}
+
+#edit_tool_search_btn:hover {
+    -fx-background-image: url("/images/application/tool/search_dark.png");
+}
+
+#edit_tool_search_option {
+    -fx-background-image: url("/images/application/tool/option_dark.png");
+}
+
+#edit_tool_search_option:hover {
+    -fx-background-image: url("/images/application/tool/option_hover.png");
+}
+
+#edit_tool_replace_close {
+    -fx-background-image: url("/images/application/tool/close_dark.png");
+}
+
+#edit_tool_replace_close:hover {
+    -fx-background-image: url("/images/application/tool/close_hover.png");
+}
+
+#edit_tool_replace_next {
+    -fx-background-image: url("/images/application/tool/replace_dark.png");
+}
+
+#edit_tool_replace_next:hover {
+    -fx-background-image: url("/images/application/tool/replace_hover.png");
+}
+
+#edit_tool_replace_all {
+    -fx-background-image: url("/images/application/tool/replaceall_dark.png");
+}
+
+#edit_tool_replace_all:hover {
+    -fx-background-image: url("/images/application/tool/replaceall_hover.png");
+}
+
+#edit_tool_jump_btn {
+    -fx-background-image: url("/images/application/tool/jump_dark.png");
+}
+
+#edit_tool_jump_btn:hover {
+    -fx-background-image: url("/images/application/tool/jump_hover.png");
+}
+
+#edit_tool_jump_close {
+    -fx-background-image: url("/images/application/tool/close_dark.png");
+}
+
+#edit_tool_jump_close:hover {
+    -fx-background-image: url("/images/application/tool/close_hover.png");
+}
+
+#edit_tool_code_close {
+    -fx-background-image: url("/images/application/tool/close_dark.png");
+}
+
+#edit_tool_code_close:hover {
+    -fx-background-image: url("/images/application/tool/close_hover.png");
+}
+
+#edit_tool_code_btn {
+    -fx-background-image: url("/images/application/tool/refresh_dark.png");
+}
+
+#edit_tool_code_btn:hover {
+    -fx-background-image: url("/images/application/tool/refresh_hover.png");
+}
+
+#edit_tool_style_default {
+    -fx-background-image: url("/images/application/tool/default_dark.png");
+}
+
+#edit_tool_style_default:hover {
+    -fx-background-image: url("/images/application/tool/default_hover.png");
+}
+
+#edit_tool_style_close {
+    -fx-background-image: url("/images/application/tool/close_dark.png");
+}
+
+#edit_tool_style_close:hover {
+    -fx-background-image: url("/images/application/tool/close_hover.png");
+}
+
+#edit_tool_style_bold {
+    -fx-background-image: url("/images/application/tool/bold_dark.png");
+}
+
+#edit_tool_style_bold:hover {
+    -fx-background-image: url("/images/application/tool/bold_hover.png");
+}
+
+#edit_tool_style_bold:selected {
+    -fx-background-image: url("/images/application/tool/bold_hover.png");
+}
+
+
+#edit_tool_style_italic {
+    -fx-background-image: url("/images/application/tool/italic_dark.png");
+}
+
+#edit_tool_style_italic:hover {
+    -fx-background-image: url("/images/application/tool/italic_hover.png");
+}
+
+#edit_tool_style_italic:selected {
+    -fx-background-image: url("/images/application/tool/italic_hover.png");
+}
+
+#edit_tool_style_underline {
+    -fx-background-image: url("/images/application/tool/underline_dark.png");
+}
+
+#edit_tool_style_underline:hover {
+    -fx-background-image: url("/images/application/tool/underline_hover.png");
+}
+
+#edit_tool_style_underline:selected {
+    -fx-background-image: url("/images/application/tool/underline_hover.png");
+}
+
+/*全局菜单样式*/
+/*控件本身上的选定项目文本颜色*/
+#edit_tool_replace_search_menu > .label {
+    -fx-text-fill: white;
+}
+
+/*整个上下文菜单的背景色、字体大小、宽度*/
+#edit_tool_replace_search_menu .context-menu {
+    -fx-background-color: #343434;
+}
+
+/*列表中的重点项目背景颜色*/
+#edit_tool_replace_search_menu .menu-item:focused {
+    -fx-background-color: #404040;
+}
+
+/*列表中非重点项目的文字颜色*/
+#edit_tool_replace_search_menu .menu-item > .label {
+    -fx-text-fill: white;
+}
+
+
+/*列表中焦点项目的文本颜色*/
+#edit_tool_replace_search_menu .menu-item:focused > .label {
+    -fx-text-fill: #5B5BFA;
+}
+
+
+/*全局菜单样式*/
+/*控件本身上的选定项目文本颜色*/
+#edit_tool_find_option_menu > .label {
+    -fx-text-fill: white;
+}
+
+/*整个上下文菜单的背景色、字体大小、宽度*/
+#edit_tool_find_option_menu .context-menu {
+    -fx-background-color: #343434;
+}
+
+/*列表中的重点项目背景颜色*/
+#edit_tool_find_option_menu .menu-item:focused {
+    -fx-background-color: #404040;
+}
+
+/*列表中非重点项目的文字颜色*/
+#edit_tool_find_option_menu .menu-item > .label {
+    -fx-text-fill: white;
+}
+
+/*列表中焦点项目的文本颜色*/
+#edit_tool_find_option_menu .menu-item:focused > .label {
+    -fx-text-fill: #5B5BFA;
+}
+
+
+/*同步返听字幕列表*/
+.listView {
+    -fx-text-fill: #ffffff;
+}
+
+.list-cell:even {
+    -fx-text-fill: #ffffff;
+}
+
+.list-cell:odd {
+    -fx-text-fill: #fff;
+}
+
+/*滚动条颜色*/
+.listView .thumb {
+    -fx-background-color: #595959;
+}
+
+/*待开发图片*/
+#InDevelopment {
+    -fx-background-image: url("/images/application/InDevelopment.png");
+}
+
+#InDevelopment_Label {
+    -fx-text-fill: #d1caca;
+}
+
+/*separator分界线*/
+.separator *.line {
+    -fx-background-color: #494949;
+    -fx-border-color: #494949
+
+}
+
+/*等待视频加载内容*/
+#WaitingLoadingPanel_Content {
+    -fx-border-color: #6e6e6e;
+}
+
+#WaitingLoadingPanel_Content_Image {
+    -fx-background-image: url("/images/application/openViedo_Dark.png");
+}
+
+#WaitingLoadingPanel_Content_Image:hover {
+    -fx-background-image: url("/images/application/openVideo_hover.png");
+}
+
+.WaitingLoadingPanel_Content_Label {
+    -fx-text-fill: #6e6e6e;
+}
+
+/*翻译面板控件*/
+#tarn_online_image {
+    -fx-background-image: url("/images/application/tran/TranOnline_Lable_Dark.png");
+}
+
+
+
+#LoadRoot {
+    -fx-effect: dropshadow(gaussian, #000000, 10.0, 100, 0, 0);
+    -fx-background-color: #1B1B1B;
+    -fx-border-color: #FFF;
+}
+
+#Load_ChoiceBox {
+    -fx-border-color: #2d2d2d;
+}
+
+#LoadTop {
+    -fx-background-color: #262626;
+}
+
+.Build_TextField {
+    -fx-background-color: #343434;
+    -fx-border-color: #5A5A5A;
+    -fx-text-fill: #fff;
+}
+
+.Build_TextField:focused {
+    -fx-background-color: #343434;
+    -fx-border-color: #bababe;
+    -fx-text-fill: #fff;
+}
+
+/*CheckBox默认样式*/
+.check-box .box {
+    -fx-background-color: #343434;
+    -fx-border-color: grey;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+/*选中颜色*/
+.check-box:selected .box {
+    -fx-background-color: #5B5BFA;
+}
+
+.check-box {
+    -fx-text-fill: #FFF;
+}
+
+/*导出手动选择路径按钮样式*/
+#Build_ChoosePath {
+    -fx-background-color: #343434;
+    -fx-border-color: #5A5A5A;
+    -fx-background-image: url("/images/application/build/Save_ChoosePath_Dark.png");
+}
+
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, #000000, 7.0,0, 0, 0);
+}
+
+.buttonShadow {
+    -fx-effect: dropshadow(three-pass-box, #a5a4a4, 3.0,0, 0, 0);
+}
+
+.buttonShadow :hover{
+    -fx-effect: dropshadow(three-pass-box, #cdcdcd, 3.0,0, 0, 0);
+
+}
+
+#Editor_Rec {
+    -fx-background-image: url("/images/application/setting/Editor_Rec_Dark.png");
+}
+
+#Editor_Rec:hover {
+    -fx-background-image: url("/images/application/setting/Editor_Rec_Dark_Select.png");
+}
+
+#closed {
+    -fx-background-image: url("/images/public/close_dark.png");
+    -fx-background-color: rgba(38, 38, 38, 0);
+}
+
+#minimize {
+    -fx-background-image: url("/images/public/min_dark.png");
+    -fx-background-color: rgba(38, 38, 38, 0);
+}
+
+.maximize {
+    -fx-background-image: url("/images/public/max_dark.png");
+    -fx-background-color: rgba(38, 38, 38, 0);
+}
+
+.winMax_Full {
+    -fx-background-image: url("/images/public/standard_dark.png");
+    -fx-background-color: rgba(38, 38, 38, 0);
+}
+
+#closed:hover {
+    -fx-background-color: red;
+}
+
+.maximize:hover {
+    -fx-background-color: rgba(94, 96, 99, 0.84);
+}
+
+.winMax_Full:hover {
+    -fx-background-color: rgba(94, 96, 99, 0.84);
+}
+
+#minimize:hover {
+    -fx-background-color: rgba(94, 96, 99, 0.84);
+}
+
+#mode_switch {
+    -fx-background-image: url("/images/public/dark.png");
+    -fx-background-color: rgba(38, 38, 38, 0);
+}
+
+
+/*全局TextArea*/
+.editor {
+    /*-fx-background-color: transparent;*/
+    -fx-background-color: #343434;
+    -fx-text-fill: #ffffff;
+    -fx-highlight-fill: #7777c2; /* makes color of highlight region */
+    -fx-highlight-text-fill: #FFF; /* makes the color of highlighted text */
+}
+
+.editor:focused {
+    -fx-background-color: #343434;
+}
+
+.editor .scroll-pane .content {
+    -fx-background-color: #343434;
+}
+
+
+/*滚动条颜色*/
+.editor .thumb {
+    -fx-background-color: #595959;
+}
+
+/*全局Label*/
+.GlobalLabel {
+    -fx-text-fill: #ffffff;
+}
+
+/*全局提示框*/
+.tooltip {
+    -fx-background-color: #2D2D2D;
+    -fx-text-fill: #FFF;
+}
+
+#TutorialsTips {
+    -fx-text-fill: #5A5A5A;
+}
+
+#TutorialsTips:hover {
+    -fx-text-fill: #5B5BFA;
+}
+
+.titles_background{
+    -fx-background-color: #262626;
+}
+
+#TutorialsTips {
+    -fx-text-fill: #5A5A5A;
+}
+
+#TutorialsTips:hover {
+    -fx-text-fill: #5B5BFA;
+}
+
+
+
+#search_execute {
+    -fx-background-image: url("/images/public/search_dark.png");
+    -fx-background-color: rgba(141, 120, 255, 0);
+}
+
+#search_execute:hover {
+    -fx-background-image: url("/images/public/search_hover.png");
+}
+
+#translationLabel {
+    -fx-background-image: url("/images/application/setting/translation_dark.png");
+}
+
+#translationLabel:hover {
+    -fx-background-image: url("/images/application/setting/translation_hover.png");
+}
+
+#voiceLabel {
+    -fx-background-image: url("/images/application/setting/voice_dark.png");
+}
+
+#voiceLabel:hover {
+    -fx-background-image: url("/images/application/setting/voice_hover.png");
+}
+
+#appidLabel {
+    -fx-background-image: url("/images/application/setting/appid_dark.png");
+}
+
+#appidLabel:hover {
+    -fx-background-image: url("/images/application/setting/appid_hover.png");
+}
+
+#keyLabel {
+    -fx-background-image: url("/images/application/setting/key_dark.png");
+}
+
+#keyLabel:hover {
+    -fx-background-image: url("/images/application/setting/key_hover.png");
+}
+
+#serviceTips {
+    -fx-background-color: transparent;
+}
+
+#serviceTips .scroll-pane .content {
+    -fx-background-color: #262626;
+}
+
+#email {
+    -fx-background-image: url("/images/application/about/email_dark.png");
+}
+
+#telegram {
+    -fx-background-image: url("/images/application/about/telegram_dark.png");
+}
+
+
+.license_label {
+    -fx-background-image: url("/images/application/about/license_dark.png");
+}
+
+.git_label {
+    -fx-background-image: url("/images/application/about/github_dark.png");
+}
+
+.scroll_pane .thumb {
+    -fx-background-color: #595959;
+}
+
+.group-line {
+    -fx-background-color: #575757;
+}

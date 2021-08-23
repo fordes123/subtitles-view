@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="trayMenu" prefHeight="105.0" prefWidth="125.0" styleClass="trayMenu" stylesheets="/css/light.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fordes.subview.controller.SystemTrayMenuController">
+    <rowConstraints>
+        <RowConstraints maxHeight="105.0" minHeight="105.0" prefHeight="105.0" vgrow="ALWAYS" />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" />
+    </columnConstraints>
+    <GridPane styleClass="trayMenu-bottom">
+        <rowConstraints>
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="ALWAYS" />
+        </rowConstraints>
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" />
+         <ColumnConstraints />
+        </columnConstraints>
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+        </padding>
+        <GridPane styleClass="row" GridPane.columnSpan="2">
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+              <styleClass>
+                  <String fx:value="icon" />
+                  <String fx:value="item-setting" />
+              </styleClass>
+            </Label>
+            <Label fx:id="setting" text="设置" GridPane.columnIndex="1">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font>
+                <padding>
+                    <Insets left="5.0" />
+                </padding>
+          </Label>
+        </GridPane>
+        <GridPane styleClass="row" GridPane.columnSpan="2" GridPane.rowIndex="1">
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label fx:id="open" text="显示主界面" GridPane.columnIndex="1">
+                <padding>
+                    <Insets left="5.0" />
+                </padding>
+                <font>
+                    <Font size="15.0" />
+                </font>
+          </Label>
+            <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+              <styleClass>
+                  <String fx:value="icon" />
+                  <String fx:value="item-open" />
+              </styleClass>
+            </Label>
+        </GridPane>
+        <GridPane styleClass="row" GridPane.columnSpan="2" GridPane.rowIndex="2">
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <Label minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="30.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+              <styleClass>
+                  <String fx:value="icon" />
+                  <String fx:value="item-exit" />
+              </styleClass>
+            </Label>
+            <Label fx:id="exit" text="退出" GridPane.columnIndex="1">
+                <font>
+                    <Font size="15.0" />
+                </font>
+                <GridPane.margin>
+                    <Insets />
+                </GridPane.margin>
+                <padding>
+                    <Insets left="5.0" />
+                </padding>
+          </Label>
+        </GridPane>
+    </GridPane>
+</GridPane>

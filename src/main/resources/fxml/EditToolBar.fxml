@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="editToolbar" prefHeight="60.0" prefWidth="950.0" xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml" fx:controller="org.fordes.subview.controller.ToolBarController">
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" minWidth="50.0" prefWidth="50.0"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="50.0" prefWidth="50.0"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="50.0" prefWidth="50.0"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="50.0" prefWidth="50.0"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="50.0" prefWidth="50.0"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="50.0" prefWidth="50.0"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="50.0" prefWidth="50.0"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="50.0" prefWidth="50.0"/>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="550.0" prefWidth="550.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="60" minHeight="60.0" prefHeight="60.0" vgrow="NEVER"/>
+    </rowConstraints>
+    <Separator maxHeight="-Infinity" minHeight="-Infinity" prefHeight="10.0" prefWidth="475.0"
+               GridPane.columnSpan="9" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+        <GridPane.margin>
+            <Insets left="50.0" right="50.0" top="57.0"/>
+        </GridPane.margin>
+    </Separator>
+    <!--标题-->
+    <Label id="edit_tool_title" styleClass="GlobalLabel" text="直接编辑" visible="false" GridPane.columnIndex="2"
+           GridPane.columnSpan="4" GridPane.valignment="CENTER">
+        <GridPane.margin>
+            <Insets/>
+        </GridPane.margin>
+        <font>
+            <Font size="20.0"/>
+        </font>
+    </Label>
+    <!--查找-->
+    <Button fx:id="edit_tool_find" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            mnemonicParsing="false" onAction="#onFind" prefHeight="30.0" prefWidth="30.0" styleClass="edit_tool_button"
+            GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+        <GridPane.margin>
+            <Insets bottom="15.0" top="15.0"/>
+        </GridPane.margin>
+        <tooltip>
+            <Tooltip text="查找关键字"/>
+        </tooltip>
+    </Button>
+    <!--替换-->
+    <Button fx:id="edit_tool_replace" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            mnemonicParsing="false" onAction="#onReplace" prefHeight="30.0" prefWidth="30.0"
+            styleClass="edit_tool_button"
+            GridPane.columnIndex="2" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+        <GridPane.margin>
+            <Insets bottom="15.0" top="15.0"/>
+        </GridPane.margin>
+        <tooltip>
+            <Tooltip text="替换关键字"/>
+        </tooltip>
+    </Button>
+    <!--跳转至指定行-->
+    <Button fx:id="edit_tool_jump" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            mnemonicParsing="false" onAction="#onJumpLine" prefHeight="30.0" prefWidth="30.0"
+            styleClass="edit_tool_button" GridPane.columnIndex="3" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+        <GridPane.margin>
+            <Insets bottom="15.0" top="15.0"/>
+        </GridPane.margin>
+        <tooltip>
+            <Tooltip text="跳转至指定行"/>
+        </tooltip>
+    </Button>
+    <!--编码-->
+    <Button fx:id="edit_tool_code" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            mnemonicParsing="false" onAction="#onChangeCode" prefHeight="30.0" prefWidth="30.0"
+            styleClass="edit_tool_button" GridPane.columnIndex="4" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+        <GridPane.margin>
+            <Insets bottom="15.0" top="15.0"/>
+        </GridPane.margin>
+        <tooltip>
+            <Tooltip text="更改文件读写编码（适用于显示乱码）"/>
+        </tooltip>
+    </Button>
+    <!--样式-->
+    <Button fx:id="edit_tool_style" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            mnemonicParsing="false" onAction="#onChangeStyle" prefHeight="30.0" prefWidth="30.0"
+            styleClass="edit_tool_button" GridPane.columnIndex="5" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+        <GridPane.margin>
+            <Insets bottom="15.0" top="15.0"/>
+        </GridPane.margin>
+        <tooltip>
+            <Tooltip text="更改编辑器字体样式和大小"/>
+        </tooltip>
+    </Button>
+    <!--添加时间轴行-->
+    <Button fx:id="edit_tool_time_line" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0"
+            styleClass="edit_tool_button" onAction="#onTimeLine"
+            GridPane.columnIndex="6" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+        <GridPane.margin>
+            <Insets bottom="15.0" top="15.0"/>
+        </GridPane.margin>
+        <tooltip>
+            <Tooltip text="新建时间轴行"/>
+        </tooltip>
+    </Button>
+    <!--添加普通行-->
+    <Button fx:id="edit_tool_regular_line" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" mnemonicParsing="false" onAction="#onRegularLine" prefHeight="30.0" prefWidth="30.0"
+            styleClass="edit_tool_button" GridPane.columnIndex="7" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+        <GridPane.margin>
+            <Insets bottom="15.0" top="15.0"/>
+        </GridPane.margin>
+        <tooltip>
+            <Tooltip text="新建普通行"/>
+        </tooltip>
+    </Button>
+    <!--收起工具栏-->
+    <Button fx:id="edit_tool_hidden" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            mnemonicParsing="false" onAction="#onHidden" prefHeight="30.0" prefWidth="30.0"
+            styleClass="edit_tool_button"
+            GridPane.columnIndex="8" GridPane.hgrow="NEVER" GridPane.vgrow="NEVER">
+        <GridPane.margin>
+            <Insets bottom="15.0" top="15.0"/>
+        </GridPane.margin>
+        <tooltip>
+            <Tooltip text="收起工具栏"/>
+        </tooltip>
+    </Button>
+</GridPane>

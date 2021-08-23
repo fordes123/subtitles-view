@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane prefHeight="760.0" prefWidth="950.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fordes.subview.controller.settings.ExperimentSettingController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" prefWidth="300.0" />
+        <ColumnConstraints hgrow="ALWAYS" prefWidth="650.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="90.0" prefHeight="90.0" vgrow="NEVER" />
+        <RowConstraints prefHeight="80.0" vgrow="NEVER" />
+        <RowConstraints prefHeight="80.0" vgrow="NEVER" />
+        <RowConstraints prefHeight="80.0" vgrow="NEVER" />
+        <RowConstraints prefHeight="80.0" vgrow="NEVER" />
+        <RowConstraints prefHeight="80.0" vgrow="NEVER" />
+        <RowConstraints prefHeight="80.0" vgrow="NEVER" />
+        <RowConstraints prefHeight="80.0" vgrow="NEVER" />
+        <RowConstraints vgrow="ALWAYS" />
+    </rowConstraints>
+    <Separator maxHeight="-Infinity" minHeight="-Infinity" prefHeight="10.0" prefWidth="475.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+        <GridPane.margin>
+            <Insets left="30.0" right="30.0" top="50.0" />
+        </GridPane.margin>
+    </Separator>
+    <Label styleClass="GlobalLabel" text="实验性功能">
+        <GridPane.margin>
+            <Insets bottom="30.0" left="30.0" />
+        </GridPane.margin>
+        <font>
+            <Font size="22.0" />
+        </font>
+    </Label>
+    <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="应用并保存" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+        <GridPane.margin>
+            <Insets right="180.0" />
+        </GridPane.margin>
+        <font>
+            <Font size="16.0" />
+        </font>
+        <styleClass>
+            <String fx:value="execute-button" />
+            <String fx:value="button-shadow" />
+        </styleClass>
+    </Button>
+    <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="放弃" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+        <font>
+            <Font size="16.0" />
+        </font>
+        <GridPane.margin>
+            <Insets right="50.0" />
+        </GridPane.margin>
+        <styleClass>
+            <String fx:value="cancel-button" />
+            <String fx:value="button-shadow" />
+        </styleClass>
+    </Button>
+    <CheckBox fx:id="subtitles_search" mnemonicParsing="false" selected="true" text="启用在线字幕搜索" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+        <font>
+            <Font size="17.0" />
+        </font>
+        <GridPane.margin>
+            <Insets left="30.0" />
+        </GridPane.margin>
+    </CheckBox>
+    <CheckBox fx:id="custom_background" mnemonicParsing="false" text="自定义背景图" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+        <font>
+            <Font size="17.0" />
+        </font>
+        <GridPane.margin>
+            <Insets left="30.0" />
+        </GridPane.margin>
+    </CheckBox>
+    <CheckBox fx:id="format_fix" layoutX="340.0" layoutY="128.0" mnemonicParsing="false" text="格式智能修复" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+        <font>
+            <Font size="17.0" />
+        </font>
+        <GridPane.margin>
+            <Insets left="30.0" />
+        </GridPane.margin>
+    </CheckBox>
+
+    <Label styleClass="GlobalLabel" text="灰度功能" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+        <font>
+            <Font size="19.0" />
+        </font>
+        <GridPane.margin>
+            <Insets right="30.0" />
+        </GridPane.margin>
+    </Label>
+    <Label styleClass="GlobalLabel" text="（敬请期待 ...）" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+        <GridPane.margin>
+            <Insets left="30.0" />
+        </GridPane.margin>
+    </Label>
+    <Label styleClass="GlobalLabel" text="（功能入口位于启动菜单处，现已全面开放）" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+        <GridPane.margin>
+            <Insets left="30.0" />
+        </GridPane.margin>
+    </Label>
+    <Label layoutX="204.0" layoutY="128.0" styleClass="GlobalLabel" text="编辑相关" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+        <font>
+            <Font size="19.0" />
+        </font>
+        <GridPane.margin>
+            <Insets right="30.0" />
+        </GridPane.margin>
+    </Label>
+    <Label layoutX="340.0" layoutY="165.0" styleClass="GlobalLabel" text="（自动修复字幕格式错误，仅支持SRT格式）" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+        <GridPane.margin>
+            <Insets left="30.0" />
+        </GridPane.margin>
+    </Label>
+</GridPane>

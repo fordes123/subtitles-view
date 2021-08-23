@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fordes.subview.dao.ApplicationInfoDao">
+
+
+    <select id="findSetServerType" resultType="java.lang.Integer">
+        SELECT
+            ins.provider_id
+        FROM
+            "interface_info" ini
+                LEFT JOIN "interface_support" ins ON ini.support_id = ins.id
+        WHERE
+            ins.server_type = #{code}
+    </select>
+</mapper>

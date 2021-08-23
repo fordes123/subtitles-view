@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+
+    <!-- spring boot 服务名 -->
+    <springProperty scope="context" name="application_name" source="spring.application.name"/>
+
+    <!-- 日志文件路径 -->
+    <springProperty scope="context" name="log_path" source="logging.file.path" default="./logs/"/>
+
+    <!-- 日志切割的最小单位 -->
+    <springProperty scope="context" name="every_file_size" source="logging.file.max-size" default="50MB"/>
+
+    <!-- 保存日志文件天数 -->
+    <springProperty scope="context" name="save_file_days" source="logging.file.max-history" default="7"/>
+
+    <!-- 日志最大占用空间 -->
+    <springProperty scope="context" name="log_max_size" source="logging.file.total-size-cap" default="1GB"/>
+
+    <!-- Mybatis日志输出 -->
+    <springProperty scope="context" name="mybatis_level" source="logging.level.org.mybatis" default="debug"/>
+
+    <!-- 彩色日志渲染 -->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+    <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
+    <conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter" />
+
+    <!-- 输出格式 -->
+    <property name="PATTERN" value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n" />
+    <property name="CONSOLE_LOG_PATTERN" value="${CONSOLE_LOG_PATTERN:-%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+
+
+    <!-- 控制台输出 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
+
+    <!--Mybatis日志输出-->
+    <logger name="org.apache.ibatis.logging.stdout.StdOutImpl" level="${mybatis_level}"/>
+
+    <!-- 常规日志文件输出 -->
+    <appender name="FILE"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${log_path}/${application_name}.log</File>
+        <Prudent>true</Prudent>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${log_path}/${application_name}.%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <MaxHistory>${save_file_days}</MaxHistory>
+            <MaxFileSize>${every_file_size}</MaxFileSize>
+            <totalSizeCap>${log_max_size}</totalSizeCap>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${PATTERN}</pattern>
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
+
+    <!-- 错误日志文件输出 -->
+    <appender name="ERROR_FILE"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${log_path}/error/${application_name}.log</File>
+        <Prudent>true</Prudent>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${log_path}/error/${application_name}.%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <MaxHistory>${save_file_days}</MaxHistory>
+            <MaxFileSize>${every_file_size}</MaxFileSize>
+            <totalSizeCap>${log_max_size}</totalSizeCap>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${PATTERN}</pattern>
+            <charset>utf8</charset>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="FILE" />
+    </root>
+
+    <root level="ERROR">
+        <appender-ref ref="ERROR_FILE" />
+    </root>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:id="root" prefHeight="680.0" prefWidth="1000.0" styleClass="root_normal" stylesheets="/css/commonStyle.css"
+          xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="org.fordes.subview.controller.StartController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" prefWidth="1000.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="40" vgrow="NEVER"/>
+        <RowConstraints prefHeight="640.0" vgrow="ALWAYS"/>
+    </rowConstraints>
+    <!--标题栏-->
+    <fx:include fx:id="top" styleClass="titlesBar" source="TitlesBar.fxml"/>
+    <GridPane styleClass="bottom-round" GridPane.rowSpan="2">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" maxWidth="350" prefWidth="300.0"/>
+            <ColumnConstraints hgrow="ALWAYS" prefWidth="700.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints prefHeight="640.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <GridPane.margin>
+            <Insets top="40.0"/>
+        </GridPane.margin>
+        <ToggleButton fx:id="homePage" alignment="CENTER_LEFT" mnemonicParsing="false"
+                      prefWidth="120.0" selected="true" styleClass="nav_button" text="主页"
+                      GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP"
+                      GridPane.vgrow="ALWAYS">
+            <toggleGroup>
+                <ToggleGroup fx:id="position"/>
+            </toggleGroup>
+            <GridPane.margin>
+                <Insets top="70.0"/>
+            </GridPane.margin>
+        </ToggleButton>
+        <ToggleButton fx:id="history" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#localChoose"
+                      prefWidth="120.0" styleClass="nav_button" text="历史" toggleGroup="$position"
+                      GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP"
+                      GridPane.vgrow="ALWAYS">
+            <GridPane.margin>
+                <Insets top="140.0"/>
+            </GridPane.margin>
+        </ToggleButton>
+        <ToggleButton fx:id="net" alignment="CENTER_LEFT" mnemonicParsing="false"
+                      prefWidth="120.0" styleClass="nav_button" text="网络位置" toggleGroup="$position"
+                      GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP"
+                      GridPane.vgrow="ALWAYS">
+            <GridPane.margin>
+                <Insets top="210.0"/>
+            </GridPane.margin>
+        </ToggleButton>
+        <Button fx:id="news" prefHeight="32.0" prefWidth="80.0" styleClass="news" text="新建"
+                GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets bottom="180.0"/>
+            </GridPane.margin>
+        </Button>
+        <Button fx:id="open" onAction="#openFile" prefHeight="32.0" prefWidth="80.0" styleClass="news" text="打开"
+                GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets bottom="85.0"/>
+            </GridPane.margin>
+        </Button>
+        <GridPane id="content" styleClass="contentBottom" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                  GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints prefWidth="100.0"/>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <GridPane.margin>
+                <Insets bottom="60.0" right="60.0" top="70.0"/>
+            </GridPane.margin>
+            <fx:include fx:id="interfacePanel" source="interfacePanel.fxml" visible="false"
+                        GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER"
+                        GridPane.vgrow="ALWAYS"/>
+            <GridPane fx:id="fileDragPanel" visible="false">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <Label fx:id="folder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="128.0"
+                       minWidth="166.0"
+                       prefHeight="128.0" prefWidth="166.0" styleClass="folder" GridPane.halignment="CENTER"
+                       GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER"
+                       GridPane.vgrow="SOMETIMES"/>
+                <Label fx:id="tips" text="拖放或点此选择文件以开始" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+                       GridPane.rowIndex="2" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
+                </Label>
+            </GridPane>
+            <GridPane fx:id="searchPanel" stylesheets="" visible="false">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints maxHeight="90.0" prefHeight="90.0" vgrow="ALWAYS"/>
+                    <RowConstraints prefHeight="420.0" vgrow="ALWAYS"/>
+                </rowConstraints>
+                <TextField fx:id="search_input" maxHeight="-Infinity" maxWidth="-Infinity"
+                           minHeight="-Infinity" minWidth="-Infinity"
+                           prefHeight="45.0" prefWidth="400.0" styleClass="TextField"
+                           GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets left="30.0" top="30.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <Button fx:id="search_execute" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                        minWidth="-Infinity"
+                        mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" text=""
+                        GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets left="380.0" top="30.0"/>
+                    </GridPane.margin>
+                </Button>
+                <ListView fx:id="search_content" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+                          GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                    <GridPane.margin>
+                        <Insets left="25.0"/>
+                    </GridPane.margin>
+                </ListView>
+                <ChoiceBox fx:id="interface_choose" prefHeight="40.0" prefWidth="160.0"
+                           GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                    <GridPane.margin>
+                        <Insets right="35.0" top="32.5"/>
+                    </GridPane.margin>
+                    <styleClass>
+                        <String fx:value="round-component"/>
+                    </styleClass>
+                </ChoiceBox>
+            </GridPane>
+            <GridPane id="6666666" fx:id="historyRecordPanel" visible="false">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="660.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints maxHeight="90.0" minHeight="66.0" prefHeight="66.0" vgrow="ALWAYS"/>
+                    <RowConstraints maxHeight="444.0" minHeight="426.0" prefHeight="444.0" vgrow="ALWAYS"/>
+                </rowConstraints>
+                <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                           minWidth="-Infinity" prefHeight="45.0"
+                           prefWidth="200.0" styleClass="TextField" GridPane.halignment="RIGHT"
+                           GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets right="30.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <ListView visible="false" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+                          GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                    <GridPane.margin>
+                        <Insets left="25.0"/>
+                    </GridPane.margin>
+                </ListView>
+                <Label text="筛选" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                    <GridPane.margin>
+                        <Insets right="250.0"/>
+                    </GridPane.margin>
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+                <TableView opacity="0.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                    <columns>
+                        <TableColumn editable="false" maxWidth="100.0" prefWidth="100.0" text="名称"/>
+                        <TableColumn prefWidth="75.0" text="最近使用时间"/>
+                        <TableColumn prefWidth="75.0" text="大小"/>
+                        <TableColumn prefWidth="75.0" text="格式"/>
+                    </columns>
+                    <GridPane.margin>
+                        <Insets left="20.0" right="20.0"/>
+                    </GridPane.margin>
+                </TableView>
+            </GridPane>
+            <fx:include id="toast" source="Toast.fxml" visible="false" GridPane.halignment="CENTER" maxWidth="400.0"
+                        GridPane.hgrow="ALWAYS" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS"/>
+        </GridPane>
+    </GridPane>
+</GridPane>
