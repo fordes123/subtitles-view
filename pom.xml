@@ -25,7 +25,7 @@
         <mybatis-plus.version>3.4.0</mybatis-plus.version>
         <hutool.version>5.7.3</hutool.version>
         <javafx-maven-plugin.version>8.8.3</javafx-maven-plugin.version>
-        <jsoup.version>1.10.2</jsoup.version>
+        <jsoup.version>1.14.2</jsoup.version>
         <jackson.version>2.11.2</jackson.version>
         <guava.version>29.0-jre</guava.version>
         <juniversalchardet.version>2.4.0</juniversalchardet.version>
