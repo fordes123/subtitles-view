@@ -21,7 +21,7 @@
         <jfoenix.version>9.0.9</jfoenix.version>
         <jSystemThemeDetector.version>3.8</jSystemThemeDetector.version>
         <jsoup.version>1.14.3</jsoup.version>
-        <sqlite.version>3.36.0.3</sqlite.version>
+        <sqlite.version>3.41.2.2</sqlite.version>
         <mybatis-plus.version>3.5.1</mybatis-plus.version>
         <sevenzipjbinding.version>16.02-2.01</sevenzipjbinding.version>
         <javapackager.version>1.6.7</javapackager.version>
