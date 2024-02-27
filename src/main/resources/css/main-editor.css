@@ -1,0 +1,86 @@
+.bar .item {
+    -fx-font-family: iconfont;
+    -fx-text-fill: -fx-white-5;
+    -fx-text-alignment: center;
+    -fx-padding: 0;
+    -fx-font-size: 20;
+}
+
+.bar .item:selected, .bar .item:hover {
+    -fx-text-fill: -fx-focus-0;
+}
+
+.dark .bar .item:selected, .dark .bar .item:hover {
+    -fx-text-fill: -fx-focus-0;
+}
+
+.dark .bar .item {
+    -fx-text-fill: -fx-white-4;
+}
+
+.text-area {
+    -fx-background-color: -fx-white-0;
+    -fx-text-fill: -fx-dark-0;
+}
+
+.dark .text-area {
+    -fx-background-color: -fx-dark-3;
+    -fx-text-fill: -fx-white-0;
+}
+
+.text-area .scroll-pane .content {
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+}
+
+
+.text-area .scroll-bar,
+.text-area .track {
+    -fx-max-width: 15;
+    -fx-min-width: 15;
+
+}
+
+.bottom .toggle-button,
+.bottom .label {
+    -fx-text-fill: -fx-dark-1;
+    -fx-font-size: 15;
+}
+
+.dark .bottom .label {
+    -fx-text-fill: -fx-white-1;
+}
+
+.bottom .toggle-button .label {
+    -fx-padding: 0;
+    -fx-font-family: iconfont;
+    -fx-font-size: 26;
+    -fx-text-fill: -fx-dark-1;
+}
+
+.bottom .toggle-button:selected .label {
+    -fx-text-fill: -fx-focus-0;
+}
+
+.dark .bottom .toggle-button:selected .label {
+    -fx-text-fill: -fx-focus-1;
+}
+
+.dark #editMode,
+.dark #editModeIcon{
+    -fx-text-fill: -fx-white-1;
+}
+
+.styled-text-area {
+    -fx-font-color: -fx-dark-1 !important;
+    -fx-text-fill: -fx-dark-0 !important;
+    -fx-fill: -fx-dark-0 !important;
+}
+
+.dark .styled-text-area {
+    -fx-font-color: -fx-white-0 !important;
+    -fx-text-fill: -fx-white-0 !important;
+    -fx-fill: -fx-white-0 !important;
+}

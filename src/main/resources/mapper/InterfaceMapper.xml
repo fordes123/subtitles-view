@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.fordes.subtitles.view.mapper.InterfaceMapper">
+    <resultMap id="availableMap" type="org.fordes.subtitles.view.model.DTO.AvailableServiceInfo">
+        <result column="auth" property="auth"/>
+        <result column="type" property="type"/>
+        <result column="provider" property="provider"/>
+        <association property="versionInfo" javaType="org.fordes.subtitles.view.model.PO.Version">
+            <result column="concurrent" property="concurrent"/>
+            <result column="carrying" property="carrying"/>
+            <result column="name" property="name"/>
+            <result column="remark" property="remark"/>
+            <result column="server_url" property="serverUrl"/>
+        </association>
+    </resultMap>
+
+    <select id="serviceInfo" resultMap="availableMap">
+        SELECT i.auth, i.type, i.provider, v.carrying, v.concurrent, v.name, v.server_url, v.remark
+        FROM "interface" i
+                 LEFT JOIN "version" v ON i.id = v.interface_id
+        WHERE "type" = #{type}
+          AND "auth" IS NOT NULL
+    </select>
+
+
+    <select id="getVersions" resultType="org.fordes.subtitles.view.model.PO.Version">
+        SELECT v.*
+        FROM "version" v
+                 LEFT JOIN "interface" i ON v.interface_id = i.id
+        WHERE i."provider" = #{provider}
+          AND i."type" = #{type}
+    </select>
+
+    <select id="getLanguageList" resultType="cn.hutool.core.lang.Dict">
+        select * FROM "language"
+    </select>
+</mapper>

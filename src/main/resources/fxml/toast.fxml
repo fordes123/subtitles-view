@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<GridPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+          visible="false"
+          prefHeight="68" prefWidth="260.0" styleClass="toast" stylesheets="/css/toast.css"
+          xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="org.fordes.subtitles.view.controller.Toast">
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" prefWidth="150"/>
+        <ColumnConstraints hgrow="NEVER" prefWidth="90"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="24" vgrow="NEVER"/>
+        <RowConstraints prefHeight="24" vgrow="NEVER"/>
+    </rowConstraints>
+    <GridPane.margin>
+        <Insets bottom="20.0" right="20.0"/>
+    </GridPane.margin>
+    <JFXButton fx:id="_perform" mnemonicParsing="false" styleClass="normal-button" text="确定"
+               GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowSpan="2"
+               GridPane.valignment="CENTER"/>
+    <JFXButton fx:id="_choose1" mnemonicParsing="false" text="确定" GridPane.columnIndex="1" visible="false"
+               GridPane.halignment="LEFT" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+        <styleClass>
+            <String fx:value="normal-button"/>
+            <String fx:value="choose"/>
+        </styleClass>
+    </JFXButton>
+    <JFXButton fx:id="_choose2" mnemonicParsing="false" text="取消" GridPane.columnIndex="1" visible="false"
+               GridPane.halignment="RIGHT" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+        <styleClass>
+            <String fx:value="normal-button"/>
+            <String fx:value="choose"/>
+        </styleClass>
+    </JFXButton>
+    <Label fx:id="_caption">
+        <GridPane.margin>
+            <Insets left="15.0"/>
+        </GridPane.margin>
+    </Label>
+    <Label fx:id="_text" GridPane.rowIndex="1">
+        <GridPane.margin>
+            <Insets left="15.0"/>
+        </GridPane.margin>
+    </Label>
+</GridPane>

@@ -1,0 +1,67 @@
+.engine {
+    -fx-background-radius: 50px;
+    -fx-pref-height: 50px;
+    -fx-pref-width: 50px;
+    -fx-min-width: -fx-pref-width;
+    -fx-max-width: -fx-pref-width;
+    -fx-min-height: -fx-pref-height;
+    -fx-max-height: -fx-pref-height;
+    -fx-background-color: -fx-white-1;
+    -fx-font-family: iconfont;
+    -fx-text-fill: -fx-white-5;
+    -fx-font-size: 20;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian, -fx-white-4, 10, 0, 0, 0);
+}
+
+.engine:selected,
+.engine:hover {
+    -fx-text-fill: -fx-focus-0;
+}
+
+.dark .engine:selected,
+.dark .engine:hover {
+    -fx-text-fill: -fx-focus-1;
+}
+
+.dark .engine {
+    -fx-background-color: -fx-dark-5;
+    -fx-text-fill: -fx-white-4;
+    -fx-effect: dropshadow(gaussian, -fx-dark-2, 10, 0, 0, 0);
+}
+
+.jfx-button {
+    -jfx-button-type: RAISED;
+}
+
+.list-cell .label {
+    -fx-text-fill: -fx-dark-0;
+}
+
+.dark .list-cell .label, .dark #searchField {
+    -fx-text-fill: -fx-white-0;
+}
+
+.list-cell:selected .label {
+    -fx-text-fill: -fx-focus-0;
+}
+
+.dark .list-cell:selected .label {
+    -fx-text-fill: -fx-focus-1;
+}
+
+.list-cell .caption {
+    -fx-font-size: 14;
+}
+
+.search-item {
+    -fx-pref-width: 200;
+    -fx-pref-height: 40;
+    -fx-min-width: -fx-pref-width;
+    -fx-min-height: -fx-pref-height;
+}
+
+#searchField {
+    -fx-font-size: 14;
+    -fx-prompt-text-fill: -fx-white-5;
+}

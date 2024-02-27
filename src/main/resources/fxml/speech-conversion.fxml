@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          stylesheets="/css/quick-start.css"
+          fx:id="root" fx:controller="org.fordes.subtitles.view.controller.SpeechConversion"
+          GridPane.halignment="CENTER" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" GridPane.hgrow="ALWAYS">
+    <children>
+        <Label text="语音转写">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+    </children>
+</GridPane>

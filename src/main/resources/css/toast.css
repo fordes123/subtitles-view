@@ -1,0 +1,60 @@
+.toast {
+    -fx-cursor: hand;
+    -fx-background-color: -fx-white-0;
+    -fx-border-insets: 0;
+    -fx-background-radius: 10;
+    -fx-padding: 10 10 10 10;
+    -fx-effect: dropshadow(gaussian, -fx-white-4, 10, 0, 0, 0);
+}
+
+.dark .toast {
+    -fx-background-color: -fx-dark-3;
+    -fx-effect: dropshadow(gaussian, -fx-dark-1, 10, 0, 0, 0);
+}
+
+#perform {
+    -fx-pref-height: 30;
+    -fx-pref-width: 70;
+    -fx-background-radius: 5;
+    -fx-font-size: 12;
+}
+
+.choose {
+    -fx-pref-height: 20;
+    -fx-pref-width: 40;
+    -fx-background-radius: 5;
+    -fx-font-size: 10;
+}
+
+#perform:hover {
+    -fx-background-color: -fx-focus-0;
+    -fx-effect: dropshadow(gaussian, -fx-white-4, 5, 0, 0, 0);
+}
+
+.dark #perform {
+    -fx-background-color: -fx-focus-1;
+}
+.dark #perform:hover {
+    -fx-background-color: -fx-focus-1;
+    -fx-effect: dropshadow(gaussian, -fx-dark-2, 5, 0, 0, 0);
+}
+
+
+
+#_caption {
+    -fx-font-size: 14;
+    -fx-text-fill: -fx-dark-0 !important;
+}
+
+.dark #_caption {
+    -fx-text-fill: -fx-white-1 !important;
+}
+
+#_text {
+    -fx-font-size: 13;
+    -fx-text-fill: -fx-white-5 !important;
+}
+
+.dark #_text {
+    -fx-text-fill: -fx-white-4 !important;
+}

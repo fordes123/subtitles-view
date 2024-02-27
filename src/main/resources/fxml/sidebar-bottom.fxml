@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.*?>
+<?import org.fordes.subtitles.view.enums.FontIcon?>
+<?import java.lang.String?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="org.fordes.subtitles.view.controller.SidebarBottom">
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"/>
+        <ColumnConstraints hgrow="ALWAYS"/>
+        <ColumnConstraints hgrow="NEVER" minWidth="60.0" prefWidth="60.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="30.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <Separator prefWidth="200.0" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+               GridPane.valignment="TOP" GridPane.vgrow="ALWAYS"/>
+    <Label GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+        <FontIcon fx:constant="LOGO"/>
+        <styleClass>
+            <String fx:value="logo"/>
+        </styleClass>
+    </Label>
+    <Label styleClass="app-name" text="SubView" GridPane.columnIndex="1" GridPane.halignment="LEFT"
+           GridPane.valignment="CENTER"/>
+    <Button fx:id="setting" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.halignment="CENTER"
+            GridPane.valignment="CENTER">
+        <styleClass>
+            <String fx:value="setting"/>
+        </styleClass>
+        <FontIcon fx:constant="SETTING"/>
+    </Button>
+</GridPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import org.fordes.subtitles.view.enums.FontIcon?>
+<?import java.lang.String?>
+<VBox fx:id="root" stylesheets="/css/title-bar.css"
+      xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+      GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+      GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS"
+      fx:controller="org.fordes.subtitles.view.controller.TitleBar">
+    <AnchorPane prefHeight="30.0">
+        <Button fx:id="closed" contentDisplay="CENTER" mnemonicParsing="false" AnchorPane.rightAnchor="0.0" onAction="#closed">
+            <FontIcon fx:constant="SCENE_CLOSE"/>
+            <styleClass>
+                <String fx:value="title-button"/>
+            </styleClass>
+        </Button>
+        <Button fx:id="maximize" contentDisplay="CENTER" mnemonicParsing="false" AnchorPane.rightAnchor="50.0" onAction="#maximize">
+            <FontIcon fx:constant="FULL_SCREEN"/>
+            <styleClass>
+                <String fx:value="title-button"/>
+            </styleClass>
+        </Button>
+        <Button fx:id="minimize" contentDisplay="CENTER" mnemonicParsing="false" AnchorPane.rightAnchor="100.0" onAction="#minimize">
+            <FontIcon fx:constant="SCENE_MINIMIZE"/>
+            <styleClass>
+                <String fx:value="title-button"/>
+            </styleClass>
+        </Button>
+        <Label fx:id="title" prefHeight="30.0" styleClass="" AnchorPane.leftAnchor="20">
+            <font>
+                <Font name="Microsoft YaHei" size="15.0"/>
+            </font>
+        </Label>
+    </AnchorPane>
+</VBox>

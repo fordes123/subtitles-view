@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import org.fordes.subtitles.view.enums.FontIcon?>
+<?import java.lang.String?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<GridPane fx:id="root" onMouseDragged="#mouseDraggedHandle" onMouseMoved="#mouseMoveHandle"
+          onMousePressed="#mousePressedHandle" prefHeight="800.0" prefWidth="1200.0"
+          xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="org.fordes.subtitles.view.controller.MainController">
+    <styleClass>
+        <String fx:value="screen"/>
+        <String fx:value="normal-screen"/>
+    </styleClass>
+    <rowConstraints>
+        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0"/>
+        <RowConstraints/>
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints fx:id="sidebarColumn" hgrow="NEVER" prefWidth="250.0"/>
+        <ColumnConstraints/>
+    </columnConstraints>
+    <fx:include fx:id="titleBar" source="title-bar.fxml" onMouseDragged="#titleBarDraggedHandle"
+                GridPane.columnSpan="2"/>
+    <GridPane styleClass="sidebar" GridPane.rowIndex="1">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="ALWAYS"/>
+            <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <fx:include fx:id="sidebarBefore" source="sidebar-before.fxml"/>
+        <fx:include fx:id="sidebarAfter" source="sidebar-after.fxml" visible="false"/>
+        <fx:include fx:id="sidebarBottom" source="sidebar-bottom.fxml" GridPane.rowIndex="1"/>
+    </GridPane>
+
+    <GridPane fx:id="content" styleClass="content" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+              GridPane.hgrow="ALWAYS"
+              GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <fx:include fx:id="quickStart" source="quick-start.fxml"/>
+        <fx:include fx:id="subtitleSearch" source="subtitle-search.fxml" visible="false"/>
+        <fx:include fx:id="toolBox" source="tool-box.fxml" visible="false"/>
+        <fx:include fx:id="setting" source="setting.fxml" visible="false"/>
+        <fx:include fx:id="export" source="export.fxml" visible="false"/>
+        <fx:include fx:id="mainEditor" source="main-editor.fxml" visible="false"/>
+        <fx:include fx:id="syncEditor" source="sync-editor.fxml" visible="false"/>
+        <fx:include fx:id="voiceConvert" source="voice-convert.fxml" visible="false"/>
+    </GridPane>
+    <Label fx:id="drawer" styleClass="drawer" onMouseClicked="#onDrawer" GridPane.columnIndex="1" GridPane.rowIndex="1"
+           GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+        <FontIcon fx:constant="PLACE_THE_LEFT"/>
+    </Label>
+    <fx:include source="toast.fxml" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM"
+                GridPane.hgrow="NEVER" GridPane.vgrow="NEVER"/>
+    <!--全局loading-->
+    <StackPane fx:id="loading" prefWidth="1200" prefHeight="800" visible="false" GridPane.rowIndex="1" styleClass="transparent"
+               GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+        <JFXSpinner StackPane.alignment="CENTER" maxWidth="150" maxHeight="150" prefHeight="150" prefWidth="150"/>
+    </StackPane>
+
+</GridPane>

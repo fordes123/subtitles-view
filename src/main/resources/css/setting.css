@@ -1,0 +1,88 @@
+.item {
+    -fx-font-size: 15;
+}
+
+.sub-title {
+    -fx-font-size: 20;
+}
+
+.item, .sub-title {
+    -fx-text-fill: -fx-dark-0;
+}
+
+.dark .item, .dark .sub-title {
+    -fx-text-fill: -fx-white-0;
+}
+
+.text-field {
+    -fx-font-size: 15;
+    -fx-text-fill: -fx-dark-0;
+    -fx-background-position: 5;
+    -fx-border-radius: 5;
+    -fx-background-color: -fx-white-2;
+    -fx-pref-width: 300;
+    -fx-pref-height: 40;
+    -fx-min-width: -fx-pref-width;
+    -fx-min-height: -fx-pref-height;
+    -fx-max-width: -fx-pref-width;
+    -fx-max-height: -fx-pref-height;
+}
+
+.dark .text-field {
+    -fx-text-fill: -fx-white-0;
+    -fx-background-color: -fx-dark-5;
+}
+
+.text-field :focused {
+    -fx-text-fill: -fx-focus-0;
+}
+
+.dark .text-field :focused {
+    -fx-text-fill: -fx-focus-1;
+}
+
+.popup-text {
+    -fx-font-size: 14;
+    -fx-text-fill: -fx-dark-4 !important;
+}
+
+.popup-text:hover {
+    -fx-text-fill: -fx-focus-0 !important;
+}
+
+.dark .popup-text {
+    -fx-text-fill: -fx-white-4 !important;
+}
+
+.dark .popup-text:hover {
+    -fx-text-fill: -fx-focus-1 !important;
+}
+
+.tips {
+    -fx-border-width: 0;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-background-color: -fx-white-2;
+    -fx-line-spacing: 8px;
+    -fx-font-size: 14;
+}
+
+ .tips .text {
+     -fx-fill: -fx-focus-0;
+ }
+
+ .dark .tips .text {
+     -fx-fill: -fx-focus-1;
+ }
+
+.dark .tips {
+    -fx-background-color: -fx-dark-5;
+}
+
+.icon {
+    -fx-font-family: iconfont;
+    -fx-font-size: 26
+}
+

@@ -1,0 +1,13 @@
+
+${AnsiColor.BRIGHT_GREEN}  $$$$$$\            $$\        $$\     $$\   $$\     $$\                           $$\    $$\ $$\
+${AnsiColor.BRIGHT_GREEN} $$  __$$\           $$ |       $$ |    \__|  $$ |    $$ |                          $$ |   $$ |\__|
+${AnsiColor.BRIGHT_GREEN} $$ /  \__|$$\   $$\ $$$$$$$\ $$$$$$\   $$\ $$$$$$\   $$ | $$$$$$\   $$$$$$$\       $$ |   $$ |$$\  $$$$$$\  $$\  $$\  $$\
+${AnsiColor.BRIGHT_GREEN} \$$$$$$\  $$ |  $$ |$$  __$$\\_$$  _|  $$ |\_$$  _|  $$ |$$  __$$\ $$  _____|      \$$\  $$  |$$ |$$  __$$\ $$ | $$ | $$ |
+${AnsiColor.BRIGHT_GREEN}  \____$$\ $$ |  $$ |$$ |  $$ | $$ |    $$ |  $$ |    $$ |$$$$$$$$ |\$$$$$$\         \$$\$$  / $$ |$$$$$$$$ |$$ | $$ | $$ |
+${AnsiColor.BRIGHT_GREEN} $$\   $$ |$$ |  $$ |$$ |  $$ | $$ |$$\ $$ |  $$ |$$\ $$ |$$   ____| \____$$\         \$$$  /  $$ |$$   ____|$$ | $$ | $$ |
+${AnsiColor.BRIGHT_GREEN} \$$$$$$  |\$$$$$$  |$$$$$$$  | \$$$$  |$$ |  \$$$$  |$$ |\$$$$$$$\ $$$$$$$  |         \$  /   $$ |\$$$$$$$\ \$$$$$\$$$$  |
+${AnsiColor.BRIGHT_GREEN}  \______/  \______/ \_______/   \____/ \__|   \____/ \__| \_______|\_______/           \_/    \__| \_______| \_____\____/
+
+${AnsiColor.BRIGHT_CYAN} :: Application :: ${AnsiColor.BRIGHT_RED}${spring.application.name}
+${AnsiColor.BRIGHT_CYAN} :: Developers :: ${AnsiColor.BRIGHT_RED}fordes
+${AnsiColor.BRIGHT_CYAN} :: Github :: ${AnsiColor.BRIGHT_RED}https://github.com/fordes123/Subtitles-View${AnsiColor.BRIGHT_WHITE}

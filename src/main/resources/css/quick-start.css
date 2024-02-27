@@ -1,0 +1,83 @@
+#root {
+    -fx-background-color: transparent;
+    -fx-border-style: dashed;
+    -fx-border-radius: 10;
+    -fx-border-width: 4;
+    -fx-border-color: -fx-white-4;
+}
+
+.error {
+    -fx-border-color: -fx-error-0 !important;
+}
+
+.error #clues, .error .button .label {
+    -fx-text-fill: -fx-error-0c !important;
+}
+
+.dark .error {
+    -fx-border-color: -fx-error-1 !important;
+}
+
+.dark .error #clues, .dark .error .button .label {
+    -fx-text-fill: -fx-error-1 !important;
+}
+
+.warning {
+    -fx-border-color: -fx-wran-0 !important;
+}
+
+.warning #clues, .warning .button .label {
+    -fx-text-fill: -fx-wran-0 !important;
+}
+
+.dark .warning {
+    -fx-border-color: -fx-wran-1 !important;
+}
+
+.dark .warning #clues, .dark .warning .button .label {
+    -fx-text-fill: -fx-wran-1 !important;
+}
+
+.success {
+    -fx-border-color: -fx-success-0 !important;
+}
+
+.success #clues, .success .button .label {
+    -fx-text-fill: -fx-success-0 !important;
+}
+
+.dark .success {
+    -fx-border-color: -fx-success-1 !important;
+}
+
+.dark .success #clues, .dark .success .button .label {
+    -fx-text-fill: -fx-success-1 !important;
+}
+
+.button {
+    -fx-background-color: transparent !important;
+}
+
+.button .label {
+    -fx-font-family: iconfont;
+    -fx-font-size: 80;
+    -fx-text-alignment: center;
+}
+
+.label {
+    -fx-text-fill: -fx-white-4 !important;
+}
+
+.button:hover .label {
+    -fx-text-fill: -fx-focus-0;
+}
+
+.dark .button:hover .label {
+    -fx-text-fill: -fx-focus-1;
+}
+
+.label {
+    -fx-font-size: 22;
+    -fx-text-fill: -fx-white-5;
+}
+

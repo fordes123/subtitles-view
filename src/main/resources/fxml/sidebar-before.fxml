@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.fordes.subtitles.view.enums.FontIcon?>
+<GridPane fx:id="root" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="org.fordes.subtitles.view.controller.SidebarBefore">
+    <rowConstraints>
+        <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+        <RowConstraints prefHeight="100" vgrow="ALWAYS"/>
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <ToggleButton fx:id="quickStart" text="快速开始" selected="true" styleClass="sidebar-item"
+                  alignment="CENTER_LEFT" prefWidth="250" prefHeight="60.0"
+                  GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER"
+                  GridPane.vgrow="ALWAYS">
+        <toggleGroup>
+            <ToggleGroup fx:id="itemGroup"/>
+        </toggleGroup>
+        <graphic>
+            <Label styleClass="sidebar-icon">
+                <FontIcon fx:constant="ITEM_START"/>
+            </Label>
+        </graphic>
+        <GridPane.margin>
+            <Insets bottom="8.0" left="13.0" right="13.0" top="8.0"/>
+        </GridPane.margin>
+    </ToggleButton>
+    <ToggleButton fx:id="subtitleSearch" text="字幕搜索" styleClass="sidebar-item" toggleGroup="$itemGroup"
+                  alignment="CENTER_LEFT" GridPane.rowIndex="1" prefWidth="250" prefHeight="60.0"
+                  GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+                  GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+        <graphic>
+            <Label styleClass="sidebar-icon">
+                <FontIcon fx:constant="ITEM_SEARCH"/>
+            </Label>
+        </graphic>
+        <GridPane.margin>
+            <Insets bottom="8.0" left="13.0" right="13.0" top="8.0"/>
+        </GridPane.margin>
+    </ToggleButton>
+    <ToggleButton fx:id="toolBox" text="工具箱" styleClass="sidebar-item" toggleGroup="$itemGroup"
+                  alignment="CENTER_LEFT" GridPane.rowIndex="2" prefWidth="250" prefHeight="60.0"
+                  GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER"
+                  GridPane.vgrow="ALWAYS">
+        <graphic>
+            <Label styleClass="sidebar-icon">
+                <FontIcon fx:constant="ITEM_TOOL"/>
+            </Label>
+        </graphic>
+        <GridPane.margin>
+            <Insets bottom="8.0" left="13.0" right="13.0" top="8.0"/>
+        </GridPane.margin>
+    </ToggleButton>
+
+</GridPane>

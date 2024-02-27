@@ -1,0 +1,42 @@
+logging:
+  config: classpath:logback/logback-spring.xml
+  file:
+    path: ./logs
+
+
+spring:
+  application:
+    name: subtitles-view
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:sqlite::resource:db/subtitles-view.sqlite
+    driver-class-name: org.sqlite.JDBC
+
+
+service:
+  translate:
+    tencent:
+      region: ap-shanghai #接口服务，详见：https://cloud.tencent.com/document/api/551/15615#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8
+    huoshan:
+      region: cn-north-1 #https://www.volcengine.com/docs/6369/67269
+      version-date: 2020-06-01
+
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  type-aliases-package: org.fordes.subtitles.view.mode.PO
+  configuration:
+    map-underscore-to-camel-case: false
+    cache-enabled: true
+  global-config:
+    banner: off
+    db-config:
+      update-strategy: not_null
+
+config:
+  editMode: false
+  exitMode: false
+  languageListMode: true
+  fontSize: 18
+  currentTheme: false

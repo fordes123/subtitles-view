@@ -1,0 +1,92 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: CI Build
+
+on:
+  push:
+    paths-ignore:
+      - 'README.md'
+    branches: [ main ]
+  pull_request:
+    paths-ignore:
+      - 'README.md'
+    branches: [ main ]
+
+  workflow_dispatch:
+    inputs:
+      generateInstaller:
+        description: 'generateInstaller'
+        required: true
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+        default: 'false'
+      customizedJre:
+        description: 'customizedJre'
+        required: true
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+        default: 'false'
+
+jobs:
+  bundling-for-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: maven
+      - name: Build with Maven
+        run: mvn --file pom.xml -Dplatform=windows -DgenerateInstaller=${{github.event.inputs.bundleJre}} -DcustomizedJre=${{github.event.inputs.customizedJre}} -DcreateZipball=true -DcreateTarball=false -B package
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: windows
+          path: |
+            target/subtitles-view-*.*
+            !target/subtitles-view-*.jar
+  bundling-for-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: maven
+      - name: Build with Maven
+        run: mvn --file pom.xml -Dplatform=linux -DgenerateInstaller=${{github.event.inputs.bundleJre}} -DcustomizedJre=${{github.event.inputs.customizedJre}} -DcreateZipball=false -DcreateTarball=true -B package
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: linux
+          path: |
+            target/subtitles-view-*.*
+            !target/subtitles-view-*.jar
+  bundling-for-mac:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: maven
+      - name: Build with Maven
+        run: mvn --file pom.xml -Dplatform=mac -DgenerateInstaller=${{github.event.inputs.bundleJre}} -DcustomizedJre=${{github.event.inputs.customizedJre}} -DcreateZipball=false -DcreateTarball=true -B package
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: mac
+          path: |
+            target/subtitles-view-*.*
+            !target/subtitles-view-*.jar

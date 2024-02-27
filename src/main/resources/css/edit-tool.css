@@ -1,0 +1,108 @@
+.toolPanel {
+    -fx-font-size: 15;
+    -fx-text-fill: -fx-dark-0;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-background-color: -fx-white-0;
+    -fx-effect: dropshadow(GAUSSIAN, -fx-dark-3, 7, 0, 0, 0);
+}
+
+.dark .toolPanel {
+    -fx-text-fill: -fx-white-0;
+    -fx-background-color: -fx-dark-3;
+    -fx-effect: dropshadow(GAUSSIAN, -fx-dark-0, 7, 0, 0, 0);
+}
+
+.toolPanel .text-field,
+.toolPanel .label,
+.toolPanel .button {
+    -fx-text-fill: -fx-dark-0;
+}
+
+.dark .toolPanel .text-field,
+.dark .toolPanel .label,
+.dark .toolPanel .button {
+    -fx-text-fill: -fx-white-0
+}
+
+.menu-bar:hover,
+.menu:hover,
+.menu-bar:focused,
+.menu:focused,
+.label:hover,
+.button:hover {
+    -fx-text-fill: -fx-focus-0 !important;
+    -fx-background-color: transparent;
+}
+
+.font-icon {
+    -fx-font-size: 20 !important;
+}
+
+
+.menu-bar,.menu {
+    -fx-pref-height: 50;
+    -fx-pref-width: 50;
+    -fx-min-height: 50;
+    -fx-min-width: 50;
+    -fx-alignment: center;
+}
+
+.menu, .menu-bar, .check-menu-item {
+    -fx-graphic: true;
+    -fx-background-color: transparent;
+}
+
+.context-menu {
+    -fx-background-color: -fx-white-1;
+}
+
+.dark .context-menu {
+    -fx-background-color: -fx-dark-4;
+}
+
+.left-item {
+    -fx-background-radius: 5 0 0 5;
+}
+
+.right-item {
+    -fx-background-radius: 0 5 5 0;
+}
+
+.left-top-item {
+    -fx-background-radius: 5 0 0 0;
+}
+
+.left-bottom-item {
+    -fx-background-radius: 0 0 0 5;
+}
+
+.right-top-item {
+    -fx-background-radius: 0 5 0 0;
+}
+
+.right-bottom-item {
+    -fx-background-radius: 0 0 5 0;
+}
+
+.error {
+    -fx-text-fill: -fx-error-0 !important;
+}
+
+.dark .error {
+    -fx-text-fill: -fx-error-1 !important;
+}
+
+.jfx-combo-box,
+.jfx-combo-box > .list-cell {
+    -fx-font-size: 15;
+    -fx-alignment: center;
+}
+
+
+.input-line,
+.input-focused-line {
+    -fx-background-color: transparent !important;
+    -fx-pref-height: 0px !important;
+    -fx-translate-y: 0px !important;
+}

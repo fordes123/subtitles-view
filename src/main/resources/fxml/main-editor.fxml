@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.fordes.subtitles.view.enums.*?>
+<?import org.fxmisc.flowless.VirtualizedScrollPane?>
+<?import org.fxmisc.richtext.StyleClassedTextArea?>
+<?import java.lang.*?>
+<GridPane fx:id="root" prefHeight="1000.0" prefWidth="800.0" stylesheets="/css/main-editor.css"
+          GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS"
+          xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="org.fordes.subtitles.view.controller.MainEditor" visible="false">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints fx:id="toolbarRow" maxHeight="60.0" minHeight="60.0" prefHeight="60.0" valignment="TOP"
+                        vgrow="NEVER"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="ALWAYS"/>
+    </rowConstraints>
+    <HBox fx:id="toolbarPanel" maxHeight="40.0" prefHeight="40.0" prefWidth="200.0" styleClass="bar"
+          GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" userData="SEARCH"
+                HBox.hgrow="NEVER">
+            <HBox.margin>
+                <Insets left="30.0"/>
+            </HBox.margin>
+            <FontIcon fx:constant="EDIT_BAR_SEARCH"/>
+            <tooltip>
+                <Tooltip text="查找关键字"/>
+            </tooltip>
+            <styleClass>
+                <String fx:value="no-border"/>
+                <String fx:value="transparent"/>
+                <String fx:value="font-icon"/>
+                <String fx:value="item"/>
+            </styleClass>
+        </Button>
+        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0"
+                userData="REPLACE" HBox.hgrow="NEVER">
+            <FontIcon fx:constant="EDIT_BAR_REPLACE"/>
+            <tooltip>
+                <Tooltip text="替换关键字"/>
+            </tooltip>
+            <styleClass>
+                <String fx:value="no-border"/>
+                <String fx:value="transparent"/>
+                <String fx:value="font-icon"/>
+                <String fx:value="item"/>
+            </styleClass>
+        </Button>
+        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0"
+                userData="JUMP" HBox.hgrow="NEVER">
+            <FontIcon fx:constant="EDIT_BAR_JUMP"/>
+            <styleClass>
+                <String fx:value="no-border"/>
+                <String fx:value="transparent"/>
+                <String fx:value="font-icon"/>
+                <String fx:value="item"/>
+            </styleClass>
+            <tooltip>
+                <Tooltip text="跳转至指定行"/>
+            </tooltip>
+        </Button>
+        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0"
+                userData="CODE" HBox.hgrow="NEVER">
+            <FontIcon fx:constant="EDIT_BAR_CODE"/>
+            <styleClass>
+                <String fx:value="no-border"/>
+                <String fx:value="transparent"/>
+                <String fx:value="font-icon"/>
+                <String fx:value="item"/>
+            </styleClass>
+            <tooltip>
+                <Tooltip text="更改文件读写编码（适用于显示乱码）"/>
+            </tooltip>
+        </Button>
+        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0"
+                userData="FONT" HBox.hgrow="NEVER">
+            <FontIcon fx:constant="EDIT_BAR_FONT"/>
+            <styleClass>
+                <String fx:value="no-border"/>
+                <String fx:value="transparent"/>
+                <String fx:value="font-icon"/>
+                <String fx:value="item"/>
+            </styleClass>
+            <tooltip>
+                <Tooltip text="更改编辑器字体样式和大小"/>
+            </tooltip>
+        </Button>
+        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0"
+                userData="TIMELINE" HBox.hgrow="NEVER">
+            <FontIcon fx:constant="EDIT_BAR_TIMELINE"/>
+            <styleClass>
+                <String fx:value="no-border"/>
+                <String fx:value="transparent"/>
+                <String fx:value="font-icon"/>
+                <String fx:value="item"/>
+            </styleClass>
+            <tooltip>
+                <Tooltip text="新建时间轴行"/>
+            </tooltip>
+        </Button>
+        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0"
+                userData="TRANSLATE" HBox.hgrow="NEVER">
+            <FontIcon fx:constant="EDIT_BAR_TRANSLATE"/>
+            <styleClass>
+                <String fx:value="no-border"/>
+                <String fx:value="transparent"/>
+                <String fx:value="font-icon"/>
+                <String fx:value="item"/>
+            </styleClass>
+            <tooltip>
+                <Tooltip text="对字幕内容进行翻译"/>
+            </tooltip>
+        </Button>
+        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0"
+                userData="REF" HBox.hgrow="NEVER">
+            <FontIcon fx:constant="EDIT_BAR_REF"/>
+            <styleClass>
+                <String fx:value="no-border"/>
+                <String fx:value="transparent"/>
+                <String fx:value="font-icon"/>
+                <String fx:value="item"/>
+            </styleClass>
+            <tooltip>
+                <Tooltip text="重新读取文件，未保存的修改将丢失"/>
+            </tooltip>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#hideToolbar" prefHeight="50.0" prefWidth="50.0"
+                HBox.hgrow="NEVER">
+            <FontIcon fx:constant="EDIT_BAR_HIDE"/>
+            <styleClass>
+                <String fx:value="no-border"/>
+                <String fx:value="transparent"/>
+                <String fx:value="font-icon"/>
+                <String fx:value="item"/>
+            </styleClass>
+            <tooltip>
+                <Tooltip text="收起工具栏"/>
+            </tooltip>
+        </Button>
+    </HBox>
+    <Separator prefWidth="10.0" GridPane.hgrow="ALWAYS" GridPane.valignment="BOTTOM" GridPane.vgrow="ALWAYS">
+        <GridPane.margin>
+            <Insets left="30.0" right="30.0"/>
+        </GridPane.margin>
+    </Separator>
+    <VirtualizedScrollPane GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1"
+                           GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+        <content>
+            <StyleClassedTextArea fx:id="editor" prefWidth="800" wrapText="true">
+                <styleClass>
+                    <String fx:value="no-border"/>
+                </styleClass>
+            </StyleClassedTextArea>
+        </content>
+        <GridPane.margin>
+            <Insets bottom="45.0" left="20.0" right="10.0" top="10.0"/>
+        </GridPane.margin>
+    </VirtualizedScrollPane>
+    <HBox styleClass="bottom" minHeight="40.0" maxHeight="40" minWidth="400.0" maxWidth="400.0"
+          GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+        <Label fx:id="indicator" textAlignment="RIGHT" alignment="CENTER_RIGHT" text="-" userData="第 {}行, 第 {}列"
+               minHeight="40" maxHeight="40" minWidth="280" maxWidth="280" onMouseClicked="#onIndicatorClicked"
+               GridPane.rowIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM"/>
+        <ToggleButton text="简洁模式" fx:id="editMode" minHeight="40.0" maxHeight="40" minWidth="120.0" maxWidth="120.0"
+                      mnemonicParsing="false" GridPane.halignment="RIGHT" GridPane.rowIndex="1" userData="完整模式"
+                      GridPane.valignment="BOTTOM" onAction="#changeEditMode">
+            <styleClass>
+                <String fx:value="transparent"/>
+                <String fx:value="no-border"/>
+            </styleClass>
+            <graphic>
+                <Label fx:id="editModeIcon">
+                    <styleClass>
+                        <String fx:value="font-icon"/>
+                    </styleClass>
+                    <FontIcon fx:constant="SWITCH_OFF_DARK"/>
+                </Label>
+            </graphic>
+        </ToggleButton>
+        <GridPane.margin>
+            <Insets bottom="5.0"/>
+        </GridPane.margin>
+    </HBox>
+    <fx:include fx:id="editTool" source="edit-tool.fxml" visible="false" GridPane.rowIndex="1"
+                GridPane.halignment="RIGHT" GridPane.valignment="TOP"/>
+</GridPane>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="root" stylesheets="/css/setting.css" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
+           GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/11"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fordes.subtitles.view.controller.Setting">
+    <ScrollPane>
+        <styleClass>
+            <String fx:value="no-border"/>
+            <String fx:value="transparent"/>
+        </styleClass>
+        <StackPane.margin>
+            <Insets bottom="10.0" left="40.0" top="10.0"/>
+        </StackPane.margin>
+        <VBox minWidth="150" prefWidth="150">
+            <HBox alignment="CENTER_LEFT" minHeight="90" prefHeight="90">
+                <Label styleClass="sub-title" text="首选项" prefHeight="90" alignment="CENTER">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="90" prefHeight="90">
+                <Label minHeight="90" minWidth="120" styleClass="item" text="外观">
+                    <HBox.margin>
+                        <Insets left="30.0"/>
+                    </HBox.margin>
+                    <tooltip>
+                        <Tooltip text="主题颜色"/>
+                    </tooltip>
+                </Label>
+                <JFXRadioButton minHeight="30" minWidth="140" mnemonicParsing="false" selected="true" text="跟随系统"
+                                HBox.hgrow="ALWAYS">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="themeGroup"/>
+                    </toggleGroup>
+                </JFXRadioButton>
+                <JFXRadioButton minHeight="30" minWidth="140" mnemonicParsing="false" text="浅色"
+                                toggleGroup="$themeGroup" userData="false"/>
+                <JFXRadioButton minHeight="30" minWidth="140" mnemonicParsing="false" text="深色"
+                                toggleGroup="$themeGroup" userData="true">
+                </JFXRadioButton>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="90" prefHeight="90">
+                <Label minHeight="90" minWidth="120" styleClass="item" text="显示样式">
+                    <HBox.margin>
+                        <Insets left="30.0"/>
+                    </HBox.margin>
+                    <tooltip>
+                        <Tooltip text="编辑器显示样式"/>
+                    </tooltip>
+                </Label>
+                <JFXComboBox minHeight="40" minWidth="180" fx:id="fontFace" maxHeight="-Infinity" maxWidth="-Infinity"
+                             promptText="暂无字体"/>
+                <JFXComboBox minHeight="40" minWidth="80" fx:id="fontSize" maxHeight="-Infinity" maxWidth="-Infinity"
+                             promptText="暂无">
+                    <HBox.margin>
+                        <Insets left="30"/>
+                    </HBox.margin>
+                </JFXComboBox>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="90" prefHeight="90">
+                <Label minHeight="90" minWidth="120" styleClass="item" text="编辑模式">
+                    <HBox.margin>
+                        <Insets left="30.0"/>
+                    </HBox.margin>
+                    <tooltip>
+                        <Tooltip text="编辑器显示模式"/>
+                    </tooltip>
+                </Label>
+                <JFXRadioButton minHeight="30" minWidth="140" mnemonicParsing="false" text="简洁模式" userData="false">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="editorModeGroup"/>
+                    </toggleGroup>
+                </JFXRadioButton>
+                <JFXRadioButton minHeight="30" minWidth="140" mnemonicParsing="false" text="完整模式"
+                                toggleGroup="$editorModeGroup" userData="true"/>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="90" prefHeight="90">
+                <Label minHeight="90" minWidth="120" styleClass="item" text="退出选项">
+                    <HBox.margin>
+                        <Insets left="30.0"/>
+                    </HBox.margin>
+                    <tooltip>
+                        <Tooltip text="在线翻译服务首选接口"/>
+                    </tooltip>
+                </Label>
+                <JFXRadioButton minHeight="30" minWidth="120" mnemonicParsing="false" text="直接退出" userData="true">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="exitModeGroup"/>
+                    </toggleGroup>
+                </JFXRadioButton>
+                <JFXRadioButton minHeight="30" minWidth="120" mnemonicParsing="false" text="最小化至托盘"
+                                toggleGroup="$exitModeGroup" userData="false"/>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="90" prefHeight="90">
+                <Label minHeight="90" minWidth="120" styleClass="item" text="文件输出位置">
+                    <HBox.margin>
+                        <Insets left="30.0"/>
+                    </HBox.margin>
+                    <tooltip>
+                        <Tooltip text="默认导出/下载等操作文件输出路径"/>
+                    </tooltip>
+                </Label>
+                <TextField minHeight="40" minWidth="140" fx:id="outPath" maxHeight="-Infinity" maxWidth="-Infinity"
+                           prefHeight="40.0" prefWidth="300.0"/>
+                <Label minHeight="90" minWidth="50" onMouseClicked="#onChooseOutPath" styleClass="popup-text"
+                       text="更改">
+                    <HBox.margin>
+                        <Insets left="20.0"/>
+                    </HBox.margin>
+                </Label>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="90" prefHeight="90">
+                <Label minHeight="90" minWidth="90" styleClass="sub-title" text="接口设置">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="90" prefHeight="90">
+                <Label minHeight="90" minWidth="120" styleClass="item" text="服务商">
+                    <HBox.margin>
+                        <Insets left="30.0"/>
+                    </HBox.margin>
+                    <tooltip>
+                        <Tooltip text="接口提供者"/>
+                    </tooltip>
+                </Label>
+                <JFXComboBox minHeight="40" minWidth="140" fx:id="provider" maxHeight="-Infinity" maxWidth="-Infinity"
+                             promptText="暂无数据"/>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="90" prefHeight="90">
+                <Label minHeight="90" minWidth="120" styleClass="item" text="接口类型">
+                    <HBox.margin>
+                        <Insets left="30.0"/>
+                    </HBox.margin>
+                    <tooltip>
+                        <Tooltip text="接口用途，一般为语音转换或文字翻译"/>
+                    </tooltip>
+                </Label>
+                <JFXComboBox minHeight="40" minWidth="140" fx:id="type" maxHeight="-Infinity" maxWidth="-Infinity"
+                             promptText="暂无数据"/>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="90" prefHeight="90">
+                <Label minHeight="90" minWidth="120" styleClass="item" text="套餐类型">
+                    <HBox.margin>
+                        <Insets left="30.0"/>
+                    </HBox.margin>
+                    <tooltip>
+                        <Tooltip text="套餐类型，付费用户拥有更好的性能"/>
+                    </tooltip>
+                </Label>
+                <JFXComboBox minHeight="40" minWidth="140" fx:id="version" maxHeight="-Infinity" maxWidth="-Infinity"
+                             promptText="暂无数据"/>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="180" >
+                <StackPane alignment="TOP_LEFT">
+                    <VBox alignment="CENTER_LEFT" minWidth="150" fx:id="infoPanel" visible="false"/>
+                    <TextFlow fx:id="tips" minHeight="160.0" maxHeight="160" minWidth="440.0" styleClass="tips">
+                        <Text styleClass="text" text="◾  视频生成字幕以及翻译为在线服务，需全程保持网络连接.&#10;"/>
+                        <Text styleClass="text" text="◾  选择套餐后悬停可以查看套餐说明，输入密钥前记得核对套餐是否正确.&#10;"/>
+                        <Text styleClass="text" text="◾  本软件开源且免费，所有在线服务系第三方提供，任何收费行为与本软件无关.&#10;"/>
+                        <padding>
+                            <Insets bottom="20.0" left="15.0" right="20.0" top="15.0"/>
+                        </padding>
+                    </TextFlow>
+                </StackPane>
+                <HBox.margin>
+                    <Insets left="40" top="20"/>
+                </HBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="90" prefHeight="90">
+                <Label styleClass="sub-title" text="附加选项" prefHeight="90" alignment="CENTER">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" minHeight="90" prefHeight="90">
+                <Label minHeight="90" minWidth="120" styleClass="item" text="语种列表">
+                    <HBox.margin>
+                        <Insets left="30.0"/>
+                    </HBox.margin>
+                    <tooltip>
+                        <Tooltip text="在线翻译和语音转换中只展示常见语种"/>
+                    </tooltip>
+                </Label>
+                <JFXRadioButton selected="true" minHeight="30" minWidth="120" mnemonicParsing="false" text="常见语种" userData="true">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="languageListGroup"/>
+                    </toggleGroup>
+                </JFXRadioButton>
+                <JFXRadioButton minHeight="30" minWidth="120" mnemonicParsing="false" text="全部语种"
+                                toggleGroup="$languageListGroup" userData="false"/>
+            </HBox>
+        </VBox>
+    </ScrollPane>
+</StackPane>

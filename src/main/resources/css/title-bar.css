@@ -1,0 +1,56 @@
+#root {
+    -fx-background-color: -fx-white-3;
+}
+
+.dark #root {
+    -fx-background-color: -fx-dark-2;
+}
+
+.full-screen #root {
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+.normal-screen #root {
+    -fx-border-radius: 8 8 0 0;
+    -fx-background-radius: 8 8 0 0;
+}
+
+#closed:hover {
+    -fx-background-color: red;
+    -fx-text-fill: -fx-white-3;
+}
+
+.dark #closed:hover {
+    -fx-background-color: red;
+}
+
+.normal-screen #closed {
+    -fx-background-radius: 0 8 0 0;
+}
+
+.full-screen #closed {
+    -fx-background-radius: 0 0 0 0;
+}
+
+#minimize:hover,
+#maximize:hover {
+    -fx-background-color: -fx-white-3;
+    -fx-background-radius: 0;
+}
+
+.dark #minimize:hover,
+.dark #maximize:hover {
+    -fx-background-color: -fx-dark-3;
+    -fx-background-radius: 0;
+}
+
+.title-button {
+    -fx-pref-height: 30;
+    -fx-pref-width: 50;
+    -fx-background-color: transparent;
+    -fx-font-family: iconfont;
+    -fx-text-fill: -fx-white-5;
+    -fx-font-size: 20;
+    -fx-text-alignment: center;
+}
